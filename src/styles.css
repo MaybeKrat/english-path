@@ -2734,14 +2734,38 @@ kbd {
   text-align: left;
   text-transform: uppercase;
 }
+/* Styled like the app's search field: rounded, soft border, green focus (Ivan disliked raw inputs, 09.11.2026). */
 .verb-inputs input {
-  height: 46px;
-  font-size: 19px;
+  height: 50px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--canvas);
+  color: var(--word);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
   text-align: center;
   text-transform: none;
   letter-spacing: 0;
+  outline: 0;
+  transition:
+    border-color 0.17s,
+    background 0.17s,
+    box-shadow 0.17s;
+}
+.verb-inputs input:hover {
+  border-color: var(--stage-2);
+}
+.verb-inputs input:focus,
+.verb-inputs input:focus-visible {
+  border-color: var(--green-2);
+  background: var(--paper);
+  box-shadow: 0 0 0 3px var(--sage);
+  outline: 0;
 }
 .verb-inputs input::placeholder {
+  color: var(--muted-2);
+  font-family: "Golos Text Variable", "Segoe UI", sans-serif;
   font-size: 13px;
 }
 .verb-forms {
@@ -2850,12 +2874,20 @@ kbd {
 
 /* Grammar (src/GrammarPage.tsx) */
 .grammar-page {
+  display: flex;
+  flex-direction: column;
   max-width: 1000px;
+  min-height: calc(100vh - 68px);
   margin: 0 auto;
 }
-/* The page head sits above the column here, so the column is shorter than on Practice. */
-.grammar-practice {
-  min-height: calc(100vh - 150px);
+/* The page fills the window like Practice; the column takes what the head leaves, so nothing scrolls. */
+.grammar-practice,
+.desktop-app .grammar-practice {
+  flex: 1;
+  min-height: 0;
+}
+.desktop-app .grammar-page {
+  min-height: calc(100vh - var(--titlebar-height) - 64px);
 }
 .grammar-tabs {
   width: 320px;

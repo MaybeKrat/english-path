@@ -209,7 +209,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                       onChange={(event) => setBase(event.target.value)}
                       autoComplete="off"
                       spellCheck={false}
-                      placeholder="можно не вводить"
+                      placeholder="необязательно"
                     />
                   </label>
                   <label>
@@ -219,7 +219,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                       onChange={(event) => setPast(event.target.value)}
                       autoComplete="off"
                       spellCheck={false}
-                      placeholder="можно не вводить"
+                      placeholder="необязательно"
                     />
                   </label>
                   <label>
@@ -229,7 +229,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                       onChange={(event) => setParticiple(event.target.value)}
                       autoComplete="off"
                       spellCheck={false}
-                      placeholder="можно не вводить"
+                      placeholder="необязательно"
                     />
                   </label>
                 </div>
