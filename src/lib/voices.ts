@@ -43,3 +43,11 @@ export function voicePackText(status: VoicePackStatus | null): string {
       return 'Проверка записей…';
   }
 }
+
+/** One line under the download bar in the sidebar. */
+export function voicePackShort(status: VoicePackStatus): string {
+  const megabytes = (bytes: number) => Math.round(bytes / 1048576);
+  if (status.state === 'verifying') return 'проверка файла';
+  if (status.state === 'error') return 'нет связи, повторим сами';
+  return `скачано ${megabytes(status.received)} из ${megabytes(status.total)} МБ`;
+}

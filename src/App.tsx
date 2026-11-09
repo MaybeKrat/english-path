@@ -50,7 +50,7 @@ import {
 import { parseBackup, readState, writeState, STORAGE_KEY } from "./lib/storage";
 import { createSpeechController } from "./lib/speech";
 import { createBufferedSpeechController } from "./lib/buffered-speech";
-import { loadRecording, voicePackText, voices } from "./lib/voices";
+import { loadRecording, voicePackShort, voicePackText, voices } from "./lib/voices";
 import { applyTheme, SYSTEM_THEME_QUERY } from "./lib/theme";
 import { DEFAULT_ZOOM, stepZoom, ZOOM_LEVELS } from "./lib/zoom";
 import { scaledCursors } from "./lib/cursors";
@@ -2273,6 +2273,19 @@ export default function App() {
             изучено <b>{oxfordLearned.toLocaleString("ru-RU")}</b> из {words.length.toLocaleString("ru-RU")} слов
           </span>
         </button>
+        {/* Shown until the recorded voices are downloaded after installation (Ivan, 09.11.2026). */}
+        {voicePack && ["downloading", "verifying", "error"].includes(voicePack.state) && (
+          <button className="side-block side-path side-voices" title="Открыть настройки голоса" onClick={() => setPage("settings")}>
+            <span className="side-head">
+              <span>Озвучка</span>
+              <strong>{Math.floor((voicePack.received / Math.max(1, voicePack.total)) * 100)}%</strong>
+            </span>
+            <span className={`voice-track${voicePack.state === "error" ? " is-paused" : ""}`}>
+              <i style={{ width: `${(voicePack.received / Math.max(1, voicePack.total)) * 100}%` }} />
+            </span>
+            <span className="side-next">{voicePackShort(voicePack)}</span>
+          </button>
+        )}
         <div className="sidebar-bottom">
           <button
             className={`nav-item ${page === "settings" ? "active" : ""}`}

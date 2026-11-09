@@ -395,6 +395,24 @@ kbd {
   border-color: var(--stage-4);
   background: var(--stage-4);
 }
+.voice-track {
+  display: block;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 99px;
+  background: var(--stage-0);
+  overflow: hidden;
+}
+.voice-track i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--stage-4), var(--stage-3));
+  transition: width 0.4s ease;
+}
+.voice-track.is-paused i {
+  background: var(--muted-2);
+}
 .side-next {
   display: block;
   margin-top: 6px;
