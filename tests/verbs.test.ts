@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { defaultState, getStudyQueue, scheduleCard } from '../src/lib/scheduler.ts';
 import { parseBackup } from '../src/lib/storage.ts';
-import { formMatches, rateVerb, spokenForms, verbQueue, verbStats, type IrregularVerb } from '../src/lib/verbs.ts';
+import { askedForm, formMatches, rateVerb, spokenForms, verbQueue, verbStats, type IrregularVerb } from '../src/lib/verbs.ts';
 import type { Word } from '../src/lib/types.ts';
 
 const NOW = new Date(2026, 10, 9, 12).getTime();
@@ -57,4 +57,14 @@ test('Backups keep verb progress and older backups get the default verb limit', 
   assert.equal(parseBackup(JSON.stringify(old), ids).settings.verbsDailyNew, 5);
   const broken = { ...state, verbs: { cards: { 'verb-fly': scheduleCard(undefined, 'good', NOW) }, reviews: [] } };
   assert.throws(() => parseBackup(JSON.stringify(broken), ids), /неизвестная карточка/);
+});
+
+test('A card asks one form, Past Simple and Past Participle by turns', () => {
+  let state = defaultState();
+  assert.equal(askedForm(VERBS[0], state), 'past');
+  state = rateVerb(state, VERBS[0], 'good', NOW);
+  assert.equal(askedForm(VERBS[0], state), 'participle');
+  assert.equal(askedForm(VERBS[1], state), 'past');
+  state = rateVerb(state, VERBS[0], 'again', NOW + 1000);
+  assert.equal(askedForm(VERBS[0], state), 'past');
 });

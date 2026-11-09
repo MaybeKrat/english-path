@@ -2717,7 +2717,7 @@ kbd {
 }
 .verb-inputs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 200px));
+  grid-template-columns: minmax(0, 300px);
   justify-content: center;
   gap: 14px;
   width: 100%;
@@ -2783,6 +2783,12 @@ kbd {
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+/* The form the card asked for. */
+.verb-forms .is-asked strong {
+  padding: 0 10px;
+  border-radius: 10px;
+  background: var(--sage);
 }
 .verb-forms strong {
   color: var(--word);

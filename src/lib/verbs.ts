@@ -33,6 +33,17 @@ export function verbProgress(state: AppState): VerbProgress {
   return state.verbs ?? { cards: {}, reviews: [] };
 }
 
+/** The form a card asks for: one at a time (Ivan, 09.11.2026), Past Simple and Past Participle by turns. */
+export type AskedForm = 'past' | 'participle';
+
+export const FORM_NAMES: Record<AskedForm, string> = { past: 'Past Simple', participle: 'Past Participle' };
+
+/** Even number of earlier answers on the verb — Past Simple, odd — Past Participle; so each review switches the form. */
+export function askedForm(verb: IrregularVerb, state: AppState): AskedForm {
+  const answers = verbProgress(state).reviews.filter((review) => review.wordId === verb.id).length;
+  return answers % 2 === 0 ? 'past' : 'participle';
+}
+
 /** Text the voices read: "learn, learnt or learned, learnt or learned". Keep in sync with scripts/build-voices.py. */
 export function spokenForms(verb: IrregularVerb): string {
   return [verb.base, verb.past, verb.participle].map((form) => form.split(' / ').join(' or ')).join(', ');

@@ -1,11 +1,14 @@
-// Irregular verbs mode: the card shows the Russian meaning; type or recall the three forms, then rate the answer as on
-// word cards. A new verb opens once its word is learned on the cards (decided 09.11.2026).
+// Irregular verbs mode: the card shows the Russian meaning and asks one form — Past Simple or Past Participle by turns;
+// type or recall it, then rate the answer as on word cards. A new verb opens once its word is learned on the cards
+// (decided 09.11.2026).
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, AudioLines, Check, Lightbulb, Lock, RotateCcw, Search, X } from "lucide-react";
 import verbData from "./data/irregular-verbs.json";
 import { scheduleCard } from "./lib/scheduler";
 import { stageOf } from "./lib/insights";
 import {
+  askedForm,
+  FORM_NAMES,
   formMatches,
   isVerbOpen,
   rateVerb,
@@ -58,27 +61,22 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
   const verb = queue[0];
   const [revealed, setRevealed] = useState(false);
   const [hint, setHint] = useState(false);
-  const [base, setBase] = useState("");
-  const [past, setPast] = useState("");
-  const [participle, setParticiple] = useState("");
+  const [answer, setAnswer] = useState("");
   const [undoState, setUndoState] = useState<AppState | null>(null);
   const [query, setQuery] = useState("");
   const firstInput = useRef<HTMLInputElement>(null);
-  const typed = base.trim() !== "" || past.trim() !== "" || participle.trim() !== "";
-  const baseRight = verb ? formMatches(base, verb.base) : false;
-  const pastRight = verb ? formMatches(past, verb.past) : false;
-  const participleRight = verb ? formMatches(participle, verb.participle) : false;
-  // Typed answers suggest a rating; the choice stays with the learner.
-  const suggested: Rating | null = !typed ? null : baseRight && pastRight && participleRight ? "good" : "again";
+  const form = verb ? askedForm(verb, state) : "past";
+  const typed = answer.trim() !== "";
+  const answerRight = verb ? formMatches(answer, verb[form]) : false;
+  // A typed answer suggests a rating; the choice stays with the learner.
+  const suggested: Rating | null = !typed ? null : answerRight ? "good" : "again";
   const newLeft = queue.filter((item) => !progress.cards[item.id]).length;
   const dueLeft = queue.length - newLeft;
 
   useEffect(() => {
     setRevealed(false);
     setHint(false);
-    setBase("");
-    setPast("");
-    setParticiple("");
+    setAnswer("");
     if (verb && active) {
       firstInput.current?.focus();
       // The front is Russian: the forms are prepared silently and spoken after the answer opens.
@@ -195,41 +193,21 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
             <span className="tag tag-level">{item.level}</span>
           </div>
           <div className="card-body">
-            {!revealed && <span className="prompt-label">ВСПОМНИТЕ ТРИ ФОРМЫ</span>}
+            {!revealed && <span className="prompt-label">ВСПОМНИТЕ {FORM_NAMES[form].toUpperCase()}</span>}
             {!revealed ? (
               <>
                 <h2 className="card-word translation-prompt">{item.translation}</h2>
                 {hint && <p className="example hint-example">{item.exampleTranslation}</p>}
                 <div className="verb-inputs">
                   <label>
-                    <span>Infinitive</span>
+                    <span>{FORM_NAMES[form]}</span>
                     <input
                       ref={firstInput}
-                      value={base}
-                      onChange={(event) => setBase(event.target.value)}
+                      value={answer}
+                      onChange={(event) => setAnswer(event.target.value)}
                       autoComplete="off"
                       spellCheck={false}
-                      placeholder="необязательно"
-                    />
-                  </label>
-                  <label>
-                    <span>Past Simple</span>
-                    <input
-                      value={past}
-                      onChange={(event) => setPast(event.target.value)}
-                      autoComplete="off"
-                      spellCheck={false}
-                      placeholder="необязательно"
-                    />
-                  </label>
-                  <label>
-                    <span>Past Participle</span>
-                    <input
-                      value={participle}
-                      onChange={(event) => setParticiple(event.target.value)}
-                      autoComplete="off"
-                      spellCheck={false}
-                      placeholder="необязательно"
+                      placeholder="можно вспомнить про себя"
                     />
                   </label>
                 </div>
@@ -241,10 +219,10 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                     ["Infinitive", item.base],
                     ["Past Simple", item.past],
                     ["Past Participle", item.participle],
-                  ].map(([label, form]) => (
-                    <div key={label}>
+                  ].map(([label, value]) => (
+                    <div key={label} className={label === FORM_NAMES[form] ? "is-asked" : ""}>
                       <small>{label}</small>
-                      <strong>{form}</strong>
+                      <strong>{value}</strong>
                     </div>
                   ))}
                 </div>
@@ -254,7 +232,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                 </div>
                 {typed && (
                   <p className="verb-check">
-                    Вы ввели: {formResult(base, baseRight)} {formResult(past, pastRight)} {formResult(participle, participleRight)}
+                    Вы ввели: {formResult(answer, answerRight)}
                   </p>
                 )}
                 <p className="example">
@@ -280,14 +258,14 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                 <kbd>E</kbd>
               </button>
             ) : (
-              <span>{revealed ? "Насколько легко вспомнили?" : "Введите формы или вспомните про себя"}</span>
+              <span>{revealed ? "Насколько легко вспомнили?" : "Введите форму или вспомните про себя"}</span>
             )}
-            <span>Русский → три формы</span>
+            <span>Русский → {FORM_NAMES[form]}</span>
           </div>
         </div>
         {!revealed ? (
           <button className="reveal-button" onClick={reveal}>
-            {typed ? "Проверить" : "Показать формы"}
+            {typed ? "Проверить" : "Показать ответ"}
             <ArrowRight size={18} />
             <kbd>Enter</kbd>
           </button>
@@ -311,11 +289,11 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
           <span>
             {revealed
               ? suggested === "good"
-                ? "Все формы верны. Оцените ответ клавишами 1–4"
+                ? "Верно. Оцените ответ клавишами 1–4"
                 : suggested === "again"
-                  ? "Есть ошибка. Оцените ответ клавишами 1–4"
+                  ? "Ошибка. Оцените ответ клавишами 1–4"
                   : "Оцените ответ клавишами 1–4"
-              : "Enter — проверить, Tab — к следующему полю"}
+              : "Enter — проверить"}
           </span>
           <button disabled={!undoState || saving} onClick={undo}>
             <RotateCcw size={14} />
