@@ -68,6 +68,8 @@ export interface Settings {
   theme: ThemePreference;
   /** Interface scale of the desktop app in percent; see src/lib/zoom.ts. */
   zoom: number;
+  /** New irregular verbs a day; see src/lib/verbs.ts. */
+  verbsDailyNew: number;
   /** Active film mode id, or null without a mode. */
   film: string | null;
   voice: Voice;
@@ -87,6 +89,14 @@ export interface AppState {
   settings: Settings;
   /** Additional new words allowed on this local calendar date only. */
   dailyExtra?: { day: string; count: number };
+  /** Irregular verbs mode; absent until the first answer there. */
+  verbs?: VerbProgress;
+}
+
+/** Progress of the irregular verbs mode, kept apart from word cards so word limits and statistics stay unchanged. */
+export interface VerbProgress {
+  cards: Record<string, CardProgress>;
+  reviews: ReviewLog[];
 }
 
 export interface StudyStats {

@@ -24,6 +24,7 @@ import {
   RotateCcw,
   Search,
   Settings2,
+  SpellCheck,
   Target,
   TrendingUp,
   Trophy,
@@ -48,11 +49,14 @@ import {
 import { parseBackup, readState, writeState, STORAGE_KEY } from "./lib/storage";
 import { createSpeechController } from "./lib/speech";
 import { createBufferedSpeechController } from "./lib/buffered-speech";
-import { loadRecording, voices } from "./lib/voices";
+import { loadRecording, voicePackText, voices } from "./lib/voices";
 import { applyTheme, SYSTEM_THEME_QUERY } from "./lib/theme";
 import { DEFAULT_ZOOM, stepZoom, ZOOM_LEVELS } from "./lib/zoom";
 import { scaledCursors } from "./lib/cursors";
 import { SPEECH_MODES, speechMode, speechModeLabel, speechModeSettings, type SpeechMode } from "./lib/speech-modes";
+import { irregularVerbs, VerbsPage } from "./VerbsPage";
+import { verbQueue } from "./lib/verbs";
+import { intervalLabel, MemoryMeter, quantity, stageLevel, stageNames } from "./shared";
 import { getTopicName, orderWordsForStudy, TOPICS } from "./lib/topics";
 import { getActiveFilm, getFilmProgress, getVisibleFilmCards, learnedCheck, percent } from "./lib/films";
 import {
@@ -82,7 +86,7 @@ const filmCards = [...new Map(films.flatMap((film) => film.cards).map((word) => 
 const allCards = [...words, ...filmCards];
 const cardsById = new Map(allCards.map((word) => [word.id, word]));
 // Film cards stay valid in saved progress even while their mode is off.
-const validIds = new Set(allCards.map((word) => word.id));
+const validIds = new Set([...allCards.map((word) => word.id), ...irregularVerbs.map((verb) => verb.id)]);
 const filmTitles = new Map(films.map((film) => [film.id, film.title]));
 const levels: Level[] = ["A1", "A2", "B1", "B2"];
 const studyWords = orderWordsForStudy(words);
@@ -99,36 +103,16 @@ const ratingLabels: Record<Rating, string> = {
   easy: "Легко",
 };
 const ratings: Rating[] = ["again", "hard", "good", "easy"];
-const stageNames: Record<Stage, string> = {
-  new: "Новые",
-  learning: "Учу",
-  familiar: "Знакомые",
-  confident: "Уверенно",
-  mastered: "Закреплено",
-};
-/** Filled segments of the four-step memory meter. */
-const stageLevel: Record<Stage, number> = { new: 0, learning: 1, familiar: 2, confident: 3, mastered: 4 };
 const weekdays = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-type Page = "study" | "library" | "stats" | "settings";
+type Page = "study" | "verbs" | "library" | "stats" | "settings";
 const pageNames = {
   study: "Практика",
+  verbs: "Глаголы",
   library: "Словарь",
   stats: "Прогресс",
   settings: "Настройки",
 };
 const PAGE_SIZE = 30;
-function quantity(n: number, one: string, few: string, many: string) {
-  return n % 10 === 1 && n % 100 !== 11
-    ? one
-    : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)
-      ? few
-      : many;
-}
-function intervalLabel(days: number) {
-  if (days < 1 / 24) return `${Math.max(1, Math.round(days * 1440))} мин`;
-  if (days < 1) return `${Math.round(days * 24)} ч`;
-  return `${Math.round(days)} ${quantity(Math.round(days), "день", "дня", "дней")}`;
-}
 function dateLabel(time: number) {
   return new Date(time).toLocaleDateString("ru-RU", {
     day: "numeric",
@@ -187,16 +171,6 @@ function initialState(): {
   }
 }
 
-function MemoryMeter({ stage }: { stage: Stage }) {
-  return (
-    <span className={`memory memory-${stageLevel[stage]}`} title={stageNames[stage]}>
-      <i />
-      <i />
-      <i />
-      <i />
-    </span>
-  );
-}
 
 function Poster({ film, className = "" }: { film: Film; className?: string }) {
   const src = filmPosters[film.id];
@@ -252,6 +226,7 @@ export default function App() {
   const current = drillWord ?? queue.find((word) => word.id === activeId) ?? queue[0];
   const isRevealed = drill ? drill.revealed : revealed;
   const stats = useMemo(() => getStats(words, state, now, films), [state, now]);
+  const verbsLeft = useMemo(() => verbQueue(irregularVerbs, state, now).length, [state, now]);
   const reverse = state.settings.direction === "ru-en";
   const currentSpeechMode = speechMode(state.settings);
   const repeatSeconds = typeof currentSpeechMode === "number" ? currentSpeechMode : 0;
@@ -312,6 +287,19 @@ export default function App() {
       else root.removeProperty(`--cursor-${kind}`);
     }
   }, [state.settings.zoom]);
+
+  // Recorded voices download in the background after installation; Settings → Voice shows how far it is.
+  const [voicePack, setVoicePack] = useState<VoicePackStatus | null>(null);
+  useEffect(() => {
+    if (!window.oxfordVoices) return;
+    let disposed = false;
+    window.oxfordVoices.status().then((status) => !disposed && setVoicePack(status), () => {});
+    const unsubscribe = window.oxfordVoices.onStatus(setVoicePack);
+    return () => {
+      disposed = true;
+      unsubscribe();
+    };
+  }, []);
 
   // Desktop scale shortcuts, as in a browser: Ctrl+plus, Ctrl+minus, Ctrl+0 and Ctrl+wheel.
   const zoomRef = useRef(state.settings.zoom);
@@ -777,7 +765,7 @@ export default function App() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `oxford-cards-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `english-path-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     setToast("Резервная копия скачана");
@@ -1837,6 +1825,25 @@ export default function App() {
                   ))}
               </select>
             </div>
+            <div className="setting-row">
+              <div>
+                <label htmlFor="verbs-limit">Новых неправильных глаголов в день</label>
+                <p>Раздел «Глаголы». Повторения не ограничиваются.</p>
+              </div>
+              <select
+                id="verbs-limit"
+                value={state.settings.verbsDailyNew}
+                onChange={(event) => updateSettings({ verbsDailyNew: Number(event.target.value) })}
+              >
+                {Array.from(new Set([0, 3, 5, 10, 15, 20, state.settings.verbsDailyNew]))
+                  .sort((a, b) => a - b)
+                  .map((limit) => (
+                    <option key={limit} value={limit}>
+                      {limit === 0 ? "Только повторения" : `${limit} ${quantity(limit, "глагол", "глагола", "глаголов")}`}
+                    </option>
+                  ))}
+              </select>
+            </div>
             <div className="setting-row vertical">
               <div>
                 <strong>Уровни слов</strong>
@@ -1925,7 +1932,7 @@ export default function App() {
               <div className="setting-row">
                 <div>
                   <label htmlFor="voice">Голос</label>
-                  <p>Записи нейроголосов Microsoft, встроены в приложение.</p>
+                  <p>Записи нейроголосов Microsoft. {voicePackText(voicePack)}</p>
                 </div>
                 <select
                   id="voice"
@@ -2178,19 +2185,20 @@ export default function App() {
             event.preventDefault();
             setPage("study");
           }}
-          aria-label="Oxford Cards — практика"
+          aria-label="English Path — практика"
         >
           <span className="brand-mark">
             <Layers size={18} />
           </span>
           <span>
-            <b>oxford</b>cards
+            <b>english</b>path
           </span>
         </a>
         <nav aria-label="Основная навигация">
           {(
             [
               { id: "study", icon: Layers },
+              { id: "verbs", icon: SpellCheck },
               { id: "library", icon: BookOpen },
               { id: "stats", icon: TrendingUp },
             ] as const
@@ -2206,6 +2214,7 @@ export default function App() {
               {item.id === "study" && stats.due + stats.newAvailable > 0 && (
                 <span className="nav-count">{stats.due + stats.newAvailable}</span>
               )}
+              {item.id === "verbs" && verbsLeft > 0 && <span className="nav-count">{verbsLeft}</span>}
             </button>
           ))}
         </nav>
@@ -2282,6 +2291,20 @@ export default function App() {
           </div>
         )}
         {page === "study" && renderPractice()}
+        {page === "verbs" && (
+          <VerbsPage
+            state={state}
+            now={now}
+            saving={saving}
+            active={!pendingImport && !filmPicker}
+            save={save}
+            setNow={setNow}
+            speak={speak}
+            prepare={(text) => speech.current?.prepare?.(text)}
+            speaking={speechState.status !== "idle" ? speechState.text : null}
+            openSettings={() => setPage("settings")}
+          />
+        )}
         {page === "library" && renderLibrary()}
         {page === "stats" && renderStats()}
         {page === "settings" && renderSettings()}

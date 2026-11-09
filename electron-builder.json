@@ -1,17 +1,20 @@
 {
-  "appId": "local.oxfordcards.desktop",
-  "productName": "Oxford Cards",
+  "appId": "local.englishpath.desktop",
+  "productName": "English Path",
   "directories": {
     "output": "release",
     "buildResources": "desktop/resources"
   },
   "files": [
     "dist/**/*",
+    "!dist/voices/**/*",
     "desktop/**/*.cjs",
+    "desktop/voice-pack.json",
     "desktop/resources/icon.ico",
     "desktop/resources/*LICENSE*.txt",
     "DATA-SOURCES.md",
     "src/data/oxford3000.json",
+    "src/data/irregular-verbs.json",
     "src/data/films/*.json",
     "src/data/sources/en-ru-LICENSE.txt",
     "package.json",
@@ -22,12 +25,24 @@
   "asar": true,
   "compression": "normal",
   "win": {
-    "target": [{ "target": "portable", "arch": ["x64"] }],
+    "target": [{ "target": "nsis", "arch": ["x64"] }],
     "icon": "desktop/resources/icon.ico",
     "requestedExecutionLevel": "asInvoker"
   },
-  "portable": {
-    "artifactName": "Oxford Cards.exe",
-    "requestExecutionLevel": "user"
+  "nsis": {
+    "artifactName": "English-Path-Setup.exe",
+    "oneClick": false,
+    "perMachine": true,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "English Path",
+    "uninstallDisplayName": "English Path",
+    "runAfterFinish": true,
+    "deleteAppDataOnUninstall": false,
+    "installerLanguages": ["ru_RU"],
+    "language": "1049",
+    "include": "desktop/installer.nsh"
   }
 }

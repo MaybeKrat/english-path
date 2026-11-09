@@ -163,6 +163,21 @@ async function main() {
     }
     const shared = validateSharedCards(films);
     if (shared.length) throw new Error(shared.slice(0, 25).join('\n'));
+    const verbs = JSON.parse(await readFile(new URL('../src/data/irregular-verbs.json', import.meta.url), 'utf8'));
+    const verbErrors = [];
+    const fields = ['id', 'base', 'past', 'participle', 'translation', 'level', 'example', 'exampleTranslation'];
+    verbs.forEach((verb, index) => {
+      const name = `Глагол ${index + 1} (${verb.base})`;
+      if (fields.some((field) => typeof verb[field] !== 'string' || !verb[field].trim())) verbErrors.push(`${name}: пустое поле.`);
+      if (verb.id !== `verb-${verb.base}`) verbErrors.push(`${name}: id должен быть verb-<base>.`);
+      if (!['A1', 'A2', 'B1', 'B2'].includes(verb.level)) verbErrors.push(`${name}: неизвестный уровень.`);
+      if (!/[а-яё]/i.test(verb.translation) || !/[а-яё]/i.test(verb.exampleTranslation)) verbErrors.push(`${name}: нет русского перевода.`);
+      const forms = [verb.past, verb.participle].flatMap((form) => form.split(' / '));
+      if (!forms.some((form) => new RegExp(`\\b${form}\\b`, 'i').test(verb.example))) verbErrors.push(`${name}: в примере нет формы глагола.`);
+    });
+    if (new Set(verbs.map((verb) => verb.id)).size !== verbs.length) verbErrors.push('Неправильные глаголы: повторяются id.');
+    if (verbErrors.length) throw new Error(verbErrors.slice(0, 25).join('\n'));
+    console.log(`Неправильные глаголы: ${verbs.length}.`);
     console.log('Структура данных проверена. Лингвистическая точность переводов этой проверкой не оценивается.');
   } catch (error) {
     console.error(`Не удалось проверить словарь: ${error instanceof Error ? error.message : String(error)}`);

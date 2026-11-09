@@ -4,6 +4,7 @@ import { finiteRange, isRecord, timestamp, validCard } from './validation.ts';
 import { isVoice } from './voices.ts';
 import { DEFAULT_ZOOM, isZoom } from './zoom.ts';
 import { isRepeatSeconds } from './speech-modes.ts';
+import { DEFAULT_VERBS_DAILY_NEW, MAX_VERBS_DAILY_NEW } from './verbs.ts';
 
 export const STORAGE_KEY = 'oxford-cards:v1';
 
@@ -27,30 +28,44 @@ function validDayKey(value: unknown): value is string {
   return Number.isFinite(at) && new Date(at).toISOString().slice(0, 10) === value;
 }
 
-function validateState(raw: string, validWordIds?: Set<string>): AppState {
-  if (raw.length > 15_000_000) invalid('файл слишком большой (максимум 15 МБ).');
-  let parsed: unknown;
-  try { parsed = JSON.parse(raw); } catch { invalid('файл содержит некорректный JSON.'); }
-  if (!isRecord(parsed) || parsed.version !== 1) invalid('неподдерживаемая версия файла.');
-  if (!isRecord(parsed.cards) || Object.keys(parsed.cards).length > 10_000) invalid('некорректный список карточек.');
+function parseCards(value: unknown, validWordIds?: Set<string>): Record<string, CardProgress> {
+  if (!isRecord(value) || Object.keys(value).length > 10_000) invalid('некорректный список карточек.');
   const cards: Record<string, CardProgress> = {};
-  for (const [id, value] of Object.entries(parsed.cards)) {
+  for (const [id, card] of Object.entries(value)) {
     const displayId = id.slice(0, 80);
     if (!validId(id, validWordIds)) invalid(`неизвестная карточка «${displayId}».`);
-    if (!validCard(value)) invalid(`некорректные интервалы или даты карточки «${id.slice(0, 80)}».`);
+    if (!validCard(card)) invalid(`некорректные интервалы или даты карточки «${displayId}».`);
     cards[id] = {
-      due: value.due, interval: value.interval, ease: value.ease, repetitions: value.repetitions,
-      lapses: value.lapses, lastReviewed: value.lastReviewed, startedAt: value.startedAt, state: value.state,
+      due: card.due, interval: card.interval, ease: card.ease, repetitions: card.repetitions,
+      lapses: card.lapses, lastReviewed: card.lastReviewed, startedAt: card.startedAt, state: card.state,
     };
   }
-  if (!Array.isArray(parsed.reviews) || parsed.reviews.length > 250_000) invalid('некорректная история повторений.');
-  const reviews: ReviewLog[] = parsed.reviews.map((review: unknown) => {
+  return cards;
+}
+
+function parseReviews(value: unknown, validWordIds?: Set<string>): ReviewLog[] {
+  if (!Array.isArray(value) || value.length > 250_000) invalid('некорректная история повторений.');
+  return value.map((review: unknown) => {
     if (!isRecord(review) || !validId(review.wordId, validWordIds) || !timestamp(review.at)
       || typeof review.rating !== 'string' || !['again', 'hard', 'good', 'easy'].includes(review.rating) || typeof review.isNew !== 'boolean') {
       invalid('некорректная запись в истории повторений.');
     }
     return { wordId: review.wordId, at: review.at, rating: review.rating as Rating, isNew: review.isNew };
   });
+}
+
+function validateState(raw: string, validWordIds?: Set<string>): AppState {
+  if (raw.length > 15_000_000) invalid('файл слишком большой (максимум 15 МБ).');
+  let parsed: unknown;
+  try { parsed = JSON.parse(raw); } catch { invalid('файл содержит некорректный JSON.'); }
+  if (!isRecord(parsed) || parsed.version !== 1) invalid('неподдерживаемая версия файла.');
+  const cards = parseCards(parsed.cards, validWordIds);
+  const reviews = parseReviews(parsed.reviews, validWordIds);
+  let verbs: AppState['verbs'];
+  if (parsed.verbs !== undefined) {
+    if (!isRecord(parsed.verbs)) invalid('некорректный прогресс неправильных глаголов.');
+    verbs = { cards: parseCards(parsed.verbs.cards, validWordIds), reviews: parseReviews(parsed.verbs.reviews, validWordIds) };
+  }
   const settings = parsed.settings;
   if (!isRecord(settings) || !finiteRange(settings.dailyNewLimit, 0, 200) || !Number.isInteger(settings.dailyNewLimit)
     || !Array.isArray(settings.levels) || settings.levels.length === 0 || settings.levels.length > 4
@@ -70,6 +85,10 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
   }
   if (settings.voice !== undefined && !isVoice(settings.voice)) invalid('некорректный голос озвучки.');
   if (settings.zoom !== undefined && !isZoom(settings.zoom)) invalid('некорректный масштаб интерфейса.');
+  if (settings.verbsDailyNew !== undefined
+    && (!finiteRange(settings.verbsDailyNew, 0, MAX_VERBS_DAILY_NEW) || !Number.isInteger(settings.verbsDailyNew))) {
+    invalid('некорректный лимит новых глаголов.');
+  }
   if (settings.repeatSeconds !== undefined && !isRepeatSeconds(settings.repeatSeconds)) invalid('некорректный повтор озвучки.');
   // The first build of the repeat mode stored an on/off flag for a 5-second repeat.
   if (settings.repeatSpeech !== undefined && typeof settings.repeatSpeech !== 'boolean') invalid('некорректный повтор озвучки.');
@@ -85,6 +104,7 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
   return {
     version: 1, cards, reviews,
     ...(dailyExtra ? { dailyExtra } : {}),
+    ...(verbs ? { verbs } : {}),
     settings: {
       dailyNewLimit: settings.dailyNewLimit,
       levels: [...settings.levels] as Level[],
@@ -96,6 +116,8 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
       theme: (settings.theme ?? 'system') as Settings['theme'],
       // Backups made before the scale setting open at 100%.
       zoom: (settings.zoom ?? DEFAULT_ZOOM) as Settings['zoom'],
+      // Backups made before the irregular verbs mode get the default daily limit.
+      verbsDailyNew: (settings.verbsDailyNew ?? DEFAULT_VERBS_DAILY_NEW) as number,
       // Backups made before film modes start without a mode.
       film: (settings.film ?? null) as Settings['film'],
       // Backups made before recorded voices get the default voice.

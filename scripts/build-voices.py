@@ -30,7 +30,13 @@ def texts() -> list[str]:
     cards = json.loads((DATA / "oxford3000.json").read_text(encoding="utf-8"))
     for path in sorted((DATA / "films").glob("*.json")):
         cards += json.loads(path.read_text(encoding="utf-8"))["cards"]
-    return sorted({card["word"].strip() for card in cards})
+    verbs = json.loads((DATA / "irregular-verbs.json").read_text(encoding="utf-8"))
+    # The infinitive and the three forms, the same text as spokenForms in src/lib/verbs.ts.
+    verb_texts = [text for verb in verbs for text in (
+        verb["base"],
+        ", ".join(" or ".join(verb[key].split(" / ")) for key in ("base", "past", "participle")),
+    )]
+    return sorted({card["word"].strip() for card in cards} | set(verb_texts))
 
 
 def missing() -> list[tuple[str, str, Path]]:

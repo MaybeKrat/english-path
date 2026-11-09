@@ -1,7 +1,7 @@
 {
-  "name": "oxford-cards",
+  "name": "english-path",
   "private": true,
-  "version": "1.5.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
@@ -12,7 +12,8 @@
     "check:data": "node scripts/check-data.mjs",
     "desktop": "electron .",
     "build:icons": "node scripts/create-desktop-icon.mjs",
-    "build:exe": "npm run build:icons && npm run build && electron-builder --win portable --x64 --config electron-builder.json"
+    "build:voice-pack": "node scripts/build-voice-pack.mjs",
+    "build:setup": "npm run build:icons && npm run build && electron-builder --win nsis --x64 --config electron-builder.json"
   },
   "dependencies": {
     "@fontsource-variable/golos-text": "^5.3.0",
@@ -32,6 +33,6 @@
     "vite": "8.3.5"
   },
   "main": "desktop/main.cjs",
-  "description": "Oxford Cards — английские карточки с интервальным повторением",
-  "author": "Oxford Cards"
+  "description": "English Path — английский: карточки слов, неправильные глаголы и грамматика",
+  "author": "English Path"
 }

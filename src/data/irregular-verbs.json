@@ -1,0 +1,1482 @@
+[
+  {
+    "id": "verb-be",
+    "base": "be",
+    "past": "was / were",
+    "participle": "been",
+    "translation": "быть, являться",
+    "level": "A1",
+    "example": "We were very tired after the long journey.",
+    "exampleTranslation": "Мы очень устали после долгой дороги."
+  },
+  {
+    "id": "verb-have",
+    "base": "have",
+    "past": "had",
+    "participle": "had",
+    "translation": "иметь",
+    "level": "A1",
+    "example": "I have had this bike since I was twelve.",
+    "exampleTranslation": "Этот велосипед у меня с двенадцати лет."
+  },
+  {
+    "id": "verb-do",
+    "base": "do",
+    "past": "did",
+    "participle": "done",
+    "translation": "делать",
+    "level": "A1",
+    "example": "She did her homework before dinner.",
+    "exampleTranslation": "Она сделала домашнее задание до ужина."
+  },
+  {
+    "id": "verb-say",
+    "base": "say",
+    "past": "said",
+    "participle": "said",
+    "translation": "сказать, говорить",
+    "level": "A1",
+    "example": "Have you said goodbye to your grandmother yet?",
+    "exampleTranslation": "Ты уже попрощался с бабушкой?"
+  },
+  {
+    "id": "verb-go",
+    "base": "go",
+    "past": "went",
+    "participle": "gone",
+    "translation": "идти, ехать",
+    "level": "A1",
+    "example": "We went to the seaside last summer.",
+    "exampleTranslation": "Прошлым летом мы ездили на море."
+  },
+  {
+    "id": "verb-get",
+    "base": "get",
+    "past": "got",
+    "participle": "got",
+    "translation": "получать; становиться; добираться",
+    "level": "A1",
+    "example": "It has got much colder since yesterday.",
+    "exampleTranslation": "Со вчерашнего дня сильно похолодало."
+  },
+  {
+    "id": "verb-make",
+    "base": "make",
+    "past": "made",
+    "participle": "made",
+    "translation": "делать, создавать",
+    "level": "A1",
+    "example": "My mum made a chocolate cake for my birthday.",
+    "exampleTranslation": "Мама испекла шоколадный торт на мой день рождения."
+  },
+  {
+    "id": "verb-know",
+    "base": "know",
+    "past": "knew",
+    "participle": "known",
+    "translation": "знать",
+    "level": "A1",
+    "example": "I have known Tom since primary school.",
+    "exampleTranslation": "Я знаю Тома с начальной школы."
+  },
+  {
+    "id": "verb-think",
+    "base": "think",
+    "past": "thought",
+    "participle": "thought",
+    "translation": "думать",
+    "level": "A1",
+    "example": "I thought the film was rather boring.",
+    "exampleTranslation": "Мне показалось, что фильм довольно скучный."
+  },
+  {
+    "id": "verb-take",
+    "base": "take",
+    "past": "took",
+    "participle": "taken",
+    "translation": "брать",
+    "level": "A1",
+    "example": "Someone has taken my umbrella from the hall.",
+    "exampleTranslation": "Кто-то взял мой зонт из прихожей."
+  },
+  {
+    "id": "verb-see",
+    "base": "see",
+    "past": "saw",
+    "participle": "seen",
+    "translation": "видеть",
+    "level": "A1",
+    "example": "We saw a fantastic play at the theatre.",
+    "exampleTranslation": "Мы посмотрели в театре потрясающий спектакль."
+  },
+  {
+    "id": "verb-come",
+    "base": "come",
+    "past": "came",
+    "participle": "come",
+    "translation": "приходить, приезжать",
+    "level": "A1",
+    "example": "Spring has come early this year.",
+    "exampleTranslation": "В этом году весна пришла рано."
+  },
+  {
+    "id": "verb-give",
+    "base": "give",
+    "past": "gave",
+    "participle": "given",
+    "translation": "давать",
+    "level": "A1",
+    "example": "My grandad gave me a watch for Christmas.",
+    "exampleTranslation": "Дедушка подарил мне часы на Рождество."
+  },
+  {
+    "id": "verb-find",
+    "base": "find",
+    "past": "found",
+    "participle": "found",
+    "translation": "находить",
+    "level": "A1",
+    "example": "Have you found your keys yet?",
+    "exampleTranslation": "Ты уже нашёл ключи?"
+  },
+  {
+    "id": "verb-tell",
+    "base": "tell",
+    "past": "told",
+    "participle": "told",
+    "translation": "рассказывать, сообщать",
+    "level": "A1",
+    "example": "She told me a funny story about her cat.",
+    "exampleTranslation": "Она рассказала мне смешную историю про свою кошку."
+  },
+  {
+    "id": "verb-become",
+    "base": "become",
+    "past": "became",
+    "participle": "become",
+    "translation": "становиться",
+    "level": "A1",
+    "example": "The town has become very popular with tourists.",
+    "exampleTranslation": "Город стал очень популярен у туристов."
+  },
+  {
+    "id": "verb-leave",
+    "base": "leave",
+    "past": "left",
+    "participle": "left",
+    "translation": "уходить, уезжать; оставлять",
+    "level": "A1",
+    "example": "The train left the station at half past six.",
+    "exampleTranslation": "Поезд отправился со станции в половине седьмого."
+  },
+  {
+    "id": "verb-feel",
+    "base": "feel",
+    "past": "felt",
+    "participle": "felt",
+    "translation": "чувствовать",
+    "level": "A1",
+    "example": "I have never felt so happy in my life.",
+    "exampleTranslation": "Я ещё никогда в жизни не был так счастлив."
+  },
+  {
+    "id": "verb-put",
+    "base": "put",
+    "past": "put",
+    "participle": "put",
+    "translation": "класть, ставить",
+    "level": "A1",
+    "example": "He put the milk back in the fridge.",
+    "exampleTranslation": "Он убрал молоко обратно в холодильник."
+  },
+  {
+    "id": "verb-bring",
+    "base": "bring",
+    "past": "brought",
+    "participle": "brought",
+    "translation": "приносить, привозить",
+    "level": "A1",
+    "example": "I've brought you some flowers from the garden.",
+    "exampleTranslation": "Я принёс тебе цветов из сада."
+  },
+  {
+    "id": "verb-begin",
+    "base": "begin",
+    "past": "began",
+    "participle": "begun",
+    "translation": "начинать(ся)",
+    "level": "A1",
+    "example": "It began to rain just after lunch.",
+    "exampleTranslation": "Сразу после обеда пошёл дождь."
+  },
+  {
+    "id": "verb-keep",
+    "base": "keep",
+    "past": "kept",
+    "participle": "kept",
+    "translation": "хранить, держать",
+    "level": "A1",
+    "example": "She has kept all her old letters.",
+    "exampleTranslation": "Она сохранила все свои старые письма."
+  },
+  {
+    "id": "verb-hold",
+    "base": "hold",
+    "past": "held",
+    "participle": "held",
+    "translation": "держать",
+    "level": "A2",
+    "example": "He held the baby very carefully.",
+    "exampleTranslation": "Он очень осторожно держал малыша."
+  },
+  {
+    "id": "verb-write",
+    "base": "write",
+    "past": "wrote",
+    "participle": "written",
+    "translation": "писать",
+    "level": "A1",
+    "example": "This book was written over a hundred years ago.",
+    "exampleTranslation": "Эта книга была написана больше ста лет назад."
+  },
+  {
+    "id": "verb-stand",
+    "base": "stand",
+    "past": "stood",
+    "participle": "stood",
+    "translation": "стоять",
+    "level": "A1",
+    "example": "We stood in the queue for an hour.",
+    "exampleTranslation": "Мы простояли в очереди целый час."
+  },
+  {
+    "id": "verb-hear",
+    "base": "hear",
+    "past": "heard",
+    "participle": "heard",
+    "translation": "слышать",
+    "level": "A1",
+    "example": "Have you heard the news about Sarah?",
+    "exampleTranslation": "Ты слышал новости про Сару?"
+  },
+  {
+    "id": "verb-let",
+    "base": "let",
+    "past": "let",
+    "participle": "let",
+    "translation": "позволять, разрешать",
+    "level": "A1",
+    "example": "My parents let me stay up late last Saturday.",
+    "exampleTranslation": "В прошлую субботу родители разрешили мне лечь попозже."
+  },
+  {
+    "id": "verb-mean",
+    "base": "mean",
+    "past": "meant",
+    "participle": "meant",
+    "translation": "значить; иметь в виду",
+    "level": "A1",
+    "example": "I've always meant to learn the piano.",
+    "exampleTranslation": "Я всегда собирался научиться играть на пианино."
+  },
+  {
+    "id": "verb-set",
+    "base": "set",
+    "past": "set",
+    "participle": "set",
+    "translation": "ставить, устанавливать",
+    "level": "B1",
+    "example": "I set my alarm for six but didn't hear it.",
+    "exampleTranslation": "Я поставил будильник на шесть, но не услышал его."
+  },
+  {
+    "id": "verb-meet",
+    "base": "meet",
+    "past": "met",
+    "participle": "met",
+    "translation": "встречать(ся), знакомиться",
+    "level": "A1",
+    "example": "I'm sure we've met somewhere before.",
+    "exampleTranslation": "Я уверен, что мы где-то уже встречались."
+  },
+  {
+    "id": "verb-run",
+    "base": "run",
+    "past": "ran",
+    "participle": "run",
+    "translation": "бегать, бежать",
+    "level": "A1",
+    "example": "She ran all the way to the station.",
+    "exampleTranslation": "Она бежала всю дорогу до станции."
+  },
+  {
+    "id": "verb-pay",
+    "base": "pay",
+    "past": "paid",
+    "participle": "paid",
+    "translation": "платить",
+    "level": "A1",
+    "example": "Have you paid the electricity bill yet?",
+    "exampleTranslation": "Ты уже оплатил счёт за электричество?"
+  },
+  {
+    "id": "verb-sit",
+    "base": "sit",
+    "past": "sat",
+    "participle": "sat",
+    "translation": "сидеть",
+    "level": "A1",
+    "example": "We sat by the fire and talked for hours.",
+    "exampleTranslation": "Мы сидели у камина и разговаривали часами."
+  },
+  {
+    "id": "verb-speak",
+    "base": "speak",
+    "past": "spoke",
+    "participle": "spoken",
+    "translation": "говорить",
+    "level": "A1",
+    "example": "English is spoken in many countries around the world.",
+    "exampleTranslation": "На английском говорят во многих странах мира."
+  },
+  {
+    "id": "verb-lie",
+    "base": "lie",
+    "past": "lay",
+    "participle": "lain",
+    "translation": "лежать",
+    "level": "A1",
+    "example": "The cat lay in the sun all afternoon.",
+    "exampleTranslation": "Кошка полдня пролежала на солнце."
+  },
+  {
+    "id": "verb-lead",
+    "base": "lead",
+    "past": "led",
+    "participle": "led",
+    "translation": "вести, приводить; руководить",
+    "level": "A2",
+    "example": "Bad weather has led to delays at the airport.",
+    "exampleTranslation": "Из-за плохой погоды в аэропорту задерживаются рейсы."
+  },
+  {
+    "id": "verb-read",
+    "base": "read",
+    "past": "read",
+    "participle": "read",
+    "translation": "читать",
+    "level": "A1",
+    "example": "I read that book on holiday last year.",
+    "exampleTranslation": "Я прочитал эту книгу в отпуске в прошлом году."
+  },
+  {
+    "id": "verb-grow",
+    "base": "grow",
+    "past": "grew",
+    "participle": "grown",
+    "translation": "расти; выращивать",
+    "level": "A1",
+    "example": "Our little village has grown into a busy town.",
+    "exampleTranslation": "Наша деревенька превратилась в оживлённый город."
+  },
+  {
+    "id": "verb-lose",
+    "base": "lose",
+    "past": "lost",
+    "participle": "lost",
+    "translation": "терять; проигрывать",
+    "level": "A1",
+    "example": "I lost my phone on the bus yesterday.",
+    "exampleTranslation": "Вчера я потерял телефон в автобусе."
+  },
+  {
+    "id": "verb-fall",
+    "base": "fall",
+    "past": "fell",
+    "participle": "fallen",
+    "translation": "падать",
+    "level": "A1",
+    "example": "Prices have fallen sharply this month.",
+    "exampleTranslation": "В этом месяце цены резко упали."
+  },
+  {
+    "id": "verb-send",
+    "base": "send",
+    "past": "sent",
+    "participle": "sent",
+    "translation": "посылать, отправлять",
+    "level": "A1",
+    "example": "She sent me a postcard from Spain.",
+    "exampleTranslation": "Она прислала мне открытку из Испании."
+  },
+  {
+    "id": "verb-build",
+    "base": "build",
+    "past": "built",
+    "participle": "built",
+    "translation": "строить",
+    "level": "A1",
+    "example": "The bridge was built in the nineteenth century.",
+    "exampleTranslation": "Мост был построен в девятнадцатом веке."
+  },
+  {
+    "id": "verb-understand",
+    "base": "understand",
+    "past": "understood",
+    "participle": "understood",
+    "translation": "понимать",
+    "level": "A1",
+    "example": "Nobody understood what the teacher meant.",
+    "exampleTranslation": "Никто не понял, что имел в виду учитель."
+  },
+  {
+    "id": "verb-draw",
+    "base": "draw",
+    "past": "drew",
+    "participle": "drawn",
+    "translation": "рисовать",
+    "level": "A1",
+    "example": "This picture was drawn by my six-year-old son.",
+    "exampleTranslation": "Этот рисунок нарисовал мой шестилетний сын."
+  },
+  {
+    "id": "verb-break",
+    "base": "break",
+    "past": "broke",
+    "participle": "broken",
+    "translation": "ломать, разбивать",
+    "level": "A1",
+    "example": "He broke his leg playing football.",
+    "exampleTranslation": "Он сломал ногу, играя в футбол."
+  },
+  {
+    "id": "verb-spend",
+    "base": "spend",
+    "past": "spent",
+    "participle": "spent",
+    "translation": "тратить; проводить (время)",
+    "level": "A1",
+    "example": "We've spent too much money this month.",
+    "exampleTranslation": "В этом месяце мы потратили слишком много денег."
+  },
+  {
+    "id": "verb-cut",
+    "base": "cut",
+    "past": "cut",
+    "participle": "cut",
+    "translation": "резать",
+    "level": "A1",
+    "example": "She cut her finger while chopping onions.",
+    "exampleTranslation": "Она порезала палец, когда резала лук."
+  },
+  {
+    "id": "verb-rise",
+    "base": "rise",
+    "past": "rose",
+    "participle": "risen",
+    "translation": "подниматься, расти",
+    "level": "A2",
+    "example": "The cost of living has risen again.",
+    "exampleTranslation": "Стоимость жизни снова выросла."
+  },
+  {
+    "id": "verb-drive",
+    "base": "drive",
+    "past": "drove",
+    "participle": "driven",
+    "translation": "водить (машину), ехать",
+    "level": "A1",
+    "example": "We drove to Scotland for the weekend.",
+    "exampleTranslation": "Мы съездили на машине в Шотландию на выходные."
+  },
+  {
+    "id": "verb-buy",
+    "base": "buy",
+    "past": "bought",
+    "participle": "bought",
+    "translation": "покупать",
+    "level": "A1",
+    "example": "I've just bought a new pair of trainers.",
+    "exampleTranslation": "Я только что купил новые кроссовки."
+  },
+  {
+    "id": "verb-wear",
+    "base": "wear",
+    "past": "wore",
+    "participle": "worn",
+    "translation": "носить (одежду), быть одетым",
+    "level": "A1",
+    "example": "She wore a lovely blue dress to the wedding.",
+    "exampleTranslation": "На свадьбу она надела прелестное синее платье."
+  },
+  {
+    "id": "verb-choose",
+    "base": "choose",
+    "past": "chose",
+    "participle": "chosen",
+    "translation": "выбирать",
+    "level": "A1",
+    "example": "Have you chosen a name for the puppy?",
+    "exampleTranslation": "Вы уже выбрали имя для щенка?"
+  },
+  {
+    "id": "verb-learn",
+    "base": "learn",
+    "past": "learnt / learned",
+    "participle": "learnt / learned",
+    "translation": "учить, узнавать",
+    "level": "A1",
+    "example": "I learnt to swim when I was five.",
+    "exampleTranslation": "Я научился плавать в пять лет."
+  },
+  {
+    "id": "verb-sell",
+    "base": "sell",
+    "past": "sold",
+    "participle": "sold",
+    "translation": "продавать",
+    "level": "A1",
+    "example": "All the tickets have been sold.",
+    "exampleTranslation": "Все билеты уже проданы."
+  },
+  {
+    "id": "verb-win",
+    "base": "win",
+    "past": "won",
+    "participle": "won",
+    "translation": "выигрывать, побеждать",
+    "level": "A1",
+    "example": "Our team won the match three–nil.",
+    "exampleTranslation": "Наша команда выиграла матч со счётом три–ноль."
+  },
+  {
+    "id": "verb-teach",
+    "base": "teach",
+    "past": "taught",
+    "participle": "taught",
+    "translation": "учить, преподавать",
+    "level": "A1",
+    "example": "She has taught English for twenty years.",
+    "exampleTranslation": "Она преподаёт английский уже двадцать лет."
+  },
+  {
+    "id": "verb-eat",
+    "base": "eat",
+    "past": "ate",
+    "participle": "eaten",
+    "translation": "есть, кушать",
+    "level": "A1",
+    "example": "We ate fish and chips on the beach.",
+    "exampleTranslation": "Мы ели рыбу с картошкой фри на пляже."
+  },
+  {
+    "id": "verb-show",
+    "base": "show",
+    "past": "showed",
+    "participle": "shown",
+    "translation": "показывать",
+    "level": "A1",
+    "example": "The film will be shown on television tonight.",
+    "exampleTranslation": "Сегодня вечером фильм покажут по телевизору."
+  },
+  {
+    "id": "verb-forget",
+    "base": "forget",
+    "past": "forgot",
+    "participle": "forgotten",
+    "translation": "забывать",
+    "level": "A1",
+    "example": "I forgot my umbrella and got soaked.",
+    "exampleTranslation": "Я забыл зонт и промок насквозь."
+  },
+  {
+    "id": "verb-catch",
+    "base": "catch",
+    "past": "caught",
+    "participle": "caught",
+    "translation": "ловить; успевать (на транспорт)",
+    "level": "A2",
+    "example": "Police have caught the man who stole the car.",
+    "exampleTranslation": "Полиция поймала человека, который угнал машину."
+  },
+  {
+    "id": "verb-fight",
+    "base": "fight",
+    "past": "fought",
+    "participle": "fought",
+    "translation": "драться, бороться",
+    "level": "A2",
+    "example": "The two brothers fought over the last biscuit.",
+    "exampleTranslation": "Два брата подрались из-за последнего печенья."
+  },
+  {
+    "id": "verb-throw",
+    "base": "throw",
+    "past": "threw",
+    "participle": "thrown",
+    "translation": "бросать",
+    "level": "A2",
+    "example": "Someone has thrown a stone through our window.",
+    "exampleTranslation": "Кто-то разбил камнем наше окно."
+  },
+  {
+    "id": "verb-sleep",
+    "base": "sleep",
+    "past": "slept",
+    "participle": "slept",
+    "translation": "спать",
+    "level": "A1",
+    "example": "I slept badly because of the noise.",
+    "exampleTranslation": "Я плохо спал из-за шума."
+  },
+  {
+    "id": "verb-drink",
+    "base": "drink",
+    "past": "drank",
+    "participle": "drunk",
+    "translation": "пить",
+    "level": "A1",
+    "example": "Have you ever drunk real Turkish coffee?",
+    "exampleTranslation": "Ты когда-нибудь пил настоящий турецкий кофе?"
+  },
+  {
+    "id": "verb-fly",
+    "base": "fly",
+    "past": "flew",
+    "participle": "flown",
+    "translation": "летать, лететь",
+    "level": "A1",
+    "example": "We flew to Edinburgh on Friday evening.",
+    "exampleTranslation": "В пятницу вечером мы полетели в Эдинбург."
+  },
+  {
+    "id": "verb-hit",
+    "base": "hit",
+    "past": "hit",
+    "participle": "hit",
+    "translation": "ударять, попадать",
+    "level": "A2",
+    "example": "The coast has been hit by heavy storms.",
+    "exampleTranslation": "На побережье обрушились сильные штормы."
+  },
+  {
+    "id": "verb-cost",
+    "base": "cost",
+    "past": "cost",
+    "participle": "cost",
+    "translation": "стоить",
+    "level": "A1",
+    "example": "The repairs cost more than we expected.",
+    "exampleTranslation": "Ремонт обошёлся дороже, чем мы ожидали."
+  },
+  {
+    "id": "verb-hurt",
+    "base": "hurt",
+    "past": "hurt",
+    "participle": "hurt",
+    "translation": "причинять боль, ранить; болеть",
+    "level": "A2",
+    "example": "Luckily, nobody was hurt in the accident.",
+    "exampleTranslation": "К счастью, в аварии никто не пострадал."
+  },
+  {
+    "id": "verb-shut",
+    "base": "shut",
+    "past": "shut",
+    "participle": "shut",
+    "translation": "закрывать",
+    "level": "A2",
+    "example": "She shut the door quietly behind her.",
+    "exampleTranslation": "Она тихо закрыла за собой дверь."
+  },
+  {
+    "id": "verb-swim",
+    "base": "swim",
+    "past": "swam",
+    "participle": "swum",
+    "translation": "плавать",
+    "level": "A1",
+    "example": "I have never swum in the sea in winter.",
+    "exampleTranslation": "Я никогда не плавал в море зимой."
+  },
+  {
+    "id": "verb-sing",
+    "base": "sing",
+    "past": "sang",
+    "participle": "sung",
+    "translation": "петь",
+    "level": "A1",
+    "example": "The children sang a song for their parents.",
+    "exampleTranslation": "Дети спели песню для родителей."
+  },
+  {
+    "id": "verb-ride",
+    "base": "ride",
+    "past": "rode",
+    "participle": "ridden",
+    "translation": "ездить (верхом, на велосипеде)",
+    "level": "A1",
+    "example": "Have you ever ridden a horse?",
+    "exampleTranslation": "Ты когда-нибудь ездил верхом?"
+  },
+  {
+    "id": "verb-wake",
+    "base": "wake",
+    "past": "woke",
+    "participle": "woken",
+    "translation": "просыпаться; будить",
+    "level": "A1",
+    "example": "I woke up at five this morning.",
+    "exampleTranslation": "Сегодня я проснулся в пять утра."
+  },
+  {
+    "id": "verb-deal",
+    "base": "deal",
+    "past": "dealt",
+    "participle": "dealt",
+    "translation": "иметь дело; справляться",
+    "level": "A2",
+    "example": "The problem has already been dealt with.",
+    "exampleTranslation": "С проблемой уже разобрались."
+  },
+  {
+    "id": "verb-hide",
+    "base": "hide",
+    "past": "hid",
+    "participle": "hidden",
+    "translation": "прятать(ся)",
+    "level": "A2",
+    "example": "The children hid behind the sofa.",
+    "exampleTranslation": "Дети спрятались за диваном."
+  },
+  {
+    "id": "verb-steal",
+    "base": "steal",
+    "past": "stole",
+    "participle": "stolen",
+    "translation": "красть",
+    "level": "A2",
+    "example": "My bike was stolen from outside the library.",
+    "exampleTranslation": "Мой велосипед украли у библиотеки."
+  },
+  {
+    "id": "verb-beat",
+    "base": "beat",
+    "past": "beat",
+    "participle": "beaten",
+    "translation": "бить; побеждать",
+    "level": "A2",
+    "example": "Liverpool beat Chelsea two–one last Saturday.",
+    "exampleTranslation": "В прошлую субботу «Ливерпуль» обыграл «Челси» со счётом два–один."
+  },
+  {
+    "id": "verb-blow",
+    "base": "blow",
+    "past": "blew",
+    "participle": "blown",
+    "translation": "дуть",
+    "level": "A2",
+    "example": "The wind has blown the fence down.",
+    "exampleTranslation": "Ветер повалил забор."
+  },
+  {
+    "id": "verb-burn",
+    "base": "burn",
+    "past": "burnt / burned",
+    "participle": "burnt / burned",
+    "translation": "гореть, жечь",
+    "level": "A2",
+    "example": "I burnt the toast again this morning.",
+    "exampleTranslation": "Сегодня утром я опять сжёг тосты."
+  },
+  {
+    "id": "verb-dream",
+    "base": "dream",
+    "past": "dreamt / dreamed",
+    "participle": "dreamt / dreamed",
+    "translation": "мечтать; видеть сон",
+    "level": "A2",
+    "example": "I've always dreamt of living by the sea.",
+    "exampleTranslation": "Я всегда мечтал жить у моря."
+  },
+  {
+    "id": "verb-feed",
+    "base": "feed",
+    "past": "fed",
+    "participle": "fed",
+    "translation": "кормить",
+    "level": "A2",
+    "example": "We fed the ducks in the park.",
+    "exampleTranslation": "Мы покормили уток в парке."
+  },
+  {
+    "id": "verb-lend",
+    "base": "lend",
+    "past": "lent",
+    "participle": "lent",
+    "translation": "одалживать, давать взаймы",
+    "level": "A2",
+    "example": "I've lent my car to my brother for the weekend.",
+    "exampleTranslation": "Я одолжил брату машину на выходные."
+  },
+  {
+    "id": "verb-ring",
+    "base": "ring",
+    "past": "rang",
+    "participle": "rung",
+    "translation": "звонить",
+    "level": "A2",
+    "example": "The phone rang in the middle of the night.",
+    "exampleTranslation": "Посреди ночи зазвонил телефон."
+  },
+  {
+    "id": "verb-shake",
+    "base": "shake",
+    "past": "shook",
+    "participle": "shaken",
+    "translation": "трясти; потрясать",
+    "level": "A2",
+    "example": "She was badly shaken by the news.",
+    "exampleTranslation": "Эта новость её сильно потрясла."
+  },
+  {
+    "id": "verb-smell",
+    "base": "smell",
+    "past": "smelt / smelled",
+    "participle": "smelt / smelled",
+    "translation": "пахнуть; нюхать",
+    "level": "A2",
+    "example": "The kitchen smelt of fresh bread.",
+    "exampleTranslation": "На кухне пахло свежим хлебом."
+  },
+  {
+    "id": "verb-spell",
+    "base": "spell",
+    "past": "spelt / spelled",
+    "participle": "spelt / spelled",
+    "translation": "писать или называть по буквам",
+    "level": "A1",
+    "example": "Your surname has been spelt wrongly on the form.",
+    "exampleTranslation": "В анкете ваша фамилия написана с ошибкой."
+  },
+  {
+    "id": "verb-light",
+    "base": "light",
+    "past": "lit",
+    "participle": "lit",
+    "translation": "зажигать",
+    "level": "B1",
+    "example": "We lit a fire to keep warm.",
+    "exampleTranslation": "Мы развели костёр, чтобы согреться."
+  },
+  {
+    "id": "verb-lay",
+    "base": "lay",
+    "past": "laid",
+    "participle": "laid",
+    "translation": "класть; накрывать (на стол)",
+    "level": "B1",
+    "example": "Has anyone laid the table for dinner yet?",
+    "exampleTranslation": "Кто-нибудь уже накрыл на стол к ужину?"
+  },
+  {
+    "id": "verb-hang",
+    "base": "hang",
+    "past": "hung",
+    "participle": "hung",
+    "translation": "вешать; висеть",
+    "level": "B1",
+    "example": "He hung his coat on the back of the door.",
+    "exampleTranslation": "Он повесил пальто на дверь."
+  },
+  {
+    "id": "verb-bend",
+    "base": "bend",
+    "past": "bent",
+    "participle": "bent",
+    "translation": "гнуть, сгибать(ся)",
+    "level": "B1",
+    "example": "Someone has bent the key, and now it won't turn.",
+    "exampleTranslation": "Кто-то погнул ключ, и теперь он не поворачивается."
+  },
+  {
+    "id": "verb-bite",
+    "base": "bite",
+    "past": "bit",
+    "participle": "bitten",
+    "translation": "кусать",
+    "level": "B1",
+    "example": "A dog bit me when I was a child.",
+    "exampleTranslation": "В детстве меня укусила собака."
+  },
+  {
+    "id": "verb-freeze",
+    "base": "freeze",
+    "past": "froze",
+    "participle": "frozen",
+    "translation": "замерзать; замораживать",
+    "level": "B1",
+    "example": "The lake has frozen, so we can go skating.",
+    "exampleTranslation": "Озеро замёрзло, так что можно покататься на коньках."
+  },
+  {
+    "id": "verb-shine",
+    "base": "shine",
+    "past": "shone",
+    "participle": "shone",
+    "translation": "светить, сиять",
+    "level": "B1",
+    "example": "The sun shone all day at the seaside.",
+    "exampleTranslation": "На море весь день светило солнце."
+  },
+  {
+    "id": "verb-shoot",
+    "base": "shoot",
+    "past": "shot",
+    "participle": "shot",
+    "translation": "стрелять; снимать (фильм)",
+    "level": "B1",
+    "example": "The film was shot in Ireland.",
+    "exampleTranslation": "Фильм снимали в Ирландии."
+  },
+  {
+    "id": "verb-sink",
+    "base": "sink",
+    "past": "sank",
+    "participle": "sunk",
+    "translation": "тонуть",
+    "level": "B1",
+    "example": "The ship sank after hitting rocks near the coast.",
+    "exampleTranslation": "Корабль затонул, налетев на скалы у берега."
+  },
+  {
+    "id": "verb-stick",
+    "base": "stick",
+    "past": "stuck",
+    "participle": "stuck",
+    "translation": "приклеивать; застревать",
+    "level": "B1",
+    "example": "The car has got stuck in the mud.",
+    "exampleTranslation": "Машина застряла в грязи."
+  },
+  {
+    "id": "verb-spread",
+    "base": "spread",
+    "past": "spread",
+    "participle": "spread",
+    "translation": "распространять(ся); намазывать",
+    "level": "B1",
+    "example": "The news spread quickly around the school.",
+    "exampleTranslation": "Новость быстро разлетелась по школе."
+  },
+  {
+    "id": "verb-prove",
+    "base": "prove",
+    "past": "proved",
+    "participle": "proved / proven",
+    "translation": "доказывать; оказываться",
+    "level": "B1",
+    "example": "The theory has never been proved.",
+    "exampleTranslation": "Эта теория так и не была доказана."
+  },
+  {
+    "id": "verb-quit",
+    "base": "quit",
+    "past": "quit",
+    "participle": "quit",
+    "translation": "бросать (привычку, работу)",
+    "level": "B1",
+    "example": "He quit his job and went travelling.",
+    "exampleTranslation": "Он уволился с работы и отправился путешествовать."
+  },
+  {
+    "id": "verb-upset",
+    "base": "upset",
+    "past": "upset",
+    "participle": "upset",
+    "translation": "расстраивать",
+    "level": "B1",
+    "example": "She was really upset by his comments.",
+    "exampleTranslation": "Его слова её очень расстроили."
+  },
+  {
+    "id": "verb-tear",
+    "base": "tear",
+    "past": "tore",
+    "participle": "torn",
+    "translation": "рвать",
+    "level": "B2",
+    "example": "I tore my jeans on a nail.",
+    "exampleTranslation": "Я порвал джинсы о гвоздь."
+  },
+  {
+    "id": "verb-strike",
+    "base": "strike",
+    "past": "struck",
+    "participle": "struck",
+    "translation": "ударять; бастовать",
+    "level": "B2",
+    "example": "The house was struck by lightning last night.",
+    "exampleTranslation": "Прошлой ночью в дом ударила молния."
+  },
+  {
+    "id": "verb-swear",
+    "base": "swear",
+    "past": "swore",
+    "participle": "sworn",
+    "translation": "клясться; ругаться",
+    "level": "B2",
+    "example": "He swore he would never lie to her again.",
+    "exampleTranslation": "Он поклялся, что больше никогда не будет ей лгать."
+  },
+  {
+    "id": "verb-sweep",
+    "base": "sweep",
+    "past": "swept",
+    "participle": "swept",
+    "translation": "подметать",
+    "level": "B2",
+    "example": "Has anyone swept the kitchen floor today?",
+    "exampleTranslation": "Кто-нибудь подметал сегодня пол на кухне?"
+  },
+  {
+    "id": "verb-seek",
+    "base": "seek",
+    "past": "sought",
+    "participle": "sought",
+    "translation": "искать, стремиться",
+    "level": "B2",
+    "example": "Thousands of people sought help after the floods.",
+    "exampleTranslation": "После наводнения тысячи людей обратились за помощью."
+  },
+  {
+    "id": "verb-slide",
+    "base": "slide",
+    "past": "slid",
+    "participle": "slid",
+    "translation": "скользить",
+    "level": "B2",
+    "example": "The book had slid off the table.",
+    "exampleTranslation": "Книга соскользнула со стола."
+  },
+  {
+    "id": "verb-split",
+    "base": "split",
+    "past": "split",
+    "participle": "split",
+    "translation": "делить, раскалывать",
+    "level": "B2",
+    "example": "Yesterday we split the bill between the four of us.",
+    "exampleTranslation": "Вчера мы разделили счёт на четверых."
+  },
+  {
+    "id": "verb-bet",
+    "base": "bet",
+    "past": "bet",
+    "participle": "bet",
+    "translation": "держать пари, делать ставку",
+    "level": "B2",
+    "example": "He has bet all his money on one horse.",
+    "exampleTranslation": "Он поставил все деньги на одну лошадь."
+  },
+  {
+    "id": "verb-dig",
+    "base": "dig",
+    "past": "dug",
+    "participle": "dug",
+    "translation": "копать",
+    "level": "B2",
+    "example": "The children dug a big hole in the sand.",
+    "exampleTranslation": "Дети выкопали большую яму в песке."
+  },
+  {
+    "id": "verb-forgive",
+    "base": "forgive",
+    "past": "forgave",
+    "participle": "forgiven",
+    "translation": "прощать",
+    "level": "B2",
+    "example": "She has never forgiven him for forgetting her birthday.",
+    "exampleTranslation": "Она так и не простила ему, что он забыл о её дне рождения."
+  },
+  {
+    "id": "verb-lean",
+    "base": "lean",
+    "past": "leant / leaned",
+    "participle": "leant / leaned",
+    "translation": "наклоняться; прислоняться",
+    "level": "B2",
+    "example": "She leant against the wall and closed her eyes.",
+    "exampleTranslation": "Она прислонилась к стене и закрыла глаза."
+  },
+  {
+    "id": "verb-wind",
+    "base": "wind",
+    "past": "wound",
+    "participle": "wound",
+    "translation": "заводить (часы); наматывать; извиваться",
+    "level": "B2",
+    "example": "The old clock hasn't been wound for years.",
+    "exampleTranslation": "Старые часы не заводили уже много лет."
+  },
+  {
+    "id": "verb-bear",
+    "base": "bear",
+    "past": "bore",
+    "participle": "borne / born",
+    "translation": "выносить, терпеть",
+    "level": "B2",
+    "example": "She bore the pain without complaining.",
+    "exampleTranslation": "Она терпела боль, не жалуясь."
+  },
+  {
+    "id": "verb-arise",
+    "base": "arise",
+    "past": "arose",
+    "participle": "arisen",
+    "translation": "возникать",
+    "level": "B2",
+    "example": "A serious problem has arisen with the computer system.",
+    "exampleTranslation": "С компьютерной системой возникла серьёзная проблема."
+  },
+  {
+    "id": "verb-cast",
+    "base": "cast",
+    "past": "cast",
+    "participle": "cast",
+    "translation": "бросать; отдавать (голос)",
+    "level": "B2",
+    "example": "She cast her vote for the first time.",
+    "exampleTranslation": "Она впервые проголосовала."
+  },
+  {
+    "id": "verb-broadcast",
+    "base": "broadcast",
+    "past": "broadcast",
+    "participle": "broadcast",
+    "translation": "транслировать, передавать в эфир",
+    "level": "B2",
+    "example": "The match will be broadcast live on the BBC.",
+    "exampleTranslation": "Матч будут транслировать в прямом эфире на Би-би-си."
+  },
+  {
+    "id": "verb-speed",
+    "base": "speed",
+    "past": "sped / speeded",
+    "participle": "sped / speeded",
+    "translation": "мчаться; превышать скорость",
+    "level": "A2",
+    "example": "The car sped past us on the motorway.",
+    "exampleTranslation": "Машина промчалась мимо нас по трассе."
+  },
+  {
+    "id": "verb-rid",
+    "base": "rid",
+    "past": "rid",
+    "participle": "rid",
+    "translation": "избавлять (get rid of — избавляться)",
+    "level": "B2",
+    "example": "We have finally got rid of the old sofa.",
+    "exampleTranslation": "Мы наконец избавились от старого дивана."
+  },
+  {
+    "id": "verb-spring",
+    "base": "spring",
+    "past": "sprang",
+    "participle": "sprung",
+    "translation": "прыгать, вскакивать",
+    "level": "B2",
+    "example": "He sprang to his feet when she came in.",
+    "exampleTranslation": "Когда она вошла, он вскочил на ноги."
+  },
+  {
+    "id": "verb-mistake",
+    "base": "mistake",
+    "past": "mistook",
+    "participle": "mistaken",
+    "translation": "ошибаться; принимать (за другого)",
+    "level": "B2",
+    "example": "If I'm not mistaken, the shop closes at five.",
+    "exampleTranslation": "Если я не ошибаюсь, магазин закрывается в пять."
+  },
+  {
+    "id": "verb-burst",
+    "base": "burst",
+    "past": "burst",
+    "participle": "burst",
+    "translation": "лопаться, разрываться",
+    "level": "B2",
+    "example": "The balloon burst with a loud bang.",
+    "exampleTranslation": "Шарик лопнул с громким хлопком."
+  },
+  {
+    "id": "verb-swing",
+    "base": "swing",
+    "past": "swung",
+    "participle": "swung",
+    "translation": "качать(ся), размахивать",
+    "level": "B2",
+    "example": "The door had swung open in the wind.",
+    "exampleTranslation": "Дверь распахнулась от ветра."
+  },
+  {
+    "id": "verb-dive",
+    "base": "dive",
+    "past": "dived",
+    "participle": "dived",
+    "translation": "нырять",
+    "level": "B2",
+    "example": "He dived into the cold water without hesitating.",
+    "exampleTranslation": "Он не раздумывая нырнул в холодную воду."
+  },
+  {
+    "id": "verb-forbid",
+    "base": "forbid",
+    "past": "forbade",
+    "participle": "forbidden",
+    "translation": "запрещать",
+    "level": "B2",
+    "example": "Smoking is forbidden in all parts of the building.",
+    "exampleTranslation": "Курить запрещено во всём здании."
+  },
+  {
+    "id": "verb-spill",
+    "base": "spill",
+    "past": "spilt / spilled",
+    "participle": "spilt / spilled",
+    "translation": "проливать",
+    "level": "B2",
+    "example": "I spilt coffee all over my keyboard.",
+    "exampleTranslation": "Я пролил кофе прямо на клавиатуру."
+  },
+  {
+    "id": "verb-spoil",
+    "base": "spoil",
+    "past": "spoilt / spoiled",
+    "participle": "spoilt / spoiled",
+    "translation": "портить; баловать",
+    "level": "B2",
+    "example": "The rain has spoilt our picnic.",
+    "exampleTranslation": "Дождь испортил нам пикник."
+  },
+  {
+    "id": "verb-shrink",
+    "base": "shrink",
+    "past": "shrank",
+    "participle": "shrunk",
+    "translation": "садиться (о ткани), уменьшаться",
+    "level": "B2",
+    "example": "My favourite jumper shrank in the wash.",
+    "exampleTranslation": "Мой любимый свитер сел после стирки."
+  },
+  {
+    "id": "verb-withdraw",
+    "base": "withdraw",
+    "past": "withdrew",
+    "participle": "withdrawn",
+    "translation": "снимать (деньги); отзывать; отступать",
+    "level": "B2",
+    "example": "I've withdrawn some cash from the machine.",
+    "exampleTranslation": "Я снял немного наличных в банкомате."
+  },
+  {
+    "id": "verb-overcome",
+    "base": "overcome",
+    "past": "overcame",
+    "participle": "overcome",
+    "translation": "преодолевать",
+    "level": "B2",
+    "example": "She overcame her fear of flying.",
+    "exampleTranslation": "Она преодолела страх перед полётами."
+  },
+  {
+    "id": "verb-spin",
+    "base": "spin",
+    "past": "spun",
+    "participle": "spun",
+    "translation": "крутить(ся), вращать(ся)",
+    "level": "B2",
+    "example": "The car spun round on the icy road.",
+    "exampleTranslation": "Машину закрутило на обледенелой дороге."
+  },
+  {
+    "id": "verb-leap",
+    "base": "leap",
+    "past": "leapt / leaped",
+    "participle": "leapt / leaped",
+    "translation": "прыгать; резко расти",
+    "level": "B2",
+    "example": "House prices have leapt by ten per cent.",
+    "exampleTranslation": "Цены на жильё подскочили на десять процентов."
+  },
+  {
+    "id": "verb-kneel",
+    "base": "kneel",
+    "past": "knelt / kneeled",
+    "participle": "knelt / kneeled",
+    "translation": "вставать на колени",
+    "level": "B2",
+    "example": "She knelt down to tie her shoelace.",
+    "exampleTranslation": "Она опустилась на колени, чтобы завязать шнурок."
+  },
+  {
+    "id": "verb-bleed",
+    "base": "bleed",
+    "past": "bled",
+    "participle": "bled",
+    "translation": "кровоточить, истекать кровью",
+    "level": "B2",
+    "example": "His knee bled badly after he fell off his bike.",
+    "exampleTranslation": "Когда он упал с велосипеда, у него сильно кровоточило колено."
+  },
+  {
+    "id": "verb-sting",
+    "base": "sting",
+    "past": "stung",
+    "participle": "stung",
+    "translation": "жалить",
+    "level": "B2",
+    "example": "I've been stung by a wasp!",
+    "exampleTranslation": "Меня ужалила оса!"
+  },
+  {
+    "id": "verb-swell",
+    "base": "swell",
+    "past": "swelled",
+    "participle": "swollen",
+    "translation": "опухать; увеличиваться",
+    "level": "B2",
+    "example": "My ankle has swollen up since I fell.",
+    "exampleTranslation": "После падения у меня распухла лодыжка."
+  },
+  {
+    "id": "verb-creep",
+    "base": "creep",
+    "past": "crept",
+    "participle": "crept",
+    "translation": "красться, ползти",
+    "level": "B2",
+    "example": "We crept upstairs so as not to wake the baby.",
+    "exampleTranslation": "Мы прокрались наверх, чтобы не разбудить малыша."
+  },
+  {
+    "id": "verb-flee",
+    "base": "flee",
+    "past": "fled",
+    "participle": "fled",
+    "translation": "бежать, спасаться бегством",
+    "level": "B2",
+    "example": "Thousands of people have fled the fighting.",
+    "exampleTranslation": "Тысячи людей бежали от боевых действий."
+  },
+  {
+    "id": "verb-breed",
+    "base": "breed",
+    "past": "bred",
+    "participle": "bred",
+    "translation": "разводить (животных); размножаться",
+    "level": "B2",
+    "example": "These dogs were bred to work on farms.",
+    "exampleTranslation": "Этих собак вывели для работы на фермах."
+  },
+  {
+    "id": "verb-sew",
+    "base": "sew",
+    "past": "sewed",
+    "participle": "sewn",
+    "translation": "шить",
+    "level": "B2",
+    "example": "All the costumes were sewn by hand.",
+    "exampleTranslation": "Все костюмы сшиты вручную."
+  },
+  {
+    "id": "verb-mow",
+    "base": "mow",
+    "past": "mowed",
+    "participle": "mown / mowed",
+    "translation": "косить, стричь (траву)",
+    "level": "B2",
+    "example": "Dad mowed the lawn on Sunday morning.",
+    "exampleTranslation": "В воскресенье утром папа подстриг газон."
+  },
+  {
+    "id": "verb-weep",
+    "base": "weep",
+    "past": "wept",
+    "participle": "wept",
+    "translation": "плакать",
+    "level": "B2",
+    "example": "She wept when she heard the sad news.",
+    "exampleTranslation": "Она заплакала, услышав печальную новость."
+  },
+  {
+    "id": "verb-stink",
+    "base": "stink",
+    "past": "stank",
+    "participle": "stunk",
+    "translation": "вонять",
+    "level": "B2",
+    "example": "The fridge stank of old cheese.",
+    "exampleTranslation": "Из холодильника воняло старым сыром."
+  },
+  {
+    "id": "verb-spit",
+    "base": "spit",
+    "past": "spat",
+    "participle": "spat",
+    "translation": "плевать(ся)",
+    "level": "B2",
+    "example": "The baby spat out its food.",
+    "exampleTranslation": "Малыш выплюнул еду."
+  },
+  {
+    "id": "verb-cling",
+    "base": "cling",
+    "past": "clung",
+    "participle": "clung",
+    "translation": "цепляться",
+    "level": "B2",
+    "example": "The little girl clung to her mother's hand.",
+    "exampleTranslation": "Девочка вцепилась в мамину руку."
+  },
+  {
+    "id": "verb-fling",
+    "base": "fling",
+    "past": "flung",
+    "participle": "flung",
+    "translation": "швырять",
+    "level": "B2",
+    "example": "He flung his bag onto the bed.",
+    "exampleTranslation": "Он швырнул сумку на кровать."
+  },
+  {
+    "id": "verb-grind",
+    "base": "grind",
+    "past": "ground",
+    "participle": "ground",
+    "translation": "молоть",
+    "level": "B2",
+    "example": "This coffee has been freshly ground.",
+    "exampleTranslation": "Это свежемолотый кофе."
+  },
+  {
+    "id": "verb-shed",
+    "base": "shed",
+    "past": "shed",
+    "participle": "shed",
+    "translation": "сбрасывать (листья); проливать (слёзы)",
+    "level": "B2",
+    "example": "The trees have shed all their leaves.",
+    "exampleTranslation": "Деревья сбросили всю листву."
+  },
+  {
+    "id": "verb-forecast",
+    "base": "forecast",
+    "past": "forecast",
+    "participle": "forecast",
+    "translation": "предсказывать, прогнозировать",
+    "level": "B2",
+    "example": "Heavy rain has been forecast for the weekend.",
+    "exampleTranslation": "На выходные обещают сильный дождь."
+  }
+]

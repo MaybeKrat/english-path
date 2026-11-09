@@ -25,3 +25,21 @@ export async function loadRecording(voice: Voice, text: string, fetcher: typeof 
     return null;
   }
 }
+
+/** Settings line about the background download of the recordings; empty outside the desktop app. */
+export function voicePackText(status: VoicePackStatus | null): string {
+  if (!status) return '';
+  const megabytes = (bytes: number) => Math.round(bytes / 1048576);
+  switch (status.state) {
+    case 'ready':
+      return 'Записи скачаны.';
+    case 'downloading':
+      return `Скачиваются: ${megabytes(status.received)} из ${megabytes(status.total)} МБ. Пока слова читает голос Windows.`;
+    case 'verifying':
+      return 'Записи скачаны, идёт проверка.';
+    case 'error':
+      return `Записи пока не скачаны (${status.error}). Повтор автоматически; до тех пор слова читает голос Windows.`;
+    default:
+      return 'Проверка записей…';
+  }
+}

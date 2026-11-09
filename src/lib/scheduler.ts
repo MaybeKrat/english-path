@@ -20,6 +20,7 @@ export function defaultState(): AppState {
       repeatSeconds: 0,
       theme: 'system',
       zoom: 100,
+      verbsDailyNew: 5,
       film: null,
       voice: 'ryan',
     },
@@ -179,7 +180,9 @@ export function getStats(words: Word[], state: AppState, now: number, films: rea
   const learned = cards.filter((card) => card.state === 'review' && card.interval >= 21).length;
   const reviews = state.reviews.filter((review) => knownIds.has(review.wordId) && review.at <= now);
   const today = localDayKey(now);
-  const days = new Set(reviews.map((review) => localDayKey(review.at)));
+  // Practice of irregular verbs keeps the streak going too.
+  const days = new Set([...reviews, ...(state.verbs?.reviews ?? []).filter((review) => review.at <= now)]
+    .map((review) => localDayKey(review.at)));
   const cursor = new Date(now);
   cursor.setHours(12, 0, 0, 0);
   if (!days.has(today)) cursor.setDate(cursor.getDate() - 1);

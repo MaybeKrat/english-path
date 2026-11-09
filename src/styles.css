@@ -2553,9 +2553,9 @@ kbd {
     display: none;
   }
   .sidebar nav {
-    flex: 3;
+    flex: 4;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0;
   }
   .sidebar-bottom {
@@ -2692,6 +2692,140 @@ kbd {
     bottom: 80px;
   }
 }
+/* Irregular verbs (src/VerbsPage.tsx) */
+.verbs-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.verb-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 220px));
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  margin-top: 28px;
+}
+.verb-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.verb-inputs input {
+  height: 46px;
+  font-size: 19px;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.verb-inputs input::placeholder {
+  font-size: 13px;
+}
+.verb-forms {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 8px 40px;
+  margin-bottom: 6px;
+}
+.verb-forms small {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted-2);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.verb-forms strong {
+  color: var(--word);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+}
+.verb-card .answer .word-meta {
+  justify-content: center;
+}
+.verb-check {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 4px;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+.verb-typed {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.verb-typed.is-right {
+  background: var(--sage);
+  color: var(--green);
+}
+.verb-typed.is-wrong {
+  background: var(--red-bg);
+  color: var(--red);
+  text-decoration: line-through;
+}
+.rating.is-suggested {
+  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--green-2);
+}
+.rating-again.is-suggested {
+  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--red);
+}
+.verbs-table {
+  margin-top: 36px;
+}
+.page-head h2 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.verbs-table .search-field {
+  margin-bottom: 12px;
+}
+.table-head.verb-row,
+.word-row.verb-row {
+  grid-template-columns: minmax(90px, 140px) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr) 64px;
+}
+.row-form {
+  font-size: 13.5px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 720px) {
+  .verb-inputs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .verb-forms {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .verb-forms strong {
+    font-size: 32px;
+  }
+  .table-head.verb-row,
+  .word-row.verb-row {
+    grid-template-columns: minmax(70px, 1fr) minmax(0, 1fr) minmax(0, 1fr) 44px;
+  }
+  .verb-row .row-translation,
+  .table-head.verb-row span:nth-child(4) {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
