@@ -2715,59 +2715,6 @@ kbd {
   max-width: 1000px;
   margin: 0 auto;
 }
-.verb-inputs {
-  display: grid;
-  grid-template-columns: minmax(0, 300px);
-  justify-content: center;
-  gap: 14px;
-  width: 100%;
-  margin-top: 28px;
-}
-.verb-inputs label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  color: var(--muted);
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  text-align: left;
-  text-transform: uppercase;
-}
-/* Styled like the app's search field: rounded, soft border, green focus (Ivan disliked raw inputs, 09.11.2026). */
-.verb-inputs input {
-  height: 50px;
-  padding: 0 14px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--canvas);
-  color: var(--word);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 22px;
-  text-align: center;
-  text-transform: none;
-  letter-spacing: 0;
-  outline: 0;
-  transition:
-    border-color 0.17s,
-    background 0.17s,
-    box-shadow 0.17s;
-}
-.verb-inputs input:hover {
-  border-color: var(--stage-2);
-}
-.verb-inputs input:focus,
-.verb-inputs input:focus-visible {
-  border-color: var(--green-2);
-  background: var(--paper);
-  box-shadow: 0 0 0 3px var(--sage);
-  outline: 0;
-}
-.verb-inputs input::placeholder {
-  color: var(--muted-2);
-  font-family: "Golos Text Variable", "Segoe UI", sans-serif;
-  font-size: 13px;
-}
 .verb-forms {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -2801,39 +2748,6 @@ kbd {
 .verb-card .answer .word-meta {
   justify-content: center;
 }
-.verb-check {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 10px 0 4px;
-  color: var(--muted);
-  font-size: 13.5px;
-}
-.verb-typed {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-weight: 600;
-}
-.verb-typed.is-right {
-  background: var(--sage);
-  color: var(--green);
-}
-.verb-typed.is-wrong {
-  background: var(--red-bg);
-  color: var(--red);
-  text-decoration: line-through;
-}
-.rating.is-suggested {
-  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--green-2);
-}
-.rating-again.is-suggested {
-  box-shadow: 0 0 0 3px var(--canvas), 0 0 0 5px var(--red);
-}
 .verbs-table {
   margin-top: 36px;
 }
@@ -2859,9 +2773,6 @@ kbd {
   overflow-wrap: anywhere;
 }
 @media (max-width: 720px) {
-  .verb-inputs {
-    grid-template-columns: minmax(0, 1fr);
-  }
   .verb-forms {
     grid-template-columns: minmax(0, 1fr);
   }

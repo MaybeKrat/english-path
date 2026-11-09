@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { defaultState, getStudyQueue, scheduleCard } from '../src/lib/scheduler.ts';
 import { parseBackup } from '../src/lib/storage.ts';
-import { askedForm, formMatches, rateVerb, spokenForms, verbQueue, verbStats, type IrregularVerb } from '../src/lib/verbs.ts';
+import { askedForm, rateVerb, spokenForms, verbQueue, verbStats, type IrregularVerb } from '../src/lib/verbs.ts';
 import type { Word } from '../src/lib/types.ts';
 
 const NOW = new Date(2026, 10, 9, 12).getTime();
@@ -11,14 +11,7 @@ const verb = (base: string, past: string, participle: string, level: IrregularVe
 const allLearned = () => true;
 const VERBS = [verb('go', 'went', 'gone'), verb('spit', 'spat', 'spat', 'B2'), verb('learn', 'learnt / learned', 'learnt / learned'), verb('see', 'saw', 'seen')];
 
-test('Typed forms accept any listed variant and nothing else', () => {
-  assert.equal(formMatches(' Went ', 'went'), true);
-  assert.equal(formMatches('learned', 'learnt / learned'), true);
-  assert.equal(formMatches('learnt/learned', 'learnt / learned'), true);
-  assert.equal(formMatches('learnt or learned', 'learnt / learned'), true);
-  assert.equal(formMatches('learnd', 'learnt / learned'), false);
-  assert.equal(formMatches('goed', 'went'), false);
-  assert.equal(formMatches('', 'went'), false);
+test('Voices read both accepted forms', () => {
   assert.equal(spokenForms(VERBS[2]), 'learn, learnt or learned, learnt or learned');
 });
 

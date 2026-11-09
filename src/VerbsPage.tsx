@@ -1,6 +1,6 @@
 // Irregular verbs mode: the card shows the Russian meaning and asks one form — Past Simple or Past Participle by turns;
-// type or recall it, then rate the answer as on word cards. A new verb opens once its word is learned on the cards
-// (decided 09.11.2026).
+// recall it, open the answer and rate it as on word cards, without typing (Ivan, 09.11.2026). A new verb opens once its
+// word is learned on the cards.
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, AudioLines, Check, Lightbulb, Lock, RotateCcw, Search, X } from "lucide-react";
 import verbData from "./data/irregular-verbs.json";
@@ -9,7 +9,6 @@ import { stageOf } from "./lib/insights";
 import {
   askedForm,
   FORM_NAMES,
-  formMatches,
   isVerbOpen,
   rateVerb,
   spokenForms,
@@ -61,24 +60,16 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
   const verb = queue[0];
   const [revealed, setRevealed] = useState(false);
   const [hint, setHint] = useState(false);
-  const [answer, setAnswer] = useState("");
   const [undoState, setUndoState] = useState<AppState | null>(null);
   const [query, setQuery] = useState("");
-  const firstInput = useRef<HTMLInputElement>(null);
   const form = verb ? askedForm(verb, state) : "past";
-  const typed = answer.trim() !== "";
-  const answerRight = verb ? formMatches(answer, verb[form]) : false;
-  // A typed answer suggests a rating; the choice stays with the learner.
-  const suggested: Rating | null = !typed ? null : answerRight ? "good" : "again";
   const newLeft = queue.filter((item) => !progress.cards[item.id]).length;
   const dueLeft = queue.length - newLeft;
 
   useEffect(() => {
     setRevealed(false);
     setHint(false);
-    setAnswer("");
     if (verb && active) {
-      firstInput.current?.focus();
       // The front is Russian: the forms are prepared silently and spoken after the answer opens.
       prepare?.(spokenForms(verb));
     }
@@ -92,7 +83,6 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
   function reveal() {
     if (!verb) return;
     setRevealed(true);
-    (document.activeElement as HTMLElement | null)?.blur();
   }
 
   async function rate(rating: Rating) {
@@ -126,10 +116,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
       const target = event.target as HTMLElement;
       const inField = target.matches("input, textarea, select");
       if (!revealed) {
-        if (event.key === "Enter" && (inField ? target.closest(".verb-inputs") : !target.closest("button, a"))) {
-          event.preventDefault();
-          revealRef.current();
-        } else if (event.code === "Space" && !inField && !target.closest("button, a")) {
+        if ((event.code === "Space" || event.key === "Enter") && !inField && !target.closest("button, a")) {
           event.preventDefault();
           revealRef.current();
         } else if (event.code === "KeyE" && !inField) {
@@ -170,16 +157,6 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
     );
   }
 
-  function formResult(value: string, right: boolean) {
-    if (!value.trim()) return null;
-    return (
-      <span className={`verb-typed ${right ? "is-right" : "is-wrong"}`}>
-        {right ? <Check size={14} /> : <X size={14} />}
-        {value.trim()}
-      </span>
-    );
-  }
-
   function renderCard(item: IrregularVerb) {
     const known = progress.cards[item.id];
     const parts = exampleParts(item);
@@ -198,19 +175,6 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
               <>
                 <h2 className="card-word translation-prompt">{item.translation}</h2>
                 {hint && <p className="example hint-example">{item.exampleTranslation}</p>}
-                <div className="verb-inputs">
-                  <label>
-                    <span>{FORM_NAMES[form]}</span>
-                    <input
-                      ref={firstInput}
-                      value={answer}
-                      onChange={(event) => setAnswer(event.target.value)}
-                      autoComplete="off"
-                      spellCheck={false}
-                      placeholder="можно вспомнить про себя"
-                    />
-                  </label>
-                </div>
               </>
             ) : (
               <div className="answer" aria-live="polite">
@@ -230,11 +194,6 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                   <span>{item.translation}</span>
                   {audioButton(spokenForms(item), `Произнести ${item.base}, ${item.past}, ${item.participle}`)}
                 </div>
-                {typed && (
-                  <p className="verb-check">
-                    Вы ввели: {formResult(answer, answerRight)}
-                  </p>
-                )}
                 <p className="example">
                   {parts ? (
                     <>
@@ -258,23 +217,23 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                 <kbd>E</kbd>
               </button>
             ) : (
-              <span>{revealed ? "Насколько легко вспомнили?" : "Введите форму или вспомните про себя"}</span>
+              <span>{revealed ? "Насколько легко вспомнили?" : "Не спешите. Попробуйте вспомнить."}</span>
             )}
             <span>Русский → {FORM_NAMES[form]}</span>
           </div>
         </div>
         {!revealed ? (
           <button className="reveal-button" onClick={reveal}>
-            {typed ? "Проверить" : "Показать ответ"}
+            Показать ответ
             <ArrowRight size={18} />
-            <kbd>Enter</kbd>
+            <kbd>Пробел</kbd>
           </button>
         ) : (
           <div className="rating-grid" aria-label="Оцените ответ">
             {ratings.map((rating, index) => (
               <button
                 key={rating}
-                className={`rating rating-${rating}${suggested === rating ? " is-suggested" : ""}`}
+                className={`rating rating-${rating}`}
                 disabled={saving}
                 onClick={() => rate(rating)}
               >
@@ -287,13 +246,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
         )}
         <div className="practice-footer">
           <span>
-            {revealed
-              ? suggested === "good"
-                ? "Верно. Оцените ответ клавишами 1–4"
-                : suggested === "again"
-                  ? "Ошибка. Оцените ответ клавишами 1–4"
-                  : "Оцените ответ клавишами 1–4"
-              : "Enter — проверить"}
+            {revealed ? "Оцените ответ клавишами 1–4" : "Сначала вспомните сами, затем откройте ответ"}
           </span>
           <button disabled={!undoState || saving} onClick={undo}>
             <RotateCcw size={14} />

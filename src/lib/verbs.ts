@@ -49,17 +49,6 @@ export function spokenForms(verb: IrregularVerb): string {
   return [verb.base, verb.past, verb.participle].map((form) => form.split(' / ').join(' or ')).join(', ');
 }
 
-function normalize(text: string): string {
-  return text.toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
-}
-
-/** Whether a typed form is right: any accepted variant counts, and so does "learnt / learned" or "learnt or learned". */
-export function formMatches(typed: string, expected: string): boolean {
-  const accepted = new Set(expected.split('/').map(normalize));
-  const parts = normalize(typed).split(/\s*(?:\/|,|\bor\b)\s*/).filter(Boolean);
-  return parts.length > 0 && parts.every((part) => accepted.has(part));
-}
-
 /** New verbs order: by level, then by the order of the list (the most useful first). */
 export function newVerbs(verbs: readonly IrregularVerb[], state: AppState, learned: LearnedCheck): IrregularVerb[] {
   const { cards } = verbProgress(state);
