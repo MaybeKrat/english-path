@@ -171,3 +171,34 @@ test('The chosen voice survives backups; older backups get Ryan and unknown voic
     assert.throws(() => parseBackup(JSON.stringify({ ...state, settings: { ...state.settings, voice } }), IDS), /голос озвучки/);
   }
 });
+
+test('Interface scale survives backups, old backups open at 100% and invalid scales are rejected', () => {
+  const state = fixture();
+  state.settings.zoom = 125;
+  assert.deepEqual(parseBackup(JSON.stringify(state), IDS), state);
+  const legacy = JSON.parse(JSON.stringify(state));
+  delete legacy.settings.zoom;
+  assert.equal(parseBackup(JSON.stringify(legacy), IDS).settings.zoom, 100);
+  for (const zoom of [null, 0, 99, 400, '100', [100]]) {
+    const broken = { ...state, settings: { ...state.settings, zoom } };
+    assert.throws(() => parseBackup(JSON.stringify(broken), IDS), /масштаб интерфейса/);
+  }
+});
+
+test('The speech repeat interval survives backups, old backups do not repeat and invalid values are rejected', () => {
+  const state = fixture();
+  state.settings.autoSpeak = true;
+  for (const seconds of [0, 5, 10, 15, 20, 30]) {
+    state.settings.repeatSeconds = seconds;
+    assert.deepEqual(parseBackup(JSON.stringify(state), IDS), state);
+  }
+  const legacy = JSON.parse(JSON.stringify(state));
+  delete legacy.settings.repeatSeconds;
+  assert.equal(parseBackup(JSON.stringify(legacy), IDS).settings.repeatSeconds, 0);
+  legacy.settings.repeatSpeech = true;
+  assert.equal(parseBackup(JSON.stringify(legacy), IDS).settings.repeatSeconds, 5, 'The first on/off build meant 5 seconds');
+  for (const repeatSeconds of [null, 1, 7, 60, '5', true, []]) {
+    const broken = { ...state, settings: { ...state.settings, repeatSeconds } };
+    assert.throws(() => parseBackup(JSON.stringify(broken), IDS), /повтор озвучки/);
+  }
+});

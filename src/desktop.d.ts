@@ -5,4 +5,7 @@ interface Window {
   oxfordTheme?: {
     setSource(source: "system" | "light" | "dark"): Promise<void>;
   };
+  oxfordZoom?: {
+    set(factor: number): void;
+  };
 }

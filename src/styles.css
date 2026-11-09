@@ -44,6 +44,8 @@
   --shadow-pop: 0 22px 50px -14px rgb(20 40 30 / 38%);
   --radius: 16px;
   --sidebar: 232px;
+  /* The native window buttons keep their size at any interface scale; App.tsx sets --zoom. */
+  --titlebar-height: calc(42px / var(--zoom, 1));
 }
 
 /* Match the system canvas before the saved preference is applied at startup. */
@@ -115,8 +117,19 @@ select,
 input {
   -webkit-tap-highlight-color: transparent;
 }
+/* Cursors grow with the interface scale of the desktop app; App.tsx sets the variables above 100%. */
+:root {
+  cursor: var(--cursor-default, auto);
+}
+a:any-link {
+  cursor: var(--cursor-pointer, pointer);
+}
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="file"]),
+textarea {
+  cursor: var(--cursor-text, text);
+}
 button {
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
   border: 0;
   background: none;
   padding: 0;
@@ -127,7 +140,7 @@ button {
     transform 0.17s;
 }
 button:disabled {
-  cursor: default;
+  cursor: var(--cursor-default, default);
   opacity: 0.4;
 }
 button:not(:disabled):active {
@@ -169,7 +182,7 @@ select {
     no-repeat right 10px center / 13px;
   color: var(--ink);
   font-size: 13px;
-  cursor: pointer;
+  cursor: var(--cursor-pointer, pointer);
 }
 kbd {
   font: 600 11px "Golos Text Variable", sans-serif;
@@ -1361,6 +1374,16 @@ kbd {
   top: calc(100% + 6px);
   right: 0;
 }
+.film-menu.speech-menu {
+  width: min(320px, calc(100vw - 32px));
+}
+.speech-menu .menu-item {
+  padding: 6px 10px;
+}
+.speech-menu .menu-thumb {
+  width: 34px;
+  height: 34px;
+}
 .film-menu-card {
   top: 0;
   right: calc(100% + 10px);
@@ -2322,7 +2345,7 @@ kbd {
   top: 0;
   left: env(titlebar-area-x, 0px);
   width: env(titlebar-area-width, calc(100% - 138px));
-  height: 42px;
+  height: var(--titlebar-height);
   z-index: 30;
   /* The sidebar color and its border continue up to the top edge of the window. */
   background: linear-gradient(
@@ -2339,20 +2362,61 @@ kbd {
   background: var(--canvas);
 }
 .desktop-app {
-  padding-top: 42px;
+  padding-top: var(--titlebar-height);
 }
 .desktop-app .sidebar {
-  padding-top: 52px;
+  padding-top: calc(var(--titlebar-height) + 10px);
 }
 .desktop-app .main-content {
-  min-height: calc(100vh - 42px);
+  min-height: calc(100vh - var(--titlebar-height));
   padding-top: 24px;
 }
 .desktop-app .practice-column {
-  min-height: calc(100vh - 42px - 64px);
+  min-height: calc(100vh - var(--titlebar-height) - 64px);
 }
 .desktop-app .word-detail {
-  max-height: calc(100vh - 42px - 40px);
+  max-height: calc(100vh - var(--titlebar-height) - 40px);
+}
+
+/* Focus mode: the card fills the window and its text grows with the free space.
+   A large interface scale makes the window small in CSS pixels; fixed sizes left the card half empty. */
+.is-focus .main-content,
+.is-focus.desktop-app .main-content {
+  min-height: 0;
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+.is-focus .practice-column,
+.is-focus.desktop-app .practice-column {
+  min-height: calc(100vh - var(--titlebar-height, 0px) - 28px);
+}
+.is-focus .session {
+  margin-bottom: 12px;
+}
+.is-focus .session-legend {
+  display: none;
+}
+.is-focus .flashcard {
+  container-type: inline-size;
+  min-height: 0;
+}
+.is-focus .card-word {
+  font-size: clamp(54px, min(14cqw, 20vh), 220px);
+}
+.is-focus .card-word.is-small {
+  font-size: clamp(40px, min(8cqw, 9vh), 120px);
+}
+.is-focus .card-word.translation-prompt {
+  font-size: clamp(30px, min(6cqw, 8vh), 96px);
+}
+.is-focus .answer {
+  width: min(900px, 100%);
+}
+.is-focus .answer h3 {
+  font-size: clamp(24px, min(4.5cqw, 6vh), 72px);
+}
+.is-focus .example {
+  font-size: clamp(16px, min(2.4cqw, 3.4vh), 40px);
 }
 
 /* ---------- smaller windows ---------- */
@@ -2404,7 +2468,7 @@ kbd {
     box-shadow: var(--shadow-pop);
   }
   .desktop-app .word-detail {
-    top: 58px;
+    top: calc(var(--titlebar-height) + 16px);
     max-height: none;
   }
 }
@@ -2531,6 +2595,12 @@ kbd {
   }
   .session-tools {
     margin-left: 0;
+  }
+  /* The tools move to the left edge, so the speech menu opens to the right of its button. */
+  .film-menu.speech-menu {
+    right: auto;
+    left: 0;
+    width: min(320px, calc(100vw - 32px));
   }
   .card-word {
     font-size: 54px;

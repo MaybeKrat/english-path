@@ -19,6 +19,7 @@ import {
   Lightbulb,
   Maximize2,
   Minimize2,
+  Repeat,
   Repeat2,
   RotateCcw,
   Search,
@@ -49,6 +50,9 @@ import { createSpeechController } from "./lib/speech";
 import { createBufferedSpeechController } from "./lib/buffered-speech";
 import { loadRecording, voices } from "./lib/voices";
 import { applyTheme, SYSTEM_THEME_QUERY } from "./lib/theme";
+import { DEFAULT_ZOOM, stepZoom, ZOOM_LEVELS } from "./lib/zoom";
+import { scaledCursors } from "./lib/cursors";
+import { SPEECH_MODES, speechMode, speechModeLabel, speechModeSettings, type SpeechMode } from "./lib/speech-modes";
 import { getTopicName, orderWordsForStudy, TOPICS } from "./lib/topics";
 import { getActiveFilm, getFilmProgress, getVisibleFilmCards, learnedCheck, percent } from "./lib/films";
 import {
@@ -227,7 +231,7 @@ export default function App() {
   const [libraryPage, setLibraryPage] = useState(0);
   const [detail, setDetail] = useState<Word | null>(null);
   const [pendingImport, setPendingImport] = useState<AppState | null>(null);
-  const [filmMenu, setFilmMenu] = useState<"chip" | "card" | null>(null);
+  const [filmMenu, setFilmMenu] = useState<"chip" | "card" | "speech" | null>(null);
   const [filmPicker, setFilmPicker] = useState(false);
   const [filmQuery, setFilmQuery] = useState("");
   const [filmFilter, setFilmFilter] = useState<"all" | "started">("all");
@@ -249,6 +253,8 @@ export default function App() {
   const isRevealed = drill ? drill.revealed : revealed;
   const stats = useMemo(() => getStats(words, state, now, films), [state, now]);
   const reverse = state.settings.direction === "ru-en";
+  const currentSpeechMode = speechMode(state.settings);
+  const repeatSeconds = typeof currentSpeechMode === "number" ? currentSpeechMode : 0;
   const activeFilm = getActiveFilm(films, state);
   const filmProgress = useMemo(
     () => (activeFilm ? getFilmProgress(activeFilm, state) : null),
@@ -293,6 +299,51 @@ export default function App() {
       media.removeEventListener("change", refreshTheme);
     };
   }, [state.settings.theme]);
+
+  useLayoutEffect(() => {
+    if (!window.oxfordZoom) return;
+    window.oxfordZoom.set(state.settings.zoom / 100);
+    // Above 100% the mouse cursor grows with the interface, see src/lib/cursors.ts.
+    const cursors = scaledCursors(state.settings.zoom);
+    const root = document.documentElement.style;
+    root.setProperty("--zoom", String(state.settings.zoom / 100));
+    for (const kind of ["default", "pointer", "text"] as const) {
+      if (cursors) root.setProperty(`--cursor-${kind}`, cursors[kind]);
+      else root.removeProperty(`--cursor-${kind}`);
+    }
+  }, [state.settings.zoom]);
+
+  // Desktop scale shortcuts, as in a browser: Ctrl+plus, Ctrl+minus, Ctrl+0 and Ctrl+wheel.
+  const zoomRef = useRef(state.settings.zoom);
+  zoomRef.current = state.settings.zoom;
+  const setZoomRef = useRef<(zoom: number) => void>(() => {});
+  setZoomRef.current = (zoom: number) => {
+    if (zoom !== zoomRef.current) updateSettings({ zoom });
+  };
+  useEffect(() => {
+    if (!window.oxfordZoom) return;
+    function onKey(event: KeyboardEvent) {
+      if (!event.ctrlKey || event.altKey || event.metaKey) return;
+      let zoom: number | undefined;
+      if (event.code === "Equal" || event.code === "NumpadAdd") zoom = stepZoom(zoomRef.current, 1);
+      else if (event.code === "Minus" || event.code === "NumpadSubtract") zoom = stepZoom(zoomRef.current, -1);
+      else if (event.code === "Digit0" || event.code === "Numpad0") zoom = DEFAULT_ZOOM;
+      if (zoom === undefined) return;
+      event.preventDefault();
+      setZoomRef.current(zoom);
+    }
+    function onWheel(event: WheelEvent) {
+      if (!event.ctrlKey || event.deltaY === 0) return;
+      event.preventDefault();
+      setZoomRef.current(stepZoom(zoomRef.current, event.deltaY < 0 ? 1 : -1));
+    }
+    window.addEventListener("keydown", onKey);
+    window.addEventListener("wheel", onWheel, { passive: false });
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      window.removeEventListener("wheel", onWheel);
+    };
+  }, []);
 
   useEffect(() => {
     const callbacks = {
@@ -388,6 +439,41 @@ export default function App() {
     const text = page === "library" ? detail?.word : page === "study" ? current?.word : undefined;
     if (text && !pendingImport) speech.current?.prepare?.(text);
   }, [current?.id, page, detail?.id, !!pendingImport]);
+  // Repeat mode: while the window has focus and the English side waits for an answer,
+  // the word is spoken again every few seconds (decided 08.11.2026).
+  const [windowFocused, setWindowFocused] = useState(() => document.hasFocus());
+  useEffect(() => {
+    const onFocus = () => setWindowFocused(true);
+    const onBlur = () => setWindowFocused(false);
+    window.addEventListener("focus", onFocus);
+    window.addEventListener("blur", onBlur);
+    return () => {
+      window.removeEventListener("focus", onFocus);
+      window.removeEventListener("blur", onBlur);
+    };
+  }, []);
+  const repeatWord =
+    page === "study" &&
+    current &&
+    (drill || current.id === activeId) &&
+    !pendingImport &&
+    !filmPicker &&
+    state.settings.autoSpeak &&
+    repeatSeconds > 0 &&
+    !reverse &&
+    !isRevealed &&
+    windowFocused
+      ? current.word
+      : null;
+  const speakRef = useRef(speak);
+  speakRef.current = speak;
+  useEffect(() => {
+    if (!repeatWord) return;
+    const id = window.setInterval(() => {
+      if (!document.hidden && document.hasFocus()) speakRef.current(repeatWord);
+    }, repeatSeconds * 1000);
+    return () => clearInterval(id);
+  }, [repeatWord, current?.id, repeatSeconds]);
   useEffect(() => {
     if (
       page === "study" &&
@@ -740,6 +826,11 @@ export default function App() {
     );
   }
 
+  function renderSpeechIcon(mode: SpeechMode) {
+    if (mode === "off") return <VolumeX size={16} />;
+    if (mode === "once") return <Volume2 size={16} />;
+    return <Repeat size={15} />;
+  }
   function renderFilmMenu(anchor: "chip" | "card") {
     if (filmMenu !== anchor) return null;
     const row = (item: FilmReadiness, selected = false) => (
@@ -867,16 +958,47 @@ export default function App() {
               </button>
               {renderFilmMenu("chip")}
             </span>
-            <button
-              className={`chip icon${state.settings.autoSpeak ? " on" : ""}`}
-              aria-pressed={state.settings.autoSpeak}
-              aria-label="Произносить автоматически"
-              title={state.settings.autoSpeak ? "Автоозвучка включена" : "Автоозвучка выключена"}
-              disabled={saving}
-              onClick={() => updateSettings({ autoSpeak: !state.settings.autoSpeak })}
-            >
-              {state.settings.autoSpeak ? <Volume2 size={16} /> : <VolumeX size={16} />}
-            </button>
+            <span className="menu-anchor">
+              <button
+                className={`chip film-menu-trigger${currentSpeechMode !== "off" ? " on" : ""}${filmMenu === "speech" ? " pressed" : ""}`}
+                aria-haspopup="menu"
+                aria-expanded={filmMenu === "speech"}
+                aria-label={`Автоозвучка: ${speechModeLabel(currentSpeechMode).toLowerCase()}`}
+                title={`Автоозвучка: ${speechModeLabel(currentSpeechMode).toLowerCase()}`}
+                onClick={() => setFilmMenu(filmMenu === "speech" ? null : "speech")}
+              >
+                {renderSpeechIcon(currentSpeechMode)}
+                {repeatSeconds > 0 && `${repeatSeconds} с`}
+                <ChevronDown size={14} />
+              </button>
+              {filmMenu === "speech" && (
+                <div className="film-menu film-menu-chip speech-menu" role="menu">
+                  <div className="menu-head">
+                    <strong>Автоозвучка</strong>
+                    <p>Повтор звучит, пока окно приложения активно и перевод не открыт.</p>
+                  </div>
+                  {SPEECH_MODES.map((mode) => (
+                    <button
+                      key={mode}
+                      role="menuitemradio"
+                      aria-checked={mode === currentSpeechMode}
+                      className={`menu-item${mode === currentSpeechMode ? " selected" : ""}`}
+                      disabled={saving}
+                      onClick={() => {
+                        setFilmMenu(null);
+                        if (mode !== currentSpeechMode) updateSettings(speechModeSettings(mode));
+                      }}
+                    >
+                      <span className="menu-thumb menu-icon">{renderSpeechIcon(mode)}</span>
+                      <span className="menu-text">
+                        <strong>{speechModeLabel(mode)}</strong>
+                      </span>
+                      {mode === currentSpeechMode && <Check size={18} />}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </span>
             <button
               className={`chip icon${focusMode ? " on" : ""}`}
               aria-pressed={focusMode}
@@ -1821,18 +1943,27 @@ export default function App() {
             )}
             <div className="setting-row">
               <div>
-                <strong>Произносить автоматически</strong>
-                <p>При показе английской стороны. Зависит от голосов браузера.</p>
+                <label htmlFor="speech-mode">Произносить автоматически</label>
+                <p>
+                  При показе английской стороны. Повтор звучит, пока окно приложения активно и перевод не открыт, и только
+                  в направлении «Английский → русский».
+                </p>
               </div>
-              <button
-                className={`toggle ${state.settings.autoSpeak ? "on" : ""}`}
-                role="switch"
-                aria-checked={state.settings.autoSpeak}
-                aria-label="Произносить автоматически"
-                onClick={() => updateSettings({ autoSpeak: !state.settings.autoSpeak })}
+              <select
+                id="speech-mode"
+                value={String(currentSpeechMode)}
+                disabled={saving}
+                onChange={(event) => {
+                  const value = event.target.value;
+                  updateSettings(speechModeSettings((value === "off" || value === "once" ? value : Number(value)) as SpeechMode));
+                }}
               >
-                <span />
-              </button>
+                {SPEECH_MODES.map((mode) => (
+                  <option key={mode} value={String(mode)}>
+                    {speechModeLabel(mode)}
+                  </option>
+                ))}
+              </select>
             </div>
           </section>
           <div className="settings-side">
@@ -1858,6 +1989,29 @@ export default function App() {
                   <option value="dark">Тёмная</option>
                 </select>
               </div>
+              {isDesktop && (
+                <div className="setting-row vertical theme-setting">
+                  <div>
+                    <label htmlFor="zoom-preference">Масштаб</label>
+                    <p>
+                      Размер текста и кнопок; больше 100% растёт и курсор мыши. Быстро: Ctrl+колесо мыши, Ctrl+плюс,
+                      Ctrl+минус, Ctrl+0 — 100%.
+                    </p>
+                  </div>
+                  <select
+                    id="zoom-preference"
+                    value={state.settings.zoom}
+                    disabled={saving}
+                    onChange={(event) => updateSettings({ zoom: Number(event.target.value) })}
+                  >
+                    {ZOOM_LEVELS.map((level) => (
+                      <option key={level} value={level}>
+                        {level}%{level === DEFAULT_ZOOM ? " — обычный" : ""}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
             </section>
             <section className="panel">
               <h3>Ваш прогресс — с вами</h3>

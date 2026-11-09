@@ -2,6 +2,8 @@ import type { AppState, CardProgress, Level, Rating, ReviewLog, Settings } from 
 import { defaultState, MAX_DAILY_EXTRA } from './scheduler.ts';
 import { finiteRange, isRecord, timestamp, validCard } from './validation.ts';
 import { isVoice } from './voices.ts';
+import { DEFAULT_ZOOM, isZoom } from './zoom.ts';
+import { isRepeatSeconds } from './speech-modes.ts';
 
 export const STORAGE_KEY = 'oxford-cards:v1';
 
@@ -67,6 +69,10 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
     invalid('некорректный мод фильма.');
   }
   if (settings.voice !== undefined && !isVoice(settings.voice)) invalid('некорректный голос озвучки.');
+  if (settings.zoom !== undefined && !isZoom(settings.zoom)) invalid('некорректный масштаб интерфейса.');
+  if (settings.repeatSeconds !== undefined && !isRepeatSeconds(settings.repeatSeconds)) invalid('некорректный повтор озвучки.');
+  // The first build of the repeat mode stored an on/off flag for a 5-second repeat.
+  if (settings.repeatSpeech !== undefined && typeof settings.repeatSpeech !== 'boolean') invalid('некорректный повтор озвучки.');
   let dailyExtra: AppState['dailyExtra'];
   if (parsed.dailyExtra !== undefined) {
     const extra = parsed.dailyExtra;
@@ -84,8 +90,12 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
       levels: [...settings.levels] as Level[],
       direction: settings.direction as Settings['direction'],
       autoSpeak: settings.autoSpeak,
+      // Backups made before the repeat mode do not repeat.
+      repeatSeconds: (settings.repeatSeconds ?? (settings.repeatSpeech === true ? 5 : 0)) as Settings['repeatSeconds'],
       // Older version-1 backups follow the operating system without losing progress.
       theme: (settings.theme ?? 'system') as Settings['theme'],
+      // Backups made before the scale setting open at 100%.
+      zoom: (settings.zoom ?? DEFAULT_ZOOM) as Settings['zoom'],
       // Backups made before film modes start without a mode.
       film: (settings.film ?? null) as Settings['film'],
       // Backups made before recorded voices get the default voice.

@@ -63,7 +63,11 @@ export interface Settings {
   levels: Level[];
   direction: 'en-ru' | 'ru-en';
   autoSpeak: boolean;
+  /** With autoSpeak: repeat the English word every N seconds until the answer is shown; 0 — once. See src/lib/speech-modes.ts. */
+  repeatSeconds: number;
   theme: ThemePreference;
+  /** Interface scale of the desktop app in percent; see src/lib/zoom.ts. */
+  zoom: number;
   /** Active film mode id, or null without a mode. */
   film: string | null;
   voice: Voice;
