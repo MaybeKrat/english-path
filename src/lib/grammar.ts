@@ -1,14 +1,15 @@
 import type { AppState, GrammarAnswer, TenseId } from './types.ts';
 import { localDayKey } from './scheduler.ts';
 
-/** The four most used tenses of the reference and the exercises (decided 09.11.2026). */
-export const TENSES: readonly TenseId[] = ['present-simple', 'present-continuous', 'past-simple', 'present-perfect'];
+/** The five tenses of the reference and the exercises, chosen by Ivan 09.11.2026. */
+export const TENSES: readonly TenseId[] = ['present-simple', 'present-continuous', 'past-simple', 'present-perfect', 'future-simple'];
 
 export const TENSE_NAMES: Record<TenseId, string> = {
   'present-simple': 'Present Simple',
   'present-continuous': 'Present Continuous',
   'past-simple': 'Past Simple',
   'present-perfect': 'Present Perfect',
+  'future-simple': 'Future Simple',
 };
 
 export function isTense(value: unknown): value is TenseId {

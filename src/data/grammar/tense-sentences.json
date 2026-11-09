@@ -1824,5 +1824,457 @@
     "cue": "so far",
     "translation": "Сколько стран ты уже посетил?",
     "why": "Опыт до настоящего момента — so far."
+  },
+  {
+    "id": "future-simple-01",
+    "tense": "future-simple",
+    "text": "It will probably rain tomorrow.",
+    "verb": [
+      "will",
+      "rain"
+    ],
+    "cue": "tomorrow",
+    "translation": "Завтра, наверное, будет дождь.",
+    "why": "Прогноз на будущее — will + глагол, tomorrow."
+  },
+  {
+    "id": "future-simple-02",
+    "tense": "future-simple",
+    "text": "I will call you tonight.",
+    "verb": [
+      "will call"
+    ],
+    "cue": "tonight",
+    "translation": "Я позвоню тебе сегодня вечером.",
+    "why": "Обещание — will + глагол; tonight бывает и в Continuous, решает форма."
+  },
+  {
+    "id": "future-simple-03",
+    "tense": "future-simple",
+    "text": "She will be thirty next year.",
+    "verb": [
+      "will be"
+    ],
+    "cue": "next year",
+    "translation": "В следующем году ей исполнится тридцать.",
+    "why": "Будущий факт — will be, next year."
+  },
+  {
+    "id": "future-simple-04",
+    "tense": "future-simple",
+    "text": "We will help you with the boxes.",
+    "verb": [
+      "will help"
+    ],
+    "cue": "",
+    "translation": "Мы поможем тебе с коробками.",
+    "why": "Предложение помощи — will + глагол."
+  },
+  {
+    "id": "future-simple-05",
+    "tense": "future-simple",
+    "text": "The new shop will open next month.",
+    "verb": [
+      "will open"
+    ],
+    "cue": "next month",
+    "translation": "Новый магазин откроется в следующем месяце.",
+    "why": "Событие в будущем — will + глагол, next month."
+  },
+  {
+    "id": "future-simple-06",
+    "tense": "future-simple",
+    "text": "I'll have the chicken soup, please.",
+    "verb": [
+      "'ll have"
+    ],
+    "cue": "",
+    "translation": "Мне куриный суп, пожалуйста.",
+    "why": "Решение в момент речи — 'll (will) + глагол."
+  },
+  {
+    "id": "future-simple-07",
+    "tense": "future-simple",
+    "text": "Tom will love this present.",
+    "verb": [
+      "will love"
+    ],
+    "cue": "",
+    "translation": "Тому понравится этот подарок.",
+    "why": "Предсказание — will + глагол."
+  },
+  {
+    "id": "future-simple-08",
+    "tense": "future-simple",
+    "text": "They will arrive in London in two hours.",
+    "verb": [
+      "will arrive"
+    ],
+    "cue": "in two hours",
+    "translation": "Они приедут в Лондон через два часа.",
+    "why": "Будущее со сроком — will + глагол, in two hours."
+  },
+  {
+    "id": "future-simple-09",
+    "tense": "future-simple",
+    "text": "You will feel better soon.",
+    "verb": [
+      "will feel"
+    ],
+    "cue": "soon",
+    "translation": "Скоро тебе станет лучше.",
+    "why": "Прогноз — will + глагол, soon."
+  },
+  {
+    "id": "future-simple-10",
+    "tense": "future-simple",
+    "text": "I will send you the photos later.",
+    "verb": [
+      "will send"
+    ],
+    "cue": "later",
+    "translation": "Я пришлю тебе фотографии позже.",
+    "why": "Обещание — will + глагол, later."
+  },
+  {
+    "id": "future-simple-11",
+    "tense": "future-simple",
+    "text": "The weather will be warm at the weekend.",
+    "verb": [
+      "will be"
+    ],
+    "cue": "at the weekend",
+    "translation": "На выходных будет тепло.",
+    "why": "Прогноз погоды — will be."
+  },
+  {
+    "id": "future-simple-12",
+    "tense": "future-simple",
+    "text": "My sister will finish school in 2028.",
+    "verb": [
+      "will finish"
+    ],
+    "cue": "in 2028",
+    "translation": "Моя сестра окончит школу в 2028 году.",
+    "why": "Год в будущем — in 2028, will + глагол."
+  },
+  {
+    "id": "future-simple-13",
+    "tense": "future-simple",
+    "text": "We will probably stay at home tonight.",
+    "verb": [
+      "will",
+      "stay"
+    ],
+    "cue": "probably",
+    "translation": "Мы, наверное, останемся сегодня дома.",
+    "why": "Предположение — will probably + глагол."
+  },
+  {
+    "id": "future-simple-14",
+    "tense": "future-simple",
+    "text": "I'll carry your bag for you.",
+    "verb": [
+      "'ll carry"
+    ],
+    "cue": "",
+    "translation": "Я понесу твою сумку.",
+    "why": "Предложение помощи — 'll (will) + глагол."
+  },
+  {
+    "id": "future-simple-15",
+    "tense": "future-simple",
+    "text": "The meeting will last about an hour.",
+    "verb": [
+      "will last"
+    ],
+    "cue": "",
+    "translation": "Встреча продлится около часа.",
+    "why": "Будущее — will + глагол."
+  },
+  {
+    "id": "future-simple-16",
+    "tense": "future-simple",
+    "text": "Robots will do most of our housework one day.",
+    "verb": [
+      "will do"
+    ],
+    "cue": "one day",
+    "translation": "Когда-нибудь роботы будут делать большую часть домашней работы.",
+    "why": "Прогноз на далёкое будущее — will, one day."
+  },
+  {
+    "id": "future-simple-17",
+    "tense": "future-simple",
+    "text": "Anna will be at the office until six.",
+    "verb": [
+      "will be"
+    ],
+    "cue": "",
+    "translation": "Анна будет в офисе до шести.",
+    "why": "Будущее — will be."
+  },
+  {
+    "id": "future-simple-18",
+    "tense": "future-simple",
+    "text": "I will always remember this trip.",
+    "verb": [
+      "will",
+      "remember"
+    ],
+    "cue": "",
+    "translation": "Я всегда буду помнить эту поездку.",
+    "why": "Обещание — will + глагол; always здесь не делает время Present Simple."
+  },
+  {
+    "id": "future-simple-19",
+    "tense": "future-simple",
+    "text": "Prices will go up again next year.",
+    "verb": [
+      "will go"
+    ],
+    "cue": "next year",
+    "translation": "В следующем году цены снова вырастут.",
+    "why": "Прогноз — will + глагол, next year."
+  },
+  {
+    "id": "future-simple-20",
+    "tense": "future-simple",
+    "text": "The film will start in ten minutes.",
+    "verb": [
+      "will start"
+    ],
+    "cue": "in ten minutes",
+    "translation": "Фильм начнётся через десять минут.",
+    "why": "Будущее со сроком — will + глагол, in ten minutes."
+  },
+  {
+    "id": "future-simple-21",
+    "tense": "future-simple",
+    "text": "I will be careful on the roads.",
+    "verb": [
+      "will be"
+    ],
+    "cue": "",
+    "translation": "Я буду осторожен на дорогах.",
+    "why": "Обещание — will be."
+  },
+  {
+    "id": "future-simple-22",
+    "tense": "future-simple",
+    "text": "Our team will win the next match.",
+    "verb": [
+      "will win"
+    ],
+    "cue": "",
+    "translation": "Наша команда выиграет следующий матч.",
+    "why": "Предсказание — will + глагол."
+  },
+  {
+    "id": "future-simple-23",
+    "tense": "future-simple",
+    "text": "You will need a coat in Scotland.",
+    "verb": [
+      "will need"
+    ],
+    "cue": "",
+    "translation": "В Шотландии тебе понадобится пальто.",
+    "why": "Предсказание — will + глагол; need здесь в будущем."
+  },
+  {
+    "id": "future-simple-24",
+    "tense": "future-simple",
+    "text": "I will be back in five minutes.",
+    "verb": [
+      "will be"
+    ],
+    "cue": "in five minutes",
+    "translation": "Я вернусь через пять минут.",
+    "why": "Будущее со сроком — will be, in five minutes."
+  },
+  {
+    "id": "future-simple-25",
+    "tense": "future-simple",
+    "text": "I won't tell anyone your secret.",
+    "verb": [
+      "won't tell"
+    ],
+    "cue": "",
+    "translation": "Я никому не расскажу твой секрет.",
+    "why": "Обещание — won't (will not) + глагол."
+  },
+  {
+    "id": "future-simple-26",
+    "tense": "future-simple",
+    "text": "It won't take long.",
+    "verb": [
+      "won't take"
+    ],
+    "cue": "",
+    "translation": "Это не займёт много времени.",
+    "why": "Отрицание в будущем — won't + глагол."
+  },
+  {
+    "id": "future-simple-27",
+    "tense": "future-simple",
+    "text": "She won't be at the party tomorrow.",
+    "verb": [
+      "won't be"
+    ],
+    "cue": "tomorrow",
+    "translation": "Завтра её не будет на вечеринке.",
+    "why": "Отрицание в будущем — won't be, tomorrow."
+  },
+  {
+    "id": "future-simple-28",
+    "tense": "future-simple",
+    "text": "We won't finish the project this week.",
+    "verb": [
+      "won't finish"
+    ],
+    "cue": "this week",
+    "translation": "Мы не закончим проект на этой неделе.",
+    "why": "won't + глагол; this week бывает и в других временах, решает форма."
+  },
+  {
+    "id": "future-simple-29",
+    "tense": "future-simple",
+    "text": "The bus won't come for another hour.",
+    "verb": [
+      "won't come"
+    ],
+    "cue": "",
+    "translation": "Автобус не придёт ещё час.",
+    "why": "Отрицание в будущем — won't + глагол."
+  },
+  {
+    "id": "future-simple-30",
+    "tense": "future-simple",
+    "text": "They will not believe this story.",
+    "verb": [
+      "will",
+      "believe"
+    ],
+    "cue": "",
+    "translation": "Они не поверят в эту историю.",
+    "why": "Полная форма отрицания — will not + глагол."
+  },
+  {
+    "id": "future-simple-31",
+    "tense": "future-simple",
+    "text": "My parents won't be home until late.",
+    "verb": [
+      "won't be"
+    ],
+    "cue": "",
+    "translation": "Родители не вернутся домой допоздна.",
+    "why": "Отрицание в будущем — won't be."
+  },
+  {
+    "id": "future-simple-32",
+    "tense": "future-simple",
+    "text": "I won't eat sweets next month.",
+    "verb": [
+      "won't eat"
+    ],
+    "cue": "next month",
+    "translation": "В следующем месяце я не буду есть сладкое.",
+    "why": "Решение на будущее — won't + глагол, next month."
+  },
+  {
+    "id": "future-simple-33",
+    "tense": "future-simple",
+    "text": "Will you help me with my homework?",
+    "verb": [
+      "Will",
+      "help"
+    ],
+    "cue": "",
+    "translation": "Ты поможешь мне с домашним заданием?",
+    "why": "Просьба о будущем — Will + подлежащее + глагол."
+  },
+  {
+    "id": "future-simple-34",
+    "tense": "future-simple",
+    "text": "Will it be cold tomorrow?",
+    "verb": [
+      "Will",
+      "be"
+    ],
+    "cue": "tomorrow",
+    "translation": "Завтра будет холодно?",
+    "why": "Вопрос о будущем — Will … be, tomorrow."
+  },
+  {
+    "id": "future-simple-35",
+    "tense": "future-simple",
+    "text": "When will the parcel arrive?",
+    "verb": [
+      "will",
+      "arrive"
+    ],
+    "cue": "When",
+    "translation": "Когда придёт посылка?",
+    "why": "Вопрос о будущем — When will + глагол."
+  },
+  {
+    "id": "future-simple-36",
+    "tense": "future-simple",
+    "text": "Will they get here on time?",
+    "verb": [
+      "Will",
+      "get"
+    ],
+    "cue": "",
+    "translation": "Они доберутся сюда вовремя?",
+    "why": "Вопрос о будущем — Will + подлежащее + глагол."
+  },
+  {
+    "id": "future-simple-37",
+    "tense": "future-simple",
+    "text": "What will you do after university?",
+    "verb": [
+      "will",
+      "do"
+    ],
+    "cue": "",
+    "translation": "Что ты будешь делать после университета?",
+    "why": "Вопрос о будущем — What will + подлежащее + глагол."
+  },
+  {
+    "id": "future-simple-38",
+    "tense": "future-simple",
+    "text": "Where will we stay in Edinburgh?",
+    "verb": [
+      "will",
+      "stay"
+    ],
+    "cue": "",
+    "translation": "Где мы остановимся в Эдинбурге?",
+    "why": "Вопрос о будущем — Where will + глагол."
+  },
+  {
+    "id": "future-simple-39",
+    "tense": "future-simple",
+    "text": "Will Sarah come to the meeting next week?",
+    "verb": [
+      "Will",
+      "come"
+    ],
+    "cue": "next week",
+    "translation": "Сара придёт на встречу на следующей неделе?",
+    "why": "Вопрос о будущем — Will + подлежащее + глагол, next week."
+  },
+  {
+    "id": "future-simple-40",
+    "tense": "future-simple",
+    "text": "How long will the journey take?",
+    "verb": [
+      "will",
+      "take"
+    ],
+    "cue": "",
+    "translation": "Сколько продлится поездка?",
+    "why": "Вопрос о будущем — How long will + глагол."
   }
 ]

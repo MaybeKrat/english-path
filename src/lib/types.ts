@@ -96,7 +96,7 @@ export interface AppState {
 }
 
 /** Tenses of the grammar reference and exercises; see src/lib/grammar.ts. */
-export type TenseId = 'present-simple' | 'present-continuous' | 'past-simple' | 'present-perfect';
+export type TenseId = 'present-simple' | 'present-continuous' | 'past-simple' | 'present-perfect' | 'future-simple';
 
 /** One answer of the "which tense?" exercise. */
 export interface GrammarAnswer {

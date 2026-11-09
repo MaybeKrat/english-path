@@ -1,4 +1,4 @@
-// Grammar: a reference of the four most used tenses and the "which tense?" exercise (decided 09.11.2026).
+// Grammar: a reference of five tenses and the "which tense?" exercise (chosen by Ivan 09.11.2026).
 import { Fragment, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, BookOpen, Check, RotateCcw, X } from "lucide-react";
 import sentenceData from "./data/grammar/tense-sentences.json";
@@ -100,7 +100,7 @@ export function GrammarPage({ state, now, saving, active, save }: Props) {
       if (event.ctrlKey || event.metaKey || event.altKey || event.repeat) return;
       const target = event.target as HTMLElement;
       if (target.matches("input, textarea, select")) return;
-      const digit = /^(?:Digit|Numpad)([1-4])$/.exec(event.code)?.[1];
+      const digit = /^(?:Digit|Numpad)([1-5])$/.exec(event.code)?.[1];
       if (digit && !round.chosen) {
         event.preventDefault();
         chooseRef.current(TENSES[Number(digit) - 1]);
@@ -164,7 +164,7 @@ export function GrammarPage({ state, now, saving, active, save }: Props) {
           ))}
         </div>
         <div className="practice-footer">
-          <span>{chosen ? "Enter или Пробел — следующее предложение" : "Ответ — клавишами 1–4"}</span>
+          <span>{chosen ? "Enter или Пробел — следующее предложение" : "Ответ — клавишами 1–5"}</span>
           {chosen && (
             <button onClick={next}>
               Дальше

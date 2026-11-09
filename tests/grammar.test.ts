@@ -43,6 +43,6 @@ test('Grammar answers are saved, counted by tense and keep the streak', () => {
   assert.deepEqual(tenseAccuracy(SENTENCES, state.grammar!.answers)['present-perfect'], { right: 1, total: 2 });
   assert.deepEqual(parseBackup(JSON.stringify(state), new Set()), state);
   assert.equal(getStats([], state, NOW + 2000).streak, 1);
-  const broken = { ...state, grammar: { answers: [{ id: 'a', at: NOW, chosen: 'future-simple', correct: true }] } };
+  const broken = { ...state, grammar: { answers: [{ id: 'a', at: NOW, chosen: 'future-perfect', correct: true }] } };
   assert.throws(() => parseBackup(JSON.stringify(broken), new Set()), /грамматике/);
 });

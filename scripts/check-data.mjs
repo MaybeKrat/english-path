@@ -184,7 +184,7 @@ async function main() {
     if (verbErrors.length) throw new Error(verbErrors.slice(0, 25).join('\n'));
     console.log(`Неправильные глаголы: ${verbs.length}.`);
     const sentences = JSON.parse(await readFile(new URL('../src/data/grammar/tense-sentences.json', import.meta.url), 'utf8'));
-    const tenses = ['present-simple', 'present-continuous', 'past-simple', 'present-perfect'];
+    const tenses = ['present-simple', 'present-continuous', 'past-simple', 'present-perfect', 'future-simple'];
     const sentenceErrors = [];
     sentences.forEach((item, index) => {
       const name = `Предложение ${index + 1} (${item.id})`;

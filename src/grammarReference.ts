@@ -1,4 +1,4 @@
-// Grammar reference: the four most used tenses (decided 09.11.2026). Texts are written for a Russian-speaking learner.
+// Grammar reference: the five tenses chosen by Ivan 09.11.2026. Texts are written for a Russian-speaking learner.
 import type { TenseId } from "./lib/types";
 
 export interface Example {
@@ -132,6 +132,35 @@ export const tenseRules: TenseRule[] = [
         wrong: "Did you ever try sushi?",
         right: "Have you ever tried sushi?",
         note: "Опыт за всю жизнь, без времени — Present Perfect. В русском одна форма прошедшего, в английском выбор зависит от связи с «сейчас».",
+      },
+    ],
+  },
+  {
+    id: "future-simple",
+    name: "Future Simple",
+    ru: "Будущее простое",
+    idea: "Будет: прогноз, обещание, решение сейчас",
+    formula: "will + V",
+    example: { en: "She will work from home tomorrow.", ru: "Завтра она будет работать из дома." },
+    uses: [
+      { title: "Прогноз, предположение", example: { en: "It will probably rain tomorrow.", ru: "Завтра, наверное, будет дождь." } },
+      { title: "Решение, принятое прямо сейчас", example: { en: "I'll have the soup, please.", ru: "Мне суп, пожалуйста." } },
+      { title: "Обещание, предложение помощи", example: { en: "I'll call you tonight.", ru: "Я позвоню тебе вечером." } },
+      { title: "Будущий факт", example: { en: "She will be thirty next year.", ru: "В следующем году ей исполнится тридцать." } },
+    ],
+    forms: [
+      { label: "+", text: "will (в речи 'll) + глагол — одинаково для всех лиц", example: { en: "We will help you.", ru: "Мы тебе поможем." } },
+      { label: "−", text: "won't (will not) + глагол", example: { en: "It won't take long.", ru: "Это не займёт много времени." } },
+      { label: "?", text: "Will + подлежащее + глагол", example: { en: "Will you come to the party?", ru: "Ты придёшь на вечеринку?" } },
+    ],
+    markers: ["tomorrow", "next week", "next year", "soon", "later", "in two hours", "one day", "probably", "I think…"],
+    mistakes: [
+      { wrong: "She wills come.", right: "She will come.", note: "У will нет -s и после него глагол без to и без -s." },
+      { wrong: "I will to call you.", right: "I will call you.", note: "После will — сразу глагол, без to." },
+      {
+        wrong: "I will meet Tom at six tomorrow — мы договорились.",
+        right: "I'm meeting Tom at six tomorrow.",
+        note: "Если уже договорились и есть время — Present Continuous; will — прогноз или решение в момент речи.",
       },
     ],
   },
