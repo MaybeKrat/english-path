@@ -24,4 +24,49 @@ function getInitialWindowLayout(workArea) {
   };
 }
 
-module.exports = { getInitialWindowLayout };
+// The window reopens where it was closed (Ivan, 09.11.2026). A saved window counts only while enough of it lies on a
+// current display, so a disconnected monitor does not leave it off-screen.
+const MIN_VISIBLE_WIDTH = 200;
+const MIN_VISIBLE_HEIGHT = 100;
+
+function isSavedWindow(value) {
+  return (
+    !!value &&
+    typeof value === "object" &&
+    ["x", "y", "width", "height"].every((key) => Number.isFinite(value[key])) &&
+    value.width >= 100 &&
+    value.height >= 100
+  );
+}
+
+function overlap(a, b) {
+  const width = Math.min(a.x + a.width, b.x + b.width) - Math.max(a.x, b.x);
+  const height = Math.min(a.y + a.height, b.y + b.height) - Math.max(a.y, b.y);
+  return width >= MIN_VISIBLE_WIDTH && height >= MIN_VISIBLE_HEIGHT ? width * height : 0;
+}
+
+/** Layout of the window saved at the last close, fitted into the display it is on; null when it cannot be used. */
+function getRestoredWindowLayout(saved, workAreas) {
+  if (!isSavedWindow(saved)) return null;
+  const area = workAreas
+    .map((workArea) => ({ workArea, shared: overlap(saved, workArea) }))
+    .filter((item) => item.shared > 0)
+    .sort((a, b) => b.shared - a.shared)[0]?.workArea;
+  if (!area) return null;
+  const width = Math.round(Math.min(saved.width, area.width));
+  const height = Math.round(Math.min(saved.height, area.height));
+  const clamp = (value, min, max) => Math.round(Math.min(Math.max(value, min), max));
+  return {
+    options: {
+      x: clamp(saved.x, area.x, area.x + area.width - width),
+      y: clamp(saved.y, area.y, area.y + area.height - height),
+      width,
+      height,
+      minWidth: Math.min(900, width),
+      minHeight: Math.min(640, height),
+    },
+    maximize: saved.maximized === true,
+  };
+}
+
+module.exports = { getInitialWindowLayout, getRestoredWindowLayout };

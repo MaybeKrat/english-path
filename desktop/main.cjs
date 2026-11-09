@@ -20,7 +20,7 @@ const {
   isTrustedSpeechSender,
   resolveAssetPath,
 } = require("./security.cjs");
-const { getInitialWindowLayout } = require("./window-options.cjs");
+const { getInitialWindowLayout, getRestoredWindowLayout } = require("./window-options.cjs");
 const { createNativeSpeechService } = require("./native-speech.cjs");
 const { getWindowThemeOptions, createWindowThemeController } = require("./theme.cjs");
 const { createVoicePack } = require("./voice-pack.cjs");
@@ -175,7 +175,15 @@ if (!hasLock) {
       });
 
       const display = screen.getDisplayNearestPoint(screen.getCursorScreenPoint());
-      const initialLayout = getInitialWindowLayout(display.workArea);
+      // The window reopens with the size and place it had when closed; otherwise centred on the cursor's display.
+      const windowStatePath = path.join(userDataPath, "window-state.json");
+      let savedWindow = null;
+      try {
+        savedWindow = JSON.parse(fs.readFileSync(windowStatePath, "utf8"));
+      } catch {}
+      const initialLayout =
+        getRestoredWindowLayout(savedWindow, screen.getAllDisplays().map((item) => item.workArea)) ??
+        getInitialWindowLayout(display.workArea);
       mainWindow = new BrowserWindow({
         ...initialLayout.options,
         title: APP_NAME,
@@ -231,6 +239,16 @@ if (!hasLock) {
         windowTheme.update();
         if (initialLayout.maximize) mainWindow.maximize();
         mainWindow.show();
+      });
+      mainWindow.on("close", () => {
+        // Normal bounds keep the size the window returns to when a maximized window is restored.
+        const bounds =
+          mainWindow.isMaximized() || mainWindow.isMinimized() || mainWindow.isFullScreen()
+            ? mainWindow.getNormalBounds()
+            : mainWindow.getBounds();
+        try {
+          fs.writeFileSync(windowStatePath, JSON.stringify({ ...bounds, maximized: mainWindow.isMaximized() }));
+        } catch {}
       });
       mainWindow.on("closed", () => {
         windowTheme.dispose();
