@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164 314" width="164" height="314">
+  <!-- Welcome and finish pages of the installer; colours and cards follow public/favicon.svg and the app's green sidebar. -->
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="164" y2="314" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#326E59"/>
+      <stop offset="1" stop-color="#174638"/>
+    </linearGradient>
+  </defs>
+  <rect width="164" height="314" fill="url(#green)"/>
+  <g transform="translate(8 14) scale(0.34)">
+    <rect x="48" y="44" width="132" height="164" rx="20" transform="rotate(-12 114 126)" fill="#B4CEAC"/>
+    <rect x="79" y="63" width="134" height="160" rx="21" fill="#10382D" fill-opacity=".25"/>
+    <rect x="79" y="58" width="134" height="160" rx="21" fill="#FFFDF4"/>
+    <path d="M115 173 146 99 177 173M126 148H166" stroke="#255648" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  <text x="20" y="124" font-family="Segoe UI" font-weight="700" font-size="22" fill="#FFFDF4">English</text>
+  <text x="20" y="150" font-family="Segoe UI" font-weight="700" font-size="22" fill="#FFFDF4">Path</text>
+  <text x="20" y="172" font-family="Segoe UI" font-size="11.5" fill="#B4CEAC">английский каждый день</text>
+  <!-- The level path from the app's sidebar: A1 → B2. -->
+  <line x1="24" y1="262" x2="140" y2="262" stroke="#B4CEAC" stroke-opacity=".35" stroke-width="2"/>
+  <line x1="24" y1="262" x2="63" y2="262" stroke="#B4CEAC" stroke-width="2"/>
+  <circle cx="24" cy="262" r="5" fill="#B4CEAC"/>
+  <circle cx="63" cy="262" r="5" fill="#174638" stroke="#B4CEAC" stroke-width="2"/>
+  <circle cx="102" cy="262" r="5" fill="#174638" stroke="#B4CEAC" stroke-opacity=".5" stroke-width="2"/>
+  <circle cx="140" cy="262" r="5" fill="#174638" stroke="#B4CEAC" stroke-opacity=".5" stroke-width="2"/>
+  <g font-family="Segoe UI" font-size="9.5" font-weight="600" fill="#B4CEAC" text-anchor="middle">
+    <text x="24" y="282">A1</text>
+    <text x="63" y="282">A2</text>
+    <text x="102" y="282" fill-opacity=".6">B1</text>
+    <text x="140" y="282" fill-opacity=".6">B2</text>
+  </g>
+</svg>
