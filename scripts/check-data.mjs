@@ -165,11 +165,16 @@ async function main() {
     if (shared.length) throw new Error(shared.slice(0, 25).join('\n'));
     const verbs = JSON.parse(await readFile(new URL('../src/data/irregular-verbs.json', import.meta.url), 'utf8'));
     const verbErrors = [];
+    const cardSpellings = new Map([...words, ...films.flatMap((film) => film.cards)].map((card) => [card.id, card.word]));
     const fields = ['id', 'base', 'past', 'participle', 'translation', 'level', 'example', 'exampleTranslation'];
     verbs.forEach((verb, index) => {
       const name = `Глагол ${index + 1} (${verb.base})`;
       if (fields.some((field) => typeof verb[field] !== 'string' || !verb[field].trim())) verbErrors.push(`${name}: пустое поле.`);
       if (verb.id !== `verb-${verb.base}`) verbErrors.push(`${name}: id должен быть verb-<base>.`);
+      // Word cards that open the verb: Oxford ids or film card ids with the same spelling.
+      if (!Array.isArray(verb.cards) || verb.cards.some((id) => !cardSpellings.has(id) || cardSpellings.get(id) !== verb.base)) {
+        verbErrors.push(`${name}: cards должны ссылаться на карточки с тем же написанием.`);
+      }
       if (!['A1', 'A2', 'B1', 'B2'].includes(verb.level)) verbErrors.push(`${name}: неизвестный уровень.`);
       if (!/[а-яё]/i.test(verb.translation) || !/[а-яё]/i.test(verb.exampleTranslation)) verbErrors.push(`${name}: нет русского перевода.`);
       const forms = [verb.past, verb.participle].flatMap((form) => form.split(' / '));
@@ -178,6 +183,25 @@ async function main() {
     if (new Set(verbs.map((verb) => verb.id)).size !== verbs.length) verbErrors.push('Неправильные глаголы: повторяются id.');
     if (verbErrors.length) throw new Error(verbErrors.slice(0, 25).join('\n'));
     console.log(`Неправильные глаголы: ${verbs.length}.`);
+    const sentences = JSON.parse(await readFile(new URL('../src/data/grammar/tense-sentences.json', import.meta.url), 'utf8'));
+    const tenses = ['present-simple', 'present-continuous', 'past-simple', 'present-perfect'];
+    const sentenceErrors = [];
+    sentences.forEach((item, index) => {
+      const name = `Предложение ${index + 1} (${item.id})`;
+      if (!tenses.includes(item.tense) || !item.id?.startsWith(`${item.tense}-`)) sentenceErrors.push(`${name}: неизвестное время или id.`);
+      if (['text', 'translation', 'why'].some((field) => typeof item[field] !== 'string' || !item[field].trim())) sentenceErrors.push(`${name}: пустое поле.`);
+      // The verb parts and the marker are highlighted in place, so they must occur in the text.
+      let from = 0;
+      for (const part of Array.isArray(item.verb) && item.verb.length ? item.verb : [null]) {
+        const at = typeof part === 'string' && part ? item.text.indexOf(part, from) : -1;
+        if (at < 0) sentenceErrors.push(`${name}: части глагола нет в тексте.`);
+        else from = at + part.length;
+      }
+      if (typeof item.cue !== 'string' || (item.cue && !item.text.includes(item.cue))) sentenceErrors.push(`${name}: подсказки нет в тексте.`);
+    });
+    if (new Set(sentences.map((item) => item.id)).size !== sentences.length) sentenceErrors.push('Предложения: повторяются id.');
+    if (sentenceErrors.length) throw new Error(sentenceErrors.slice(0, 25).join('\n'));
+    console.log(`Упражнение «Определи время»: ${sentences.length} предложений, ${tenses.map((tense) => `${tense} — ${sentences.filter((item) => item.tense === tense).length}`).join('; ')}.`);
     console.log('Структура данных проверена. Лингвистическая точность переводов этой проверкой не оценивается.');
   } catch (error) {
     console.error(`Не удалось проверить словарь: ${error instanceof Error ? error.message : String(error)}`);

@@ -1,0 +1,1828 @@
+[
+  {
+    "id": "present-simple-01",
+    "tense": "present-simple",
+    "text": "I usually drink coffee in the morning.",
+    "verb": [
+      "drink"
+    ],
+    "cue": "usually",
+    "translation": "Я обычно пью кофе по утрам.",
+    "why": "Привычка, регулярное действие — usually."
+  },
+  {
+    "id": "present-simple-02",
+    "tense": "present-simple",
+    "text": "My brother plays football every Saturday.",
+    "verb": [
+      "plays"
+    ],
+    "cue": "every Saturday",
+    "translation": "Мой брат играет в футбол каждую субботу.",
+    "why": "Действие повторяется каждую неделю — every Saturday."
+  },
+  {
+    "id": "present-simple-03",
+    "tense": "present-simple",
+    "text": "Water boils at 100 degrees Celsius.",
+    "verb": [
+      "boils"
+    ],
+    "cue": "",
+    "translation": "Вода кипит при 100 градусах по Цельсию.",
+    "why": "Научный факт, верен всегда — простая форма boils."
+  },
+  {
+    "id": "present-simple-04",
+    "tense": "present-simple",
+    "text": "The museum opens at ten every morning.",
+    "verb": [
+      "opens"
+    ],
+    "cue": "every morning",
+    "translation": "Музей открывается в десять каждое утро.",
+    "why": "Расписание, повторяется каждый день — every morning."
+  },
+  {
+    "id": "present-simple-05",
+    "tense": "present-simple",
+    "text": "She knows the answer to this question.",
+    "verb": [
+      "knows"
+    ],
+    "cue": "",
+    "translation": "Она знает ответ на этот вопрос.",
+    "why": "Know — глагол состояния, его не ставят в Continuous."
+  },
+  {
+    "id": "present-simple-06",
+    "tense": "present-simple",
+    "text": "We often visit our grandparents in summer.",
+    "verb": [
+      "visit"
+    ],
+    "cue": "often",
+    "translation": "Летом мы часто навещаем бабушку и дедушку.",
+    "why": "Частое, повторяющееся действие — often."
+  },
+  {
+    "id": "present-simple-07",
+    "tense": "present-simple",
+    "text": "Tom works in a big hospital in Leeds.",
+    "verb": [
+      "works"
+    ],
+    "cue": "",
+    "translation": "Том работает в большой больнице в Лидсе.",
+    "why": "Постоянная работа, а не действие сейчас — форма works с -s."
+  },
+  {
+    "id": "present-simple-08",
+    "tense": "present-simple",
+    "text": "I believe every word of your story.",
+    "verb": [
+      "believe"
+    ],
+    "cue": "",
+    "translation": "Я верю каждому слову твоей истории.",
+    "why": "Believe — глагол мнения, в Continuous не ставится."
+  },
+  {
+    "id": "present-simple-09",
+    "tense": "present-simple",
+    "text": "We need a bigger flat now.",
+    "verb": [
+      "need"
+    ],
+    "cue": "",
+    "translation": "Сейчас нам нужна квартира побольше.",
+    "why": "Need — глагол состояния: даже с now остаётся Present Simple."
+  },
+  {
+    "id": "present-simple-10",
+    "tense": "present-simple",
+    "text": "It often rains in Manchester in November.",
+    "verb": [
+      "rains"
+    ],
+    "cue": "often",
+    "translation": "В Манчестере в ноябре часто идут дожди.",
+    "why": "Обычное, повторяющееся явление — often."
+  },
+  {
+    "id": "present-simple-11",
+    "tense": "present-simple",
+    "text": "Anna always takes the bus to work.",
+    "verb": [
+      "takes"
+    ],
+    "cue": "always",
+    "translation": "Анна всегда ездит на работу на автобусе.",
+    "why": "Привычка — always."
+  },
+  {
+    "id": "present-simple-12",
+    "tense": "present-simple",
+    "text": "My parents live in a small village near York.",
+    "verb": [
+      "live"
+    ],
+    "cue": "",
+    "translation": "Мои родители живут в маленькой деревне недалеко от Йорка.",
+    "why": "Постоянное место жительства — простая форма live."
+  },
+  {
+    "id": "present-simple-13",
+    "tense": "present-simple",
+    "text": "He brushes his teeth twice a day.",
+    "verb": [
+      "brushes"
+    ],
+    "cue": "twice a day",
+    "translation": "Он чистит зубы два раза в день.",
+    "why": "Регулярное действие — twice a day."
+  },
+  {
+    "id": "present-simple-14",
+    "tense": "present-simple",
+    "text": "I like this song very much.",
+    "verb": [
+      "like"
+    ],
+    "cue": "",
+    "translation": "Мне очень нравится эта песня.",
+    "why": "Like — глагол чувства, в Continuous не ставится."
+  },
+  {
+    "id": "present-simple-15",
+    "tense": "present-simple",
+    "text": "The train to London leaves every hour.",
+    "verb": [
+      "leaves"
+    ],
+    "cue": "every hour",
+    "translation": "Поезд в Лондон отправляется каждый час.",
+    "why": "Расписание транспорта — every hour."
+  },
+  {
+    "id": "present-simple-16",
+    "tense": "present-simple",
+    "text": "We sometimes order pizza on Friday nights.",
+    "verb": [
+      "order"
+    ],
+    "cue": "sometimes",
+    "translation": "Иногда по пятницам вечером мы заказываем пиццу.",
+    "why": "Действие повторяется время от времени — sometimes."
+  },
+  {
+    "id": "present-simple-17",
+    "tense": "present-simple",
+    "text": "The sun rises in the east.",
+    "verb": [
+      "rises"
+    ],
+    "cue": "",
+    "translation": "Солнце встаёт на востоке.",
+    "why": "Общеизвестный факт — простая форма rises."
+  },
+  {
+    "id": "present-simple-18",
+    "tense": "present-simple",
+    "text": "My sister speaks three languages fluently.",
+    "verb": [
+      "speaks"
+    ],
+    "cue": "",
+    "translation": "Моя сестра свободно говорит на трёх языках.",
+    "why": "Постоянный факт о человеке, а не действие сейчас — speaks."
+  },
+  {
+    "id": "present-simple-19",
+    "tense": "present-simple",
+    "text": "Our English lesson starts at nine every Tuesday.",
+    "verb": [
+      "starts"
+    ],
+    "cue": "every Tuesday",
+    "translation": "Наш урок английского начинается в девять каждый вторник.",
+    "why": "Расписание, повторяется каждую неделю — every Tuesday."
+  },
+  {
+    "id": "present-simple-20",
+    "tense": "present-simple",
+    "text": "Cats sleep for about fifteen hours every day.",
+    "verb": [
+      "sleep"
+    ],
+    "cue": "every day",
+    "translation": "Кошки спят около пятнадцати часов в день.",
+    "why": "Факт и регулярное действие — every day."
+  },
+  {
+    "id": "present-simple-21",
+    "tense": "present-simple",
+    "text": "Jack goes to the gym three times a week.",
+    "verb": [
+      "goes"
+    ],
+    "cue": "three times a week",
+    "translation": "Джек ходит в спортзал три раза в неделю.",
+    "why": "Регулярное действие — three times a week."
+  },
+  {
+    "id": "present-simple-22",
+    "tense": "present-simple",
+    "text": "I want a cup of tea with milk.",
+    "verb": [
+      "want"
+    ],
+    "cue": "",
+    "translation": "Я хочу чашку чая с молоком.",
+    "why": "Want — глагол желания, только Present Simple."
+  },
+  {
+    "id": "present-simple-23",
+    "tense": "present-simple",
+    "text": "This bag belongs to my teacher.",
+    "verb": [
+      "belongs"
+    ],
+    "cue": "",
+    "translation": "Эта сумка принадлежит моему учителю.",
+    "why": "Belong — глагол состояния, в Continuous не бывает."
+  },
+  {
+    "id": "present-simple-24",
+    "tense": "present-simple",
+    "text": "She never eats meat or fish.",
+    "verb": [
+      "eats"
+    ],
+    "cue": "never",
+    "translation": "Она никогда не ест мясо и рыбу.",
+    "why": "Привычка: never с простой формой eats, без have."
+  },
+  {
+    "id": "present-simple-25",
+    "tense": "present-simple",
+    "text": "We don't usually watch TV in the evening.",
+    "verb": [
+      "don't",
+      "watch"
+    ],
+    "cue": "usually",
+    "translation": "Обычно мы не смотрим телевизор по вечерам.",
+    "why": "Привычка в отрицании: don't + глагол — usually."
+  },
+  {
+    "id": "present-simple-26",
+    "tense": "present-simple",
+    "text": "My dad doesn't like spicy food.",
+    "verb": [
+      "doesn't",
+      "like"
+    ],
+    "cue": "",
+    "translation": "Мой папа не любит острую еду.",
+    "why": "Like — глагол состояния; отрицание через doesn't."
+  },
+  {
+    "id": "present-simple-27",
+    "tense": "present-simple",
+    "text": "It doesn't often snow in London.",
+    "verb": [
+      "doesn't",
+      "snow"
+    ],
+    "cue": "often",
+    "translation": "В Лондоне нечасто идёт снег.",
+    "why": "Обычное явление, отрицание через doesn't — often."
+  },
+  {
+    "id": "present-simple-28",
+    "tense": "present-simple",
+    "text": "They don't understand a word of Russian.",
+    "verb": [
+      "don't",
+      "understand"
+    ],
+    "cue": "",
+    "translation": "Они не понимают ни слова по-русски.",
+    "why": "Understand — глагол состояния, отрицание через don't."
+  },
+  {
+    "id": "present-simple-29",
+    "tense": "present-simple",
+    "text": "Kate doesn't work on Mondays.",
+    "verb": [
+      "doesn't",
+      "work"
+    ],
+    "cue": "on Mondays",
+    "translation": "Кейт не работает по понедельникам.",
+    "why": "Повторяется каждую неделю — on Mondays."
+  },
+  {
+    "id": "present-simple-30",
+    "tense": "present-simple",
+    "text": "I don't know his phone number.",
+    "verb": [
+      "don't",
+      "know"
+    ],
+    "cue": "",
+    "translation": "Я не знаю его номер телефона.",
+    "why": "Know — глагол состояния, отрицание через don't."
+  },
+  {
+    "id": "present-simple-31",
+    "tense": "present-simple",
+    "text": "The library doesn't open on Sundays.",
+    "verb": [
+      "doesn't",
+      "open"
+    ],
+    "cue": "on Sundays",
+    "translation": "По воскресеньям библиотека не работает.",
+    "why": "Расписание, каждое воскресенье — on Sundays."
+  },
+  {
+    "id": "present-simple-32",
+    "tense": "present-simple",
+    "text": "Paul doesn't drive to work every day.",
+    "verb": [
+      "doesn't",
+      "drive"
+    ],
+    "cue": "every day",
+    "translation": "Пол ездит на работу на машине не каждый день.",
+    "why": "Повторяющееся действие — every day."
+  },
+  {
+    "id": "present-simple-33",
+    "tense": "present-simple",
+    "text": "Do you play tennis every weekend?",
+    "verb": [
+      "Do",
+      "play"
+    ],
+    "cue": "every weekend",
+    "translation": "Ты играешь в теннис каждые выходные?",
+    "why": "Вопрос о привычке: Do + глагол — every weekend."
+  },
+  {
+    "id": "present-simple-34",
+    "tense": "present-simple",
+    "text": "Does your sister live in London?",
+    "verb": [
+      "Does",
+      "live"
+    ],
+    "cue": "",
+    "translation": "Твоя сестра живёт в Лондоне?",
+    "why": "Вопрос о постоянной ситуации: Does + live."
+  },
+  {
+    "id": "present-simple-35",
+    "tense": "present-simple",
+    "text": "How often do you go to the cinema?",
+    "verb": [
+      "do",
+      "go"
+    ],
+    "cue": "How often",
+    "translation": "Как часто ты ходишь в кино?",
+    "why": "Вопрос о частоте, о привычке — How often."
+  },
+  {
+    "id": "present-simple-36",
+    "tense": "present-simple",
+    "text": "What time does the film start?",
+    "verb": [
+      "does",
+      "start"
+    ],
+    "cue": "",
+    "translation": "Во сколько начинается фильм?",
+    "why": "Вопрос о расписании: does + start."
+  },
+  {
+    "id": "present-simple-37",
+    "tense": "present-simple",
+    "text": "Do they know about the party?",
+    "verb": [
+      "Do",
+      "know"
+    ],
+    "cue": "",
+    "translation": "Они знают о вечеринке?",
+    "why": "Know — глагол состояния; вопрос через Do."
+  },
+  {
+    "id": "present-simple-38",
+    "tense": "present-simple",
+    "text": "Does Mark usually cook dinner?",
+    "verb": [
+      "Does",
+      "cook"
+    ],
+    "cue": "usually",
+    "translation": "Марк обычно готовит ужин?",
+    "why": "Вопрос о привычке — usually."
+  },
+  {
+    "id": "present-simple-39",
+    "tense": "present-simple",
+    "text": "Where do you buy your vegetables?",
+    "verb": [
+      "do",
+      "buy"
+    ],
+    "cue": "",
+    "translation": "Где ты покупаешь овощи?",
+    "why": "Вопрос о привычном действии: do + buy."
+  },
+  {
+    "id": "present-simple-40",
+    "tense": "present-simple",
+    "text": "Do you need any help with your bags?",
+    "verb": [
+      "Do",
+      "need"
+    ],
+    "cue": "",
+    "translation": "Тебе нужна помощь с сумками?",
+    "why": "Need — глагол состояния; вопрос через Do."
+  },
+  {
+    "id": "present-continuous-01",
+    "tense": "present-continuous",
+    "text": "I am reading a very good book at the moment.",
+    "verb": [
+      "am reading"
+    ],
+    "cue": "at the moment",
+    "translation": "Сейчас я читаю очень хорошую книгу.",
+    "why": "Действие идёт в этот период — at the moment."
+  },
+  {
+    "id": "present-continuous-02",
+    "tense": "present-continuous",
+    "text": "The children are playing in the garden right now.",
+    "verb": [
+      "are playing"
+    ],
+    "cue": "right now",
+    "translation": "Дети сейчас играют в саду.",
+    "why": "Действие происходит прямо сейчас — right now."
+  },
+  {
+    "id": "present-continuous-03",
+    "tense": "present-continuous",
+    "text": "She is cooking dinner for her friends.",
+    "verb": [
+      "is cooking"
+    ],
+    "cue": "",
+    "translation": "Она готовит ужин для своих друзей.",
+    "why": "Форма is + -ing: действие идёт сейчас."
+  },
+  {
+    "id": "present-continuous-04",
+    "tense": "present-continuous",
+    "text": "We are meeting Tom at the station tomorrow.",
+    "verb": [
+      "are meeting"
+    ],
+    "cue": "tomorrow",
+    "translation": "Завтра мы встречаем Тома на вокзале.",
+    "why": "Договорённость на будущее — tomorrow с формой are meeting."
+  },
+  {
+    "id": "present-continuous-05",
+    "tense": "present-continuous",
+    "text": "My brother is living with us this month.",
+    "verb": [
+      "is living"
+    ],
+    "cue": "this month",
+    "translation": "В этом месяце брат живёт у нас.",
+    "why": "Временная ситуация — this month."
+  },
+  {
+    "id": "present-continuous-06",
+    "tense": "present-continuous",
+    "text": "It is raining heavily now.",
+    "verb": [
+      "is raining"
+    ],
+    "cue": "now",
+    "translation": "Сейчас идёт сильный дождь.",
+    "why": "Действие идёт в момент речи — now."
+  },
+  {
+    "id": "present-continuous-07",
+    "tense": "present-continuous",
+    "text": "They are building a new school near our house.",
+    "verb": [
+      "are building"
+    ],
+    "cue": "",
+    "translation": "Рядом с нашим домом строят новую школу.",
+    "why": "Форма are + -ing: стройка идёт в наше время."
+  },
+  {
+    "id": "present-continuous-08",
+    "tense": "present-continuous",
+    "text": "I am flying to Berlin on Friday.",
+    "verb": [
+      "am flying"
+    ],
+    "cue": "on Friday",
+    "translation": "В пятницу я лечу в Берлин.",
+    "why": "Запланированная поездка, билет уже есть — on Friday."
+  },
+  {
+    "id": "present-continuous-09",
+    "tense": "present-continuous",
+    "text": "Emma is studying for her exams these days.",
+    "verb": [
+      "is studying"
+    ],
+    "cue": "these days",
+    "translation": "Эмма сейчас готовится к экзаменам.",
+    "why": "Временное занятие в этот период — these days."
+  },
+  {
+    "id": "present-continuous-10",
+    "tense": "present-continuous",
+    "text": "We are sitting in a café near the river.",
+    "verb": [
+      "are sitting"
+    ],
+    "cue": "",
+    "translation": "Мы сидим в кафе у реки.",
+    "why": "Форма are + -ing: описываем, что происходит сейчас."
+  },
+  {
+    "id": "present-continuous-11",
+    "tense": "present-continuous",
+    "text": "He is wearing a blue jacket today.",
+    "verb": [
+      "is wearing"
+    ],
+    "cue": "today",
+    "translation": "Сегодня на нём синяя куртка.",
+    "why": "Что надето на человеке сегодня — is wearing, today."
+  },
+  {
+    "id": "present-continuous-12",
+    "tense": "present-continuous",
+    "text": "Prices are rising quickly this year.",
+    "verb": [
+      "are rising"
+    ],
+    "cue": "this year",
+    "translation": "В этом году цены быстро растут.",
+    "why": "Изменение, которое идёт сейчас — this year."
+  },
+  {
+    "id": "present-continuous-13",
+    "tense": "present-continuous",
+    "text": "My parents are travelling around Italy this summer.",
+    "verb": [
+      "are travelling"
+    ],
+    "cue": "this summer",
+    "translation": "Этим летом мои родители путешествуют по Италии.",
+    "why": "Временная ситуация — this summer."
+  },
+  {
+    "id": "present-continuous-14",
+    "tense": "present-continuous",
+    "text": "Sam is talking to his boss on the phone.",
+    "verb": [
+      "is talking"
+    ],
+    "cue": "",
+    "translation": "Сэм разговаривает по телефону с начальником.",
+    "why": "Форма is + -ing: разговор идёт прямо сейчас."
+  },
+  {
+    "id": "present-continuous-15",
+    "tense": "present-continuous",
+    "text": "I am working from home this week.",
+    "verb": [
+      "am working"
+    ],
+    "cue": "this week",
+    "translation": "На этой неделе я работаю из дома.",
+    "why": "Временно, только на этой неделе — this week."
+  },
+  {
+    "id": "present-continuous-16",
+    "tense": "present-continuous",
+    "text": "The dog is barking at the postman.",
+    "verb": [
+      "is barking"
+    ],
+    "cue": "",
+    "translation": "Собака лает на почтальона.",
+    "why": "Форма is + -ing: действие происходит сейчас."
+  },
+  {
+    "id": "present-continuous-17",
+    "tense": "present-continuous",
+    "text": "We are painting the kitchen at the weekend.",
+    "verb": [
+      "are painting"
+    ],
+    "cue": "at the weekend",
+    "translation": "На выходных мы будем красить кухню.",
+    "why": "План на ближайшие выходные — at the weekend."
+  },
+  {
+    "id": "present-continuous-18",
+    "tense": "present-continuous",
+    "text": "Lucy is taking driving lessons this spring.",
+    "verb": [
+      "is taking"
+    ],
+    "cue": "this spring",
+    "translation": "Этой весной Люси берёт уроки вождения.",
+    "why": "Временное занятие — this spring."
+  },
+  {
+    "id": "present-continuous-19",
+    "tense": "present-continuous",
+    "text": "Our team is playing really well this season.",
+    "verb": [
+      "is playing"
+    ],
+    "cue": "this season",
+    "translation": "В этом сезоне наша команда играет очень хорошо.",
+    "why": "Временная ситуация, текущий сезон — this season."
+  },
+  {
+    "id": "present-continuous-20",
+    "tense": "present-continuous",
+    "text": "I am waiting for the bus outside the bank.",
+    "verb": [
+      "am waiting"
+    ],
+    "cue": "",
+    "translation": "Я жду автобус у банка.",
+    "why": "Форма am + -ing: жду прямо сейчас."
+  },
+  {
+    "id": "present-continuous-21",
+    "tense": "present-continuous",
+    "text": "They are getting married next month.",
+    "verb": [
+      "are getting"
+    ],
+    "cue": "next month",
+    "translation": "В следующем месяце они женятся.",
+    "why": "Договорённость на будущее — next month."
+  },
+  {
+    "id": "present-continuous-22",
+    "tense": "present-continuous",
+    "text": "He is staying at a hotel near the airport tonight.",
+    "verb": [
+      "is staying"
+    ],
+    "cue": "tonight",
+    "translation": "Сегодня он ночует в отеле возле аэропорта.",
+    "why": "Договорённость на сегодня — tonight."
+  },
+  {
+    "id": "present-continuous-23",
+    "tense": "present-continuous",
+    "text": "Everyone is watching the match on TV.",
+    "verb": [
+      "is watching"
+    ],
+    "cue": "",
+    "translation": "Все смотрят матч по телевизору.",
+    "why": "Форма is + -ing: действие идёт сейчас."
+  },
+  {
+    "id": "present-continuous-24",
+    "tense": "present-continuous",
+    "text": "Jane and Mike are having a party on Saturday.",
+    "verb": [
+      "are having"
+    ],
+    "cue": "on Saturday",
+    "translation": "В субботу у Джейн и Майка вечеринка.",
+    "why": "Договорённость на будущее — on Saturday."
+  },
+  {
+    "id": "present-continuous-25",
+    "tense": "present-continuous",
+    "text": "I am not working this Friday.",
+    "verb": [
+      "am",
+      "working"
+    ],
+    "cue": "this Friday",
+    "translation": "В эту пятницу я не работаю.",
+    "why": "Договорённость на будущее: am not + -ing — this Friday."
+  },
+  {
+    "id": "present-continuous-26",
+    "tense": "present-continuous",
+    "text": "The children aren't listening to the teacher.",
+    "verb": [
+      "aren't",
+      "listening"
+    ],
+    "cue": "",
+    "translation": "Дети не слушают учителя.",
+    "why": "Форма aren't + -ing: сейчас не слушают."
+  },
+  {
+    "id": "present-continuous-27",
+    "tense": "present-continuous",
+    "text": "Mia isn't wearing her glasses today.",
+    "verb": [
+      "isn't",
+      "wearing"
+    ],
+    "cue": "today",
+    "translation": "Сегодня Миа без очков.",
+    "why": "Ситуация только сегодня — isn't wearing, today."
+  },
+  {
+    "id": "present-continuous-28",
+    "tense": "present-continuous",
+    "text": "We aren't going anywhere this weekend.",
+    "verb": [
+      "aren't",
+      "going"
+    ],
+    "cue": "this weekend",
+    "translation": "В эти выходные мы никуда не едем.",
+    "why": "План на выходные — this weekend."
+  },
+  {
+    "id": "present-continuous-29",
+    "tense": "present-continuous",
+    "text": "My laptop isn't working at the moment.",
+    "verb": [
+      "isn't",
+      "working"
+    ],
+    "cue": "at the moment",
+    "translation": "Мой ноутбук сейчас не работает.",
+    "why": "Временная ситуация сейчас — at the moment."
+  },
+  {
+    "id": "present-continuous-30",
+    "tense": "present-continuous",
+    "text": "Dad isn't cooking dinner tonight.",
+    "verb": [
+      "isn't",
+      "cooking"
+    ],
+    "cue": "tonight",
+    "translation": "Папа сегодня вечером не готовит ужин.",
+    "why": "План на сегодняшний вечер — tonight."
+  },
+  {
+    "id": "present-continuous-31",
+    "tense": "present-continuous",
+    "text": "They are not playing football in this rain.",
+    "verb": [
+      "are",
+      "playing"
+    ],
+    "cue": "",
+    "translation": "Они не играют в футбол под таким дождём.",
+    "why": "Форма are not + -ing: сейчас не играют."
+  },
+  {
+    "id": "present-continuous-32",
+    "tense": "present-continuous",
+    "text": "Grandma is not feeling very well this week.",
+    "verb": [
+      "is",
+      "feeling"
+    ],
+    "cue": "this week",
+    "translation": "Бабушка на этой неделе неважно себя чувствует.",
+    "why": "Временное состояние — this week."
+  },
+  {
+    "id": "present-continuous-33",
+    "tense": "present-continuous",
+    "text": "What are you doing right now?",
+    "verb": [
+      "are",
+      "doing"
+    ],
+    "cue": "right now",
+    "translation": "Что ты сейчас делаешь?",
+    "why": "Вопрос о действии в момент речи — right now."
+  },
+  {
+    "id": "present-continuous-34",
+    "tense": "present-continuous",
+    "text": "Is it snowing in the mountains?",
+    "verb": [
+      "Is",
+      "snowing"
+    ],
+    "cue": "",
+    "translation": "В горах идёт снег?",
+    "why": "Вопрос Is + -ing: идёт ли снег сейчас."
+  },
+  {
+    "id": "present-continuous-35",
+    "tense": "present-continuous",
+    "text": "Are you meeting your friends tonight?",
+    "verb": [
+      "Are",
+      "meeting"
+    ],
+    "cue": "tonight",
+    "translation": "Ты встречаешься с друзьями сегодня вечером?",
+    "why": "Вопрос о договорённости — tonight."
+  },
+  {
+    "id": "present-continuous-36",
+    "tense": "present-continuous",
+    "text": "Why is the baby crying?",
+    "verb": [
+      "is",
+      "crying"
+    ],
+    "cue": "",
+    "translation": "Почему ребёнок плачет?",
+    "why": "Вопрос is + -ing: плачет прямо сейчас."
+  },
+  {
+    "id": "present-continuous-37",
+    "tense": "present-continuous",
+    "text": "Is Peter working late today?",
+    "verb": [
+      "Is",
+      "working"
+    ],
+    "cue": "today",
+    "translation": "Питер сегодня работает допоздна?",
+    "why": "Вопрос о ситуации сегодня — Is + working, today."
+  },
+  {
+    "id": "present-continuous-38",
+    "tense": "present-continuous",
+    "text": "Where are they staying this summer?",
+    "verb": [
+      "are",
+      "staying"
+    ],
+    "cue": "this summer",
+    "translation": "Где они живут этим летом?",
+    "why": "Временная ситуация — this summer."
+  },
+  {
+    "id": "present-continuous-39",
+    "tense": "present-continuous",
+    "text": "Who is she talking to on the phone?",
+    "verb": [
+      "is",
+      "talking"
+    ],
+    "cue": "",
+    "translation": "С кем она говорит по телефону?",
+    "why": "Вопрос is + -ing: разговор идёт сейчас."
+  },
+  {
+    "id": "present-continuous-40",
+    "tense": "present-continuous",
+    "text": "Are we having dinner at Grandma's on Sunday?",
+    "verb": [
+      "Are",
+      "having"
+    ],
+    "cue": "on Sunday",
+    "translation": "Мы ужинаем у бабушки в воскресенье?",
+    "why": "Вопрос о договорённости — on Sunday."
+  },
+  {
+    "id": "past-simple-01",
+    "tense": "past-simple",
+    "text": "I watched a great film yesterday.",
+    "verb": [
+      "watched"
+    ],
+    "cue": "yesterday",
+    "translation": "Вчера я посмотрел отличный фильм.",
+    "why": "Законченное действие в прошлом — yesterday."
+  },
+  {
+    "id": "past-simple-02",
+    "tense": "past-simple",
+    "text": "We moved to Manchester in 2019.",
+    "verb": [
+      "moved"
+    ],
+    "cue": "in 2019",
+    "translation": "Мы переехали в Манчестер в 2019 году.",
+    "why": "Указан год в прошлом — in 2019."
+  },
+  {
+    "id": "past-simple-03",
+    "tense": "past-simple",
+    "text": "She bought a new phone last week.",
+    "verb": [
+      "bought"
+    ],
+    "cue": "last week",
+    "translation": "На прошлой неделе она купила новый телефон.",
+    "why": "Законченное время в прошлом — last week."
+  },
+  {
+    "id": "past-simple-04",
+    "tense": "past-simple",
+    "text": "My grandfather built this house fifty years ago.",
+    "verb": [
+      "built"
+    ],
+    "cue": "fifty years ago",
+    "translation": "Мой дедушка построил этот дом пятьдесят лет назад.",
+    "why": "Время в прошлом — fifty years ago."
+  },
+  {
+    "id": "past-simple-05",
+    "tense": "past-simple",
+    "text": "They went to Spain on holiday last summer.",
+    "verb": [
+      "went"
+    ],
+    "cue": "last summer",
+    "translation": "Прошлым летом они ездили в отпуск в Испанию.",
+    "why": "Законченный период — last summer."
+  },
+  {
+    "id": "past-simple-06",
+    "tense": "past-simple",
+    "text": "Tom lost his wallet on the train.",
+    "verb": [
+      "lost"
+    ],
+    "cue": "",
+    "translation": "Том потерял кошелёк в поезде.",
+    "why": "Рассказ о случае в прошлом — форма lost без have."
+  },
+  {
+    "id": "past-simple-07",
+    "tense": "past-simple",
+    "text": "The concert started at eight o'clock.",
+    "verb": [
+      "started"
+    ],
+    "cue": "",
+    "translation": "Концерт начался в восемь часов.",
+    "why": "Конкретный момент в прошлом — форма started без has."
+  },
+  {
+    "id": "past-simple-08",
+    "tense": "past-simple",
+    "text": "I met my best friend at university.",
+    "verb": [
+      "met"
+    ],
+    "cue": "",
+    "translation": "Я познакомился с лучшим другом в университете.",
+    "why": "Учёба в прошлом закончилась — форма met без have."
+  },
+  {
+    "id": "past-simple-09",
+    "tense": "past-simple",
+    "text": "It snowed a lot last winter.",
+    "verb": [
+      "snowed"
+    ],
+    "cue": "last winter",
+    "translation": "Прошлой зимой было много снега.",
+    "why": "Законченный период — last winter."
+  },
+  {
+    "id": "past-simple-10",
+    "tense": "past-simple",
+    "text": "Shakespeare wrote many famous plays.",
+    "verb": [
+      "wrote"
+    ],
+    "cue": "",
+    "translation": "Шекспир написал много известных пьес.",
+    "why": "Жизнь автора закончилась — только прошедшее, wrote."
+  },
+  {
+    "id": "past-simple-11",
+    "tense": "past-simple",
+    "text": "Anna called me two hours ago.",
+    "verb": [
+      "called"
+    ],
+    "cue": "two hours ago",
+    "translation": "Анна звонила мне два часа назад.",
+    "why": "Время в прошлом — two hours ago."
+  },
+  {
+    "id": "past-simple-12",
+    "tense": "past-simple",
+    "text": "We had dinner at a Chinese restaurant on Saturday.",
+    "verb": [
+      "had"
+    ],
+    "cue": "on Saturday",
+    "translation": "В субботу мы ужинали в китайском ресторане.",
+    "why": "Конкретный прошедший день — on Saturday."
+  },
+  {
+    "id": "past-simple-13",
+    "tense": "past-simple",
+    "text": "He finished university in 2021.",
+    "verb": [
+      "finished"
+    ],
+    "cue": "in 2021",
+    "translation": "Он окончил университет в 2021 году.",
+    "why": "Год в прошлом — in 2021."
+  },
+  {
+    "id": "past-simple-14",
+    "tense": "past-simple",
+    "text": "I saw your sister at the supermarket on Monday.",
+    "verb": [
+      "saw"
+    ],
+    "cue": "on Monday",
+    "translation": "В понедельник я видел твою сестру в супермаркете.",
+    "why": "Конкретный прошедший день — on Monday."
+  },
+  {
+    "id": "past-simple-15",
+    "tense": "past-simple",
+    "text": "The children played in the park all afternoon.",
+    "verb": [
+      "played"
+    ],
+    "cue": "",
+    "translation": "Дети играли в парке весь день.",
+    "why": "Законченное действие в прошлом — форма played."
+  },
+  {
+    "id": "past-simple-16",
+    "tense": "past-simple",
+    "text": "My parents got married in 1995.",
+    "verb": [
+      "got"
+    ],
+    "cue": "in 1995",
+    "translation": "Мои родители поженились в 1995 году.",
+    "why": "Год в прошлом — in 1995."
+  },
+  {
+    "id": "past-simple-17",
+    "tense": "past-simple",
+    "text": "She left the office an hour ago.",
+    "verb": [
+      "left"
+    ],
+    "cue": "an hour ago",
+    "translation": "Она ушла из офиса час назад.",
+    "why": "Время в прошлом — an hour ago."
+  },
+  {
+    "id": "past-simple-18",
+    "tense": "past-simple",
+    "text": "We stayed at a lovely hotel by the sea.",
+    "verb": [
+      "stayed"
+    ],
+    "cue": "",
+    "translation": "Мы жили в чудесном отеле у моря.",
+    "why": "Поездка уже закончилась — форма stayed."
+  },
+  {
+    "id": "past-simple-19",
+    "tense": "past-simple",
+    "text": "Mark broke his leg last year.",
+    "verb": [
+      "broke"
+    ],
+    "cue": "last year",
+    "translation": "В прошлом году Марк сломал ногу.",
+    "why": "Законченный период — last year."
+  },
+  {
+    "id": "past-simple-20",
+    "tense": "past-simple",
+    "text": "I was really tired on Friday evening.",
+    "verb": [
+      "was"
+    ],
+    "cue": "on Friday evening",
+    "translation": "В пятницу вечером я очень устал.",
+    "why": "Конкретное время в прошлом — on Friday evening, форма was."
+  },
+  {
+    "id": "past-simple-21",
+    "tense": "past-simple",
+    "text": "My friends were in Paris last month.",
+    "verb": [
+      "were"
+    ],
+    "cue": "last month",
+    "translation": "В прошлом месяце мои друзья были в Париже.",
+    "why": "Законченный период — last month."
+  },
+  {
+    "id": "past-simple-22",
+    "tense": "past-simple",
+    "text": "Mozart died in Vienna in 1791.",
+    "verb": [
+      "died"
+    ],
+    "cue": "in 1791",
+    "translation": "Моцарт умер в Вене в 1791 году.",
+    "why": "Год в прошлом — in 1791."
+  },
+  {
+    "id": "past-simple-23",
+    "tense": "past-simple",
+    "text": "We visited the British Museum three days ago.",
+    "verb": [
+      "visited"
+    ],
+    "cue": "three days ago",
+    "translation": "Три дня назад мы ходили в Британский музей.",
+    "why": "Время в прошлом — three days ago."
+  },
+  {
+    "id": "past-simple-24",
+    "tense": "past-simple",
+    "text": "Kate read the whole book in one evening.",
+    "verb": [
+      "read"
+    ],
+    "cue": "",
+    "translation": "Кейт прочитала всю книгу за один вечер.",
+    "why": "Read без -s после Kate — значит, это прошедшее время."
+  },
+  {
+    "id": "past-simple-25",
+    "tense": "past-simple",
+    "text": "I didn't sleep well last night.",
+    "verb": [
+      "didn't",
+      "sleep"
+    ],
+    "cue": "last night",
+    "translation": "Прошлой ночью я плохо спал.",
+    "why": "Отрицание didn't + глагол — last night."
+  },
+  {
+    "id": "past-simple-26",
+    "tense": "past-simple",
+    "text": "We didn't go out on Saturday night.",
+    "verb": [
+      "didn't",
+      "go"
+    ],
+    "cue": "on Saturday night",
+    "translation": "В субботу вечером мы никуда не ходили.",
+    "why": "Конкретное прошедшее время — on Saturday night."
+  },
+  {
+    "id": "past-simple-27",
+    "tense": "past-simple",
+    "text": "She didn't call me back yesterday.",
+    "verb": [
+      "didn't",
+      "call"
+    ],
+    "cue": "yesterday",
+    "translation": "Вчера она мне не перезвонила.",
+    "why": "Законченный день в прошлом — yesterday."
+  },
+  {
+    "id": "past-simple-28",
+    "tense": "past-simple",
+    "text": "They didn't enjoy the film very much.",
+    "verb": [
+      "didn't",
+      "enjoy"
+    ],
+    "cue": "",
+    "translation": "Фильм им не очень понравился.",
+    "why": "Отрицание didn't + глагол: просмотр уже закончился."
+  },
+  {
+    "id": "past-simple-29",
+    "tense": "past-simple",
+    "text": "My dad didn't have a mobile phone in 1990.",
+    "verb": [
+      "didn't",
+      "have"
+    ],
+    "cue": "in 1990",
+    "translation": "В 1990 году у папы не было мобильного телефона.",
+    "why": "Год в прошлом — in 1990."
+  },
+  {
+    "id": "past-simple-30",
+    "tense": "past-simple",
+    "text": "Tom wasn't at work last Monday.",
+    "verb": [
+      "wasn't"
+    ],
+    "cue": "last Monday",
+    "translation": "В прошлый понедельник Тома не было на работе.",
+    "why": "Законченное время — last Monday."
+  },
+  {
+    "id": "past-simple-31",
+    "tense": "past-simple",
+    "text": "The weather wasn't good in Scotland last August.",
+    "verb": [
+      "wasn't"
+    ],
+    "cue": "last August",
+    "translation": "Прошлым августом в Шотландии была плохая погода.",
+    "why": "Законченный период — last August."
+  },
+  {
+    "id": "past-simple-32",
+    "tense": "past-simple",
+    "text": "I didn't know the answer in the exam.",
+    "verb": [
+      "didn't",
+      "know"
+    ],
+    "cue": "",
+    "translation": "На экзамене я не знал ответа.",
+    "why": "Отрицание didn't + know: экзамен уже прошёл."
+  },
+  {
+    "id": "past-simple-33",
+    "tense": "past-simple",
+    "text": "When did you start your new job?",
+    "verb": [
+      "did",
+      "start"
+    ],
+    "cue": "When",
+    "translation": "Когда ты начал работать на новом месте?",
+    "why": "Вопрос When — о моменте в прошлом, нужен Past Simple."
+  },
+  {
+    "id": "past-simple-34",
+    "tense": "past-simple",
+    "text": "Did you see the match last night?",
+    "verb": [
+      "Did",
+      "see"
+    ],
+    "cue": "last night",
+    "translation": "Ты смотрел матч вчера вечером?",
+    "why": "Вопрос о прошедшем времени — last night."
+  },
+  {
+    "id": "past-simple-35",
+    "tense": "past-simple",
+    "text": "Where did they go on holiday?",
+    "verb": [
+      "did",
+      "go"
+    ],
+    "cue": "",
+    "translation": "Куда они ездили в отпуск?",
+    "why": "Вопрос через did: поездка уже закончилась."
+  },
+  {
+    "id": "past-simple-36",
+    "tense": "past-simple",
+    "text": "What did she say about the party?",
+    "verb": [
+      "did",
+      "say"
+    ],
+    "cue": "",
+    "translation": "Что она сказала о вечеринке?",
+    "why": "Вопрос через did + say: разговор уже был."
+  },
+  {
+    "id": "past-simple-37",
+    "tense": "past-simple",
+    "text": "Did Ben pass his driving test?",
+    "verb": [
+      "Did",
+      "pass"
+    ],
+    "cue": "",
+    "translation": "Бен сдал экзамен по вождению?",
+    "why": "Вопрос Did + глагол: экзамен уже прошёл."
+  },
+  {
+    "id": "past-simple-38",
+    "tense": "past-simple",
+    "text": "Why were you late last Friday?",
+    "verb": [
+      "were"
+    ],
+    "cue": "last Friday",
+    "translation": "Почему ты опоздал в прошлую пятницу?",
+    "why": "Законченное время — last Friday."
+  },
+  {
+    "id": "past-simple-39",
+    "tense": "past-simple",
+    "text": "Was the hotel in Rome expensive?",
+    "verb": [
+      "Was"
+    ],
+    "cue": "",
+    "translation": "Отель в Риме был дорогим?",
+    "why": "Вопрос с Was: поездка уже в прошлом."
+  },
+  {
+    "id": "past-simple-40",
+    "tense": "past-simple",
+    "text": "Did your parents live in London in the 1980s?",
+    "verb": [
+      "Did",
+      "live"
+    ],
+    "cue": "in the 1980s",
+    "translation": "Твои родители жили в Лондоне в 1980-х?",
+    "why": "Законченный период — in the 1980s."
+  },
+  {
+    "id": "present-perfect-01",
+    "tense": "present-perfect",
+    "text": "I have lived in this city since 2020.",
+    "verb": [
+      "have lived"
+    ],
+    "cue": "since 2020",
+    "translation": "Я живу в этом городе с 2020 года.",
+    "why": "Действие началось в прошлом и длится до сих пор — since 2020."
+  },
+  {
+    "id": "present-perfect-02",
+    "tense": "present-perfect",
+    "text": "She has worked here for five years.",
+    "verb": [
+      "has worked"
+    ],
+    "cue": "for five years",
+    "translation": "Она работает здесь пять лет.",
+    "why": "Длится до сих пор — for five years."
+  },
+  {
+    "id": "present-perfect-03",
+    "tense": "present-perfect",
+    "text": "We have already eaten lunch.",
+    "verb": [
+      "have",
+      "eaten"
+    ],
+    "cue": "already",
+    "translation": "Мы уже пообедали.",
+    "why": "Уже сделано к настоящему моменту — already."
+  },
+  {
+    "id": "present-perfect-04",
+    "tense": "present-perfect",
+    "text": "Tom has just left the office.",
+    "verb": [
+      "has",
+      "left"
+    ],
+    "cue": "just",
+    "translation": "Том только что ушёл из офиса.",
+    "why": "Только что, результат сейчас — just."
+  },
+  {
+    "id": "present-perfect-05",
+    "tense": "present-perfect",
+    "text": "I have lost my house keys.",
+    "verb": [
+      "have lost"
+    ],
+    "cue": "",
+    "translation": "Я потерял ключи от дома.",
+    "why": "Результат сейчас — ключей нет; форма have lost."
+  },
+  {
+    "id": "present-perfect-06",
+    "tense": "present-perfect",
+    "text": "They have visited London three times.",
+    "verb": [
+      "have visited"
+    ],
+    "cue": "three times",
+    "translation": "Они были в Лондоне три раза.",
+    "why": "Опыт без указания, когда именно — three times."
+  },
+  {
+    "id": "present-perfect-07",
+    "tense": "present-perfect",
+    "text": "My sister has broken her phone.",
+    "verb": [
+      "has broken"
+    ],
+    "cue": "",
+    "translation": "Моя сестра разбила телефон.",
+    "why": "Результат сейчас — телефон сломан; форма has broken."
+  },
+  {
+    "id": "present-perfect-08",
+    "tense": "present-perfect",
+    "text": "We have known each other for ten years.",
+    "verb": [
+      "have known"
+    ],
+    "cue": "for ten years",
+    "translation": "Мы знаем друг друга десять лет.",
+    "why": "Длится до сих пор — for ten years."
+  },
+  {
+    "id": "present-perfect-09",
+    "tense": "present-perfect",
+    "text": "He has seen this film twice.",
+    "verb": [
+      "has seen"
+    ],
+    "cue": "twice",
+    "translation": "Он видел этот фильм дважды.",
+    "why": "Опыт без указания времени — twice."
+  },
+  {
+    "id": "present-perfect-10",
+    "tense": "present-perfect",
+    "text": "It has rained a lot this week.",
+    "verb": [
+      "has rained"
+    ],
+    "cue": "this week",
+    "translation": "На этой неделе было много дождей.",
+    "why": "Неделя ещё не закончилась — this week."
+  },
+  {
+    "id": "present-perfect-11",
+    "tense": "present-perfect",
+    "text": "I have just finished my homework.",
+    "verb": [
+      "have",
+      "finished"
+    ],
+    "cue": "just",
+    "translation": "Я только что закончил домашнее задание.",
+    "why": "Только что, результат сейчас — just."
+  },
+  {
+    "id": "present-perfect-12",
+    "tense": "present-perfect",
+    "text": "Anna has cut her hair short.",
+    "verb": [
+      "has cut"
+    ],
+    "cue": "",
+    "translation": "Анна коротко подстриглась.",
+    "why": "Результат виден сейчас — форма has cut."
+  },
+  {
+    "id": "present-perfect-13",
+    "tense": "present-perfect",
+    "text": "My parents have bought a new car.",
+    "verb": [
+      "have bought"
+    ],
+    "cue": "",
+    "translation": "Мои родители купили новую машину.",
+    "why": "Важен результат сейчас: машина есть — have bought."
+  },
+  {
+    "id": "present-perfect-14",
+    "tense": "present-perfect",
+    "text": "Petrol prices have gone up since January.",
+    "verb": [
+      "have gone"
+    ],
+    "cue": "since January",
+    "translation": "С января цены на бензин выросли.",
+    "why": "С момента в прошлом до сейчас — since January."
+  },
+  {
+    "id": "present-perfect-15",
+    "tense": "present-perfect",
+    "text": "We have been to Paris many times.",
+    "verb": [
+      "have been"
+    ],
+    "cue": "many times",
+    "translation": "Мы много раз были в Париже.",
+    "why": "Опыт за жизнь — many times."
+  },
+  {
+    "id": "present-perfect-16",
+    "tense": "present-perfect",
+    "text": "She has written three emails today.",
+    "verb": [
+      "has written"
+    ],
+    "cue": "today",
+    "translation": "Сегодня она написала три письма.",
+    "why": "Сегодняшний день ещё не закончился — today."
+  },
+  {
+    "id": "present-perfect-17",
+    "tense": "present-perfect",
+    "text": "I have never tried Indian food.",
+    "verb": [
+      "have",
+      "tried"
+    ],
+    "cue": "never",
+    "translation": "Я никогда не пробовал индийскую еду.",
+    "why": "Опыт за всю жизнь — never с have tried."
+  },
+  {
+    "id": "present-perfect-18",
+    "tense": "present-perfect",
+    "text": "Our teacher has given us a lot of homework.",
+    "verb": [
+      "has given"
+    ],
+    "cue": "",
+    "translation": "Учитель задал нам много домашней работы.",
+    "why": "Результат сейчас: задание есть — has given."
+  },
+  {
+    "id": "present-perfect-19",
+    "tense": "present-perfect",
+    "text": "Mike has been ill since Monday.",
+    "verb": [
+      "has been"
+    ],
+    "cue": "since Monday",
+    "translation": "Майк болеет с понедельника.",
+    "why": "Состояние длится до сих пор — since Monday."
+  },
+  {
+    "id": "present-perfect-20",
+    "tense": "present-perfect",
+    "text": "They have recently moved into a new flat.",
+    "verb": [
+      "have",
+      "moved"
+    ],
+    "cue": "recently",
+    "translation": "Они недавно переехали в новую квартиру.",
+    "why": "Недавнее действие с результатом сейчас — recently."
+  },
+  {
+    "id": "present-perfect-21",
+    "tense": "present-perfect",
+    "text": "The film has already started.",
+    "verb": [
+      "has",
+      "started"
+    ],
+    "cue": "already",
+    "translation": "Фильм уже начался.",
+    "why": "Уже произошло, важно сейчас — already."
+  },
+  {
+    "id": "present-perfect-22",
+    "tense": "present-perfect",
+    "text": "I have had this bike for six years.",
+    "verb": [
+      "have had"
+    ],
+    "cue": "for six years",
+    "translation": "У меня этот велосипед уже шесть лет.",
+    "why": "Длится до сих пор — for six years."
+  },
+  {
+    "id": "present-perfect-23",
+    "tense": "present-perfect",
+    "text": "Someone has taken my umbrella.",
+    "verb": [
+      "has taken"
+    ],
+    "cue": "",
+    "translation": "Кто-то взял мой зонт.",
+    "why": "Результат сейчас: зонта нет — has taken."
+  },
+  {
+    "id": "present-perfect-24",
+    "tense": "present-perfect",
+    "text": "We have made a lot of new friends this year.",
+    "verb": [
+      "have made"
+    ],
+    "cue": "this year",
+    "translation": "В этом году мы нашли много новых друзей.",
+    "why": "Год ещё не закончился — this year."
+  },
+  {
+    "id": "present-perfect-25",
+    "tense": "present-perfect",
+    "text": "I haven't read the new book yet.",
+    "verb": [
+      "haven't",
+      "read"
+    ],
+    "cue": "yet",
+    "translation": "Я ещё не прочитал новую книгу.",
+    "why": "Ещё не сделано к настоящему моменту — yet."
+  },
+  {
+    "id": "present-perfect-26",
+    "tense": "present-perfect",
+    "text": "She hasn't called me since Friday.",
+    "verb": [
+      "hasn't",
+      "called"
+    ],
+    "cue": "since Friday",
+    "translation": "Она не звонила мне с пятницы.",
+    "why": "С момента в прошлом до сейчас — since Friday."
+  },
+  {
+    "id": "present-perfect-27",
+    "tense": "present-perfect",
+    "text": "We haven't seen Mark for a long time.",
+    "verb": [
+      "haven't",
+      "seen"
+    ],
+    "cue": "for a long time",
+    "translation": "Мы давно не видели Марка.",
+    "why": "Длится до сих пор — for a long time."
+  },
+  {
+    "id": "present-perfect-28",
+    "tense": "present-perfect",
+    "text": "They haven't booked a holiday this year.",
+    "verb": [
+      "haven't",
+      "booked"
+    ],
+    "cue": "this year",
+    "translation": "В этом году они не бронировали отпуск.",
+    "why": "Год ещё не закончился — this year."
+  },
+  {
+    "id": "present-perfect-29",
+    "tense": "present-perfect",
+    "text": "Jack hasn't done his homework.",
+    "verb": [
+      "hasn't",
+      "done"
+    ],
+    "cue": "",
+    "translation": "Джек не сделал домашнее задание.",
+    "why": "Результат сейчас: задание не готово — hasn't done."
+  },
+  {
+    "id": "present-perfect-30",
+    "tense": "present-perfect",
+    "text": "It hasn't rained here for two months.",
+    "verb": [
+      "hasn't",
+      "rained"
+    ],
+    "cue": "for two months",
+    "translation": "Здесь не было дождя два месяца.",
+    "why": "Длится до сих пор — for two months."
+  },
+  {
+    "id": "present-perfect-31",
+    "tense": "present-perfect",
+    "text": "I haven't eaten anything today.",
+    "verb": [
+      "haven't",
+      "eaten"
+    ],
+    "cue": "today",
+    "translation": "Я сегодня ничего не ел.",
+    "why": "Сегодняшний день ещё не закончился — today."
+  },
+  {
+    "id": "present-perfect-32",
+    "tense": "present-perfect",
+    "text": "The parcel hasn't arrived yet.",
+    "verb": [
+      "hasn't",
+      "arrived"
+    ],
+    "cue": "yet",
+    "translation": "Посылка ещё не пришла.",
+    "why": "Ещё не произошло к настоящему моменту — yet."
+  },
+  {
+    "id": "present-perfect-33",
+    "tense": "present-perfect",
+    "text": "Have you ever been to Rome?",
+    "verb": [
+      "Have",
+      "been"
+    ],
+    "cue": "ever",
+    "translation": "Ты когда-нибудь был в Риме?",
+    "why": "Вопрос об опыте за жизнь — ever."
+  },
+  {
+    "id": "present-perfect-34",
+    "tense": "present-perfect",
+    "text": "Has she finished her report yet?",
+    "verb": [
+      "Has",
+      "finished"
+    ],
+    "cue": "yet",
+    "translation": "Она уже закончила отчёт?",
+    "why": "Вопрос, сделано ли к настоящему моменту — yet."
+  },
+  {
+    "id": "present-perfect-35",
+    "tense": "present-perfect",
+    "text": "How long have you known Sarah?",
+    "verb": [
+      "have",
+      "known"
+    ],
+    "cue": "How long",
+    "translation": "Как давно ты знаешь Сару?",
+    "why": "Вопрос о длительности до сих пор — How long."
+  },
+  {
+    "id": "present-perfect-36",
+    "tense": "present-perfect",
+    "text": "Have you seen my phone anywhere?",
+    "verb": [
+      "Have",
+      "seen"
+    ],
+    "cue": "",
+    "translation": "Ты нигде не видел мой телефон?",
+    "why": "Важен результат сейчас: телефон нужен — Have + seen."
+  },
+  {
+    "id": "present-perfect-37",
+    "tense": "present-perfect",
+    "text": "Has Tom ever ridden a horse?",
+    "verb": [
+      "Has",
+      "ridden"
+    ],
+    "cue": "ever",
+    "translation": "Том когда-нибудь ездил на лошади?",
+    "why": "Вопрос об опыте — ever."
+  },
+  {
+    "id": "present-perfect-38",
+    "tense": "present-perfect",
+    "text": "Have they already left for the airport?",
+    "verb": [
+      "Have",
+      "left"
+    ],
+    "cue": "already",
+    "translation": "Они уже уехали в аэропорт?",
+    "why": "Уже произошло к настоящему моменту — already."
+  },
+  {
+    "id": "present-perfect-39",
+    "tense": "present-perfect",
+    "text": "What have you done to your hair?",
+    "verb": [
+      "have",
+      "done"
+    ],
+    "cue": "",
+    "translation": "Что ты сделал со своими волосами?",
+    "why": "Результат виден сейчас — have done."
+  },
+  {
+    "id": "present-perfect-40",
+    "tense": "present-perfect",
+    "text": "How many countries have you visited so far?",
+    "verb": [
+      "have",
+      "visited"
+    ],
+    "cue": "so far",
+    "translation": "Сколько стран ты уже посетил?",
+    "why": "Опыт до настоящего момента — so far."
+  }
+]

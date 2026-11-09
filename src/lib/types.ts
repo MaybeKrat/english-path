@@ -91,6 +91,20 @@ export interface AppState {
   dailyExtra?: { day: string; count: number };
   /** Irregular verbs mode; absent until the first answer there. */
   verbs?: VerbProgress;
+  /** Grammar exercises; absent until the first answer there. */
+  grammar?: { answers: GrammarAnswer[] };
+}
+
+/** Tenses of the grammar reference and exercises; see src/lib/grammar.ts. */
+export type TenseId = 'present-simple' | 'present-continuous' | 'past-simple' | 'present-perfect';
+
+/** One answer of the "which tense?" exercise. */
+export interface GrammarAnswer {
+  /** Sentence id from src/data/grammar/tense-sentences.json. */
+  id: string;
+  at: number;
+  chosen: TenseId;
+  correct: boolean;
 }
 
 /** Progress of the irregular verbs mode, kept apart from word cards so word limits and statistics stay unchanged. */

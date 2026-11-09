@@ -180,9 +180,10 @@ export function getStats(words: Word[], state: AppState, now: number, films: rea
   const learned = cards.filter((card) => card.state === 'review' && card.interval >= 21).length;
   const reviews = state.reviews.filter((review) => knownIds.has(review.wordId) && review.at <= now);
   const today = localDayKey(now);
-  // Practice of irregular verbs keeps the streak going too.
-  const days = new Set([...reviews, ...(state.verbs?.reviews ?? []).filter((review) => review.at <= now)]
-    .map((review) => localDayKey(review.at)));
+  // Practice of irregular verbs and grammar keeps the streak going too.
+  const days = new Set([...reviews, ...(state.verbs?.reviews ?? []), ...(state.grammar?.answers ?? [])]
+    .filter((entry) => entry.at <= now)
+    .map((entry) => localDayKey(entry.at)));
   const cursor = new Date(now);
   cursor.setHours(12, 0, 0, 0);
   if (!days.has(today)) cursor.setDate(cursor.getDate() - 1);

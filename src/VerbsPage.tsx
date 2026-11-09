@@ -1,10 +1,21 @@
-// Irregular verbs mode: type or recall the Past Simple and Past Participle, then rate the answer as on word cards.
+// Irregular verbs mode: the card shows the Russian meaning; type or recall the three forms, then rate the answer as on
+// word cards. A new verb opens once its word is learned on the cards (decided 09.11.2026).
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, AudioLines, Check, RotateCcw, Search, X } from "lucide-react";
+import { ArrowRight, AudioLines, Check, Lightbulb, Lock, RotateCcw, Search, X } from "lucide-react";
 import verbData from "./data/irregular-verbs.json";
 import { scheduleCard } from "./lib/scheduler";
 import { stageOf } from "./lib/insights";
-import { formMatches, rateVerb, spokenForms, verbProgress, verbQueue, verbStats, type IrregularVerb } from "./lib/verbs";
+import {
+  formMatches,
+  isVerbOpen,
+  rateVerb,
+  spokenForms,
+  verbProgress,
+  verbQueue,
+  verbStats,
+  type IrregularVerb,
+  type LearnedCheck,
+} from "./lib/verbs";
 import { intervalLabel, MemoryMeter, quantity } from "./shared";
 import type { AppState, Rating } from "./lib/types";
 
@@ -26,6 +37,8 @@ interface Props {
   /** Text that is being prepared or spoken now. */
   speaking: string | null;
   openSettings: () => void;
+  /** Learned word cards; see learnedCheck in src/lib/films.ts. */
+  learned: LearnedCheck;
 }
 
 /** Splits the example around the first verb form it contains. */
@@ -38,33 +51,38 @@ function exampleParts(verb: IrregularVerb): [string, string, string] | null {
   return null;
 }
 
-export function VerbsPage({ state, now, saving, active, save, setNow, speak, prepare, speaking, openSettings }: Props) {
-  const queue = useMemo(() => verbQueue(irregularVerbs, state, now), [state, now]);
-  const stats = useMemo(() => verbStats(irregularVerbs, state, now), [state, now]);
+export function VerbsPage({ state, now, saving, active, save, setNow, speak, prepare, speaking, openSettings, learned }: Props) {
+  const queue = useMemo(() => verbQueue(irregularVerbs, state, now, learned), [state, now, learned]);
+  const stats = useMemo(() => verbStats(irregularVerbs, state, now, learned), [state, now, learned]);
   const progress = verbProgress(state);
   const verb = queue[0];
   const [revealed, setRevealed] = useState(false);
+  const [hint, setHint] = useState(false);
+  const [base, setBase] = useState("");
   const [past, setPast] = useState("");
   const [participle, setParticiple] = useState("");
   const [undoState, setUndoState] = useState<AppState | null>(null);
   const [query, setQuery] = useState("");
   const firstInput = useRef<HTMLInputElement>(null);
-  const typed = past.trim() !== "" || participle.trim() !== "";
+  const typed = base.trim() !== "" || past.trim() !== "" || participle.trim() !== "";
+  const baseRight = verb ? formMatches(base, verb.base) : false;
   const pastRight = verb ? formMatches(past, verb.past) : false;
   const participleRight = verb ? formMatches(participle, verb.participle) : false;
   // Typed answers suggest a rating; the choice stays with the learner.
-  const suggested: Rating | null = !typed ? null : pastRight && participleRight ? "good" : "again";
+  const suggested: Rating | null = !typed ? null : baseRight && pastRight && participleRight ? "good" : "again";
   const newLeft = queue.filter((item) => !progress.cards[item.id]).length;
   const dueLeft = queue.length - newLeft;
 
   useEffect(() => {
     setRevealed(false);
+    setHint(false);
+    setBase("");
     setPast("");
     setParticiple("");
     if (verb && active) {
       firstInput.current?.focus();
-      prepare?.(verb.base);
-      if (state.settings.autoSpeak) speak(verb.base);
+      // The front is Russian: the forms are prepared silently and spoken after the answer opens.
+      prepare?.(spokenForms(verb));
     }
   }, [verb?.id, active]);
 
@@ -77,7 +95,6 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
     if (!verb) return;
     setRevealed(true);
     (document.activeElement as HTMLElement | null)?.blur();
-    prepare?.(spokenForms(verb));
   }
 
   async function rate(rating: Rating) {
@@ -117,6 +134,9 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
         } else if (event.code === "Space" && !inField && !target.closest("button, a")) {
           event.preventDefault();
           revealRef.current();
+        } else if (event.code === "KeyE" && !inField) {
+          event.preventDefault();
+          setHint(true);
         }
         return;
       }
@@ -175,19 +195,26 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
             <span className="tag tag-level">{item.level}</span>
           </div>
           <div className="card-body">
-            {!revealed && <span className="prompt-label">ВСПОМНИТЕ ДВЕ ФОРМЫ</span>}
+            {!revealed && <span className="prompt-label">ВСПОМНИТЕ ТРИ ФОРМЫ</span>}
             {!revealed ? (
               <>
-                <h2 className="card-word">{item.base}</h2>
-                <div className="word-meta">
-                  <span>{item.translation}</span>
-                  {audioButton(item.base, `Произнести ${item.base}`)}
-                </div>
+                <h2 className="card-word translation-prompt">{item.translation}</h2>
+                {hint && <p className="example hint-example">{item.exampleTranslation}</p>}
                 <div className="verb-inputs">
+                  <label>
+                    <span>Infinitive</span>
+                    <input
+                      ref={firstInput}
+                      value={base}
+                      onChange={(event) => setBase(event.target.value)}
+                      autoComplete="off"
+                      spellCheck={false}
+                      placeholder="можно не вводить"
+                    />
+                  </label>
                   <label>
                     <span>Past Simple</span>
                     <input
-                      ref={firstInput}
                       value={past}
                       onChange={(event) => setPast(event.target.value)}
                       autoComplete="off"
@@ -227,7 +254,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
                 </div>
                 {typed && (
                   <p className="verb-check">
-                    Вы ввели: {formResult(past, pastRight)} {formResult(participle, participleRight)}
+                    Вы ввели: {formResult(base, baseRight)} {formResult(past, pastRight)} {formResult(participle, participleRight)}
                   </p>
                 )}
                 <p className="example">
@@ -246,8 +273,16 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
             )}
           </div>
           <div className="card-foot">
-            <span>{revealed ? "Насколько легко вспомнили?" : "Введите формы или вспомните про себя"}</span>
-            <span>Infinitive → Past Simple, Past Participle</span>
+            {!revealed && !hint ? (
+              <button className="hint-button" onClick={() => setHint(true)}>
+                <Lightbulb size={15} />
+                Не ясно, какой глагол? Покажите пример
+                <kbd>E</kbd>
+              </button>
+            ) : (
+              <span>{revealed ? "Насколько легко вспомнили?" : "Введите формы или вспомните про себя"}</span>
+            )}
+            <span>Русский → три формы</span>
           </div>
         </div>
         {!revealed ? (
@@ -276,7 +311,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
           <span>
             {revealed
               ? suggested === "good"
-                ? "Обе формы верны. Оцените ответ клавишами 1–4"
+                ? "Все формы верны. Оцените ответ клавишами 1–4"
                 : suggested === "again"
                   ? "Есть ошибка. Оцените ответ клавишами 1–4"
                   : "Оцените ответ клавишами 1–4"
@@ -296,7 +331,7 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
       .map((card) => card.due)
       .filter((due) => due > now)
       .sort((a, b) => a - b)[0];
-    const left = irregularVerbs.length - stats.started;
+    const locked = irregularVerbs.length - stats.started - stats.open;
     return (
       <div className="panel done-panel">
         <div className="done-center">
@@ -308,9 +343,11 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
             {nextDue
               ? `Следующее повторение — ${new Date(nextDue).toLocaleString("ru-RU", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}.`
               : "Повторений пока нет."}{" "}
-            {left > 0
-              ? `Новых глаголов в день: ${state.settings.verbsDailyNew}, не начато ещё ${left}.`
-              : "Все глаголы начаты."}
+            {stats.open > 0
+              ? `Новых глаголов в день: ${state.settings.verbsDailyNew}, открыто и ещё не начато: ${stats.open}.`
+              : "Все открытые глаголы начаты."}{" "}
+            {locked > 0 &&
+              `Ещё ${locked} ${quantity(locked, "глагол откроется", "глагола откроются", "глаголов откроются")}, когда их слова будут выучены в «Практике».`}
           </p>
           <button className="secondary-button" onClick={openSettings}>
             Изменить лимит новых глаголов
@@ -338,6 +375,9 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
             </span>
             <span>
               Начато <strong>{stats.started}</strong>
+            </span>
+            <span title="Глагол открывается, когда его слово выучено в «Практике»">
+              Открыто новых <strong>{stats.open}</strong>
             </span>
             <span>
               Ответов сегодня <strong>{stats.answersToday}</strong>
@@ -377,7 +417,16 @@ export function VerbsPage({ state, now, saving, active, save, setNow, speak, pre
               <span className="row-form">{item.past}</span>
               <span className="row-form">{item.participle}</span>
               <span className="row-translation">{item.translation}</span>
-              <MemoryMeter stage={stageOf(progress.cards[item.id])} />
+              {progress.cards[item.id] || isVerbOpen(item, learned) ? (
+                <MemoryMeter stage={stageOf(progress.cards[item.id])} />
+              ) : (
+                <span
+                  className="row-locked"
+                  title={item.cards.length ? "Откроется, когда слово будет выучено в «Практике»" : "Этого слова нет в карточках"}
+                >
+                  <Lock size={13} />
+                </span>
+              )}
             </button>
           ))}
         </div>

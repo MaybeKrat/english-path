@@ -2553,9 +2553,9 @@ kbd {
     display: none;
   }
   .sidebar nav {
-    flex: 4;
+    flex: 5;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0;
   }
   .sidebar-bottom {
@@ -2699,7 +2699,7 @@ kbd {
 }
 .verb-inputs {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 220px));
+  grid-template-columns: repeat(3, minmax(0, 200px));
   justify-content: center;
   gap: 14px;
   width: 100%;
@@ -2801,6 +2801,10 @@ kbd {
 .word-row.verb-row {
   grid-template-columns: minmax(90px, 140px) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr) 64px;
 }
+.row-locked {
+  display: inline-flex;
+  color: var(--muted-2);
+}
 .row-form {
   font-size: 13.5px;
   font-weight: 500;
@@ -2823,6 +2827,288 @@ kbd {
   .verb-row .row-translation,
   .table-head.verb-row span:nth-child(4) {
     display: none;
+  }
+}
+
+/* Grammar (src/GrammarPage.tsx) */
+.grammar-page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* The page head sits above the column here, so the column is shorter than on Practice. */
+.grammar-practice {
+  min-height: calc(100vh - 150px);
+}
+.grammar-tabs {
+  width: 320px;
+  margin-left: auto;
+}
+.tense-sentence {
+  max-width: 760px;
+  color: var(--word);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  overflow-wrap: anywhere;
+}
+.tense-sentence mark,
+.tense-mistakes mark {
+  padding: 0 4px;
+  border-radius: 6px;
+  background: var(--sage);
+  color: var(--green);
+}
+.tense-cue {
+  text-decoration-color: var(--amber);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+.tense-feedback {
+  max-width: 640px;
+}
+.tense-feedback h3 {
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.tense-feedback h3.is-right {
+  color: var(--green);
+}
+.tense-feedback h3.is-wrong {
+  color: var(--red);
+}
+.tense-why {
+  margin-top: 8px;
+  color: var(--secondary-ink);
+  font-size: 15px;
+}
+.tense-feedback .link-button {
+  margin-top: 10px;
+}
+.tense-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+.tense-option {
+  position: relative;
+  height: 58px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+.tense-option kbd {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.tense-option:not(:disabled):hover {
+  border-color: var(--green-2);
+}
+.tense-option:disabled {
+  opacity: 0.55;
+}
+.tense-option.is-right {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--on-accent);
+  opacity: 1;
+}
+.tense-option.is-wrong {
+  border-color: var(--red);
+  background: var(--red-bg);
+  color: var(--red);
+  opacity: 1;
+}
+.tense-summary .done-center {
+  max-width: 640px;
+}
+.tense-mistakes {
+  width: 100%;
+  margin: 14px 0 6px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.tense-mistakes li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.tense-mistakes p {
+  font-size: 16px;
+}
+.tense-mistakes small,
+.tense-mistakes-note {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.tense-mistakes-note {
+  margin-bottom: 14px;
+}
+.reference {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 40px;
+}
+.reference-overview {
+  overflow: hidden;
+}
+.reference-row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 190px minmax(0, 1.3fr);
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  font-size: 13.5px;
+}
+.reference-row:last-child {
+  border-bottom: 0;
+}
+button.reference-row:hover {
+  background: var(--surface-hover);
+}
+.reference-head {
+  padding-block: 10px;
+  color: var(--muted-2);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+.reference-row small,
+.rule small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+.reference code,
+.rule code {
+  color: var(--green);
+  font-family: inherit;
+  font-weight: 600;
+}
+.rule {
+  padding: 22px 26px;
+  scroll-margin-top: 20px;
+}
+.rule-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+}
+.rule-head h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.rule-head span {
+  color: var(--muted);
+}
+.rule-head .rule-score {
+  margin-left: auto;
+  font-size: 12.5px;
+}
+.rule h3 {
+  margin: 18px 0 8px;
+  color: var(--muted-2);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.rule-uses,
+.rule-mistakes {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.rule-uses li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 14px;
+  font-size: 14px;
+}
+.rule-uses b {
+  font-weight: 500;
+}
+.rule-forms {
+  display: grid;
+  gap: 8px;
+}
+.rule-forms > div {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  font-size: 14px;
+}
+.rule-forms > div > span:last-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 14px;
+}
+.rule-sign {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  background: var(--sage);
+  color: var(--green);
+  font-weight: 700;
+}
+.rule-markers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.rule-markers .chip {
+  cursor: default;
+}
+.rule-mistakes li {
+  font-size: 14px;
+}
+.rule-mistakes s {
+  color: var(--red);
+}
+@media (max-width: 720px) {
+  .grammar-tabs {
+    width: 100%;
+    margin-left: 0;
+  }
+  .tense-sentence {
+    font-size: 28px;
+  }
+  .tense-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .reference-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .reference-head span:nth-child(n + 3),
+  .reference-row > :nth-child(n + 4) {
+    display: none;
+  }
+  .rule {
+    padding: 18px;
+  }
+  .rule-uses li,
+  .rule-forms > div > span:last-child {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
   }
 }
 

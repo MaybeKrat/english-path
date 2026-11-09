@@ -5,6 +5,7 @@ import { isVoice } from './voices.ts';
 import { DEFAULT_ZOOM, isZoom } from './zoom.ts';
 import { isRepeatSeconds } from './speech-modes.ts';
 import { DEFAULT_VERBS_DAILY_NEW, MAX_VERBS_DAILY_NEW } from './verbs.ts';
+import { isTense } from './grammar.ts';
 
 export const STORAGE_KEY = 'oxford-cards:v1';
 
@@ -66,6 +67,22 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
     if (!isRecord(parsed.verbs)) invalid('некорректный прогресс неправильных глаголов.');
     verbs = { cards: parseCards(parsed.verbs.cards, validWordIds), reviews: parseReviews(parsed.verbs.reviews, validWordIds) };
   }
+  let grammar: AppState['grammar'];
+  if (parsed.grammar !== undefined) {
+    // Sentence ids are not checked against the data: a removed sentence must not block the progress.
+    if (!isRecord(parsed.grammar) || !Array.isArray(parsed.grammar.answers) || parsed.grammar.answers.length > 250_000) {
+      invalid('некорректная история упражнений по грамматике.');
+    }
+    grammar = {
+      answers: parsed.grammar.answers.map((answer: unknown) => {
+        if (!isRecord(answer) || typeof answer.id !== 'string' || !/^[a-z0-9-]{1,80}$/.test(answer.id) || !timestamp(answer.at)
+          || !isTense(answer.chosen) || typeof answer.correct !== 'boolean') {
+          invalid('некорректная запись в истории упражнений по грамматике.');
+        }
+        return { id: answer.id, at: answer.at, chosen: answer.chosen, correct: answer.correct };
+      }),
+    };
+  }
   const settings = parsed.settings;
   if (!isRecord(settings) || !finiteRange(settings.dailyNewLimit, 0, 200) || !Number.isInteger(settings.dailyNewLimit)
     || !Array.isArray(settings.levels) || settings.levels.length === 0 || settings.levels.length > 4
@@ -105,6 +122,7 @@ function validateState(raw: string, validWordIds?: Set<string>): AppState {
     version: 1, cards, reviews,
     ...(dailyExtra ? { dailyExtra } : {}),
     ...(verbs ? { verbs } : {}),
+    ...(grammar ? { grammar } : {}),
     settings: {
       dailyNewLimit: settings.dailyNewLimit,
       levels: [...settings.levels] as Level[],

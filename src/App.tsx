@@ -15,6 +15,7 @@ import {
   Clock3,
   ExternalLink,
   Flame,
+  GraduationCap,
   Layers,
   Lightbulb,
   Maximize2,
@@ -55,6 +56,7 @@ import { DEFAULT_ZOOM, stepZoom, ZOOM_LEVELS } from "./lib/zoom";
 import { scaledCursors } from "./lib/cursors";
 import { SPEECH_MODES, speechMode, speechModeLabel, speechModeSettings, type SpeechMode } from "./lib/speech-modes";
 import { irregularVerbs, VerbsPage } from "./VerbsPage";
+import { GrammarPage } from "./GrammarPage";
 import { verbQueue } from "./lib/verbs";
 import { intervalLabel, MemoryMeter, quantity, stageLevel, stageNames } from "./shared";
 import { getTopicName, orderWordsForStudy, TOPICS } from "./lib/topics";
@@ -104,10 +106,11 @@ const ratingLabels: Record<Rating, string> = {
 };
 const ratings: Rating[] = ["again", "hard", "good", "easy"];
 const weekdays = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"];
-type Page = "study" | "verbs" | "library" | "stats" | "settings";
+type Page = "study" | "verbs" | "grammar" | "library" | "stats" | "settings";
 const pageNames = {
   study: "Практика",
   verbs: "Глаголы",
+  grammar: "Грамматика",
   library: "Словарь",
   stats: "Прогресс",
   settings: "Настройки",
@@ -226,7 +229,8 @@ export default function App() {
   const current = drillWord ?? queue.find((word) => word.id === activeId) ?? queue[0];
   const isRevealed = drill ? drill.revealed : revealed;
   const stats = useMemo(() => getStats(words, state, now, films), [state, now]);
-  const verbsLeft = useMemo(() => verbQueue(irregularVerbs, state, now).length, [state, now]);
+  const learnedWords = useMemo(() => learnedCheck(state), [state]);
+  const verbsLeft = useMemo(() => verbQueue(irregularVerbs, state, now, learnedWords).length, [state, now, learnedWords]);
   const reverse = state.settings.direction === "ru-en";
   const currentSpeechMode = speechMode(state.settings);
   const repeatSeconds = typeof currentSpeechMode === "number" ? currentSpeechMode : 0;
@@ -2199,6 +2203,7 @@ export default function App() {
             [
               { id: "study", icon: Layers },
               { id: "verbs", icon: SpellCheck },
+              { id: "grammar", icon: GraduationCap },
               { id: "library", icon: BookOpen },
               { id: "stats", icon: TrendingUp },
             ] as const
@@ -2303,7 +2308,11 @@ export default function App() {
             prepare={(text) => speech.current?.prepare?.(text)}
             speaking={speechState.status !== "idle" ? speechState.text : null}
             openSettings={() => setPage("settings")}
+            learned={learnedWords}
           />
+        )}
+        {page === "grammar" && (
+          <GrammarPage state={state} now={now} saving={saving} active={!pendingImport && !filmPicker} save={save} />
         )}
         {page === "library" && renderLibrary()}
         {page === "stats" && renderStats()}

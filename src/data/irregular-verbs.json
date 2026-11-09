@@ -7,7 +7,10 @@
     "translation": "быть, являться",
     "level": "A1",
     "example": "We were very tired after the long journey.",
-    "exampleTranslation": "Мы очень устали после долгой дороги."
+    "exampleTranslation": "Мы очень устали после долгой дороги.",
+    "cards": [
+      "oxford-46599c5bb5c33101"
+    ]
   },
   {
     "id": "verb-have",
@@ -17,57 +20,75 @@
     "translation": "иметь",
     "level": "A1",
     "example": "I have had this bike since I was twelve.",
-    "exampleTranslation": "Этот велосипед у меня с двенадцати лет."
+    "exampleTranslation": "Этот велосипед у меня с двенадцати лет.",
+    "cards": [
+      "oxford-193c45b5281908d2"
+    ]
   },
   {
     "id": "verb-do",
     "base": "do",
     "past": "did",
     "participle": "done",
-    "translation": "делать",
+    "translation": "делать (действие, работу)",
     "level": "A1",
     "example": "She did her homework before dinner.",
-    "exampleTranslation": "Она сделала домашнее задание до ужина."
+    "exampleTranslation": "Она сделала домашнее задание до ужина.",
+    "cards": [
+      "oxford-122f217d9c55a342"
+    ]
   },
   {
     "id": "verb-say",
     "base": "say",
     "past": "said",
     "participle": "said",
-    "translation": "сказать, говорить",
+    "translation": "сказать, произнести (слова)",
     "level": "A1",
     "example": "Have you said goodbye to your grandmother yet?",
-    "exampleTranslation": "Ты уже попрощался с бабушкой?"
+    "exampleTranslation": "Ты уже попрощался с бабушкой?",
+    "cards": [
+      "oxford-a0b967fc60136d2e"
+    ]
   },
   {
     "id": "verb-go",
     "base": "go",
     "past": "went",
     "participle": "gone",
-    "translation": "идти, ехать",
+    "translation": "идти, ехать (куда-то)",
     "level": "A1",
     "example": "We went to the seaside last summer.",
-    "exampleTranslation": "Прошлым летом мы ездили на море."
+    "exampleTranslation": "Прошлым летом мы ездили на море.",
+    "cards": [
+      "oxford-4cd0e21a9a0795a1"
+    ]
   },
   {
     "id": "verb-get",
     "base": "get",
     "past": "got",
     "participle": "got",
-    "translation": "получать; становиться; добираться",
+    "translation": "получать; добираться",
     "level": "A1",
     "example": "It has got much colder since yesterday.",
-    "exampleTranslation": "Со вчерашнего дня сильно похолодало."
+    "exampleTranslation": "Со вчерашнего дня сильно похолодало.",
+    "cards": [
+      "oxford-2998b3232d29e8dc"
+    ]
   },
   {
     "id": "verb-make",
     "base": "make",
     "past": "made",
     "participle": "made",
-    "translation": "делать, создавать",
+    "translation": "делать, изготавливать, создавать",
     "level": "A1",
     "example": "My mum made a chocolate cake for my birthday.",
-    "exampleTranslation": "Мама испекла шоколадный торт на мой день рождения."
+    "exampleTranslation": "Мама испекла шоколадный торт на мой день рождения.",
+    "cards": [
+      "oxford-d05aa2a15fb3c40e"
+    ]
   },
   {
     "id": "verb-know",
@@ -77,7 +98,10 @@
     "translation": "знать",
     "level": "A1",
     "example": "I have known Tom since primary school.",
-    "exampleTranslation": "Я знаю Тома с начальной школы."
+    "exampleTranslation": "Я знаю Тома с начальной школы.",
+    "cards": [
+      "oxford-cd1bb3012bcfaa0c"
+    ]
   },
   {
     "id": "verb-think",
@@ -87,7 +111,10 @@
     "translation": "думать",
     "level": "A1",
     "example": "I thought the film was rather boring.",
-    "exampleTranslation": "Мне показалось, что фильм довольно скучный."
+    "exampleTranslation": "Мне показалось, что фильм довольно скучный.",
+    "cards": [
+      "oxford-dc2fc19d8fce376c"
+    ]
   },
   {
     "id": "verb-take",
@@ -97,7 +124,10 @@
     "translation": "брать",
     "level": "A1",
     "example": "Someone has taken my umbrella from the hall.",
-    "exampleTranslation": "Кто-то взял мой зонт из прихожей."
+    "exampleTranslation": "Кто-то взял мой зонт из прихожей.",
+    "cards": [
+      "oxford-d1905cf90af29a5a"
+    ]
   },
   {
     "id": "verb-see",
@@ -107,7 +137,10 @@
     "translation": "видеть",
     "level": "A1",
     "example": "We saw a fantastic play at the theatre.",
-    "exampleTranslation": "Мы посмотрели в театре потрясающий спектакль."
+    "exampleTranslation": "Мы посмотрели в театре потрясающий спектакль.",
+    "cards": [
+      "oxford-aa9e9b5c907d50fe"
+    ]
   },
   {
     "id": "verb-come",
@@ -117,7 +150,10 @@
     "translation": "приходить, приезжать",
     "level": "A1",
     "example": "Spring has come early this year.",
-    "exampleTranslation": "В этом году весна пришла рано."
+    "exampleTranslation": "В этом году весна пришла рано.",
+    "cards": [
+      "oxford-9c19636ddea25f0a"
+    ]
   },
   {
     "id": "verb-give",
@@ -127,7 +163,10 @@
     "translation": "давать",
     "level": "A1",
     "example": "My grandad gave me a watch for Christmas.",
-    "exampleTranslation": "Дедушка подарил мне часы на Рождество."
+    "exampleTranslation": "Дедушка подарил мне часы на Рождество.",
+    "cards": [
+      "oxford-0895a532e404a5c9"
+    ]
   },
   {
     "id": "verb-find",
@@ -137,27 +176,36 @@
     "translation": "находить",
     "level": "A1",
     "example": "Have you found your keys yet?",
-    "exampleTranslation": "Ты уже нашёл ключи?"
+    "exampleTranslation": "Ты уже нашёл ключи?",
+    "cards": [
+      "oxford-e6640de835ad09fb"
+    ]
   },
   {
     "id": "verb-tell",
     "base": "tell",
     "past": "told",
     "participle": "told",
-    "translation": "рассказывать, сообщать",
+    "translation": "рассказывать, сообщать (кому-то)",
     "level": "A1",
     "example": "She told me a funny story about her cat.",
-    "exampleTranslation": "Она рассказала мне смешную историю про свою кошку."
+    "exampleTranslation": "Она рассказала мне смешную историю про свою кошку.",
+    "cards": [
+      "oxford-879915cfdc2cb485"
+    ]
   },
   {
     "id": "verb-become",
     "base": "become",
     "past": "became",
     "participle": "become",
-    "translation": "становиться",
+    "translation": "становиться (кем-то, каким-то)",
     "level": "A1",
     "example": "The town has become very popular with tourists.",
-    "exampleTranslation": "Город стал очень популярен у туристов."
+    "exampleTranslation": "Город стал очень популярен у туристов.",
+    "cards": [
+      "oxford-9ebb1e6f5b2adf42"
+    ]
   },
   {
     "id": "verb-leave",
@@ -167,7 +215,10 @@
     "translation": "уходить, уезжать; оставлять",
     "level": "A1",
     "example": "The train left the station at half past six.",
-    "exampleTranslation": "Поезд отправился со станции в половине седьмого."
+    "exampleTranslation": "Поезд отправился со станции в половине седьмого.",
+    "cards": [
+      "oxford-af193190b8d3cd14"
+    ]
   },
   {
     "id": "verb-feel",
@@ -177,17 +228,23 @@
     "translation": "чувствовать",
     "level": "A1",
     "example": "I have never felt so happy in my life.",
-    "exampleTranslation": "Я ещё никогда в жизни не был так счастлив."
+    "exampleTranslation": "Я ещё никогда в жизни не был так счастлив.",
+    "cards": [
+      "oxford-116c49130f14f514"
+    ]
   },
   {
     "id": "verb-put",
     "base": "put",
     "past": "put",
     "participle": "put",
-    "translation": "класть, ставить",
+    "translation": "класть, ставить (куда-то)",
     "level": "A1",
     "example": "He put the milk back in the fridge.",
-    "exampleTranslation": "Он убрал молоко обратно в холодильник."
+    "exampleTranslation": "Он убрал молоко обратно в холодильник.",
+    "cards": [
+      "oxford-373cb2c6d4fe2778"
+    ]
   },
   {
     "id": "verb-bring",
@@ -197,7 +254,10 @@
     "translation": "приносить, привозить",
     "level": "A1",
     "example": "I've brought you some flowers from the garden.",
-    "exampleTranslation": "Я принёс тебе цветов из сада."
+    "exampleTranslation": "Я принёс тебе цветов из сада.",
+    "cards": [
+      "oxford-4311902217ad5aa4"
+    ]
   },
   {
     "id": "verb-begin",
@@ -207,27 +267,36 @@
     "translation": "начинать(ся)",
     "level": "A1",
     "example": "It began to rain just after lunch.",
-    "exampleTranslation": "Сразу после обеда пошёл дождь."
+    "exampleTranslation": "Сразу после обеда пошёл дождь.",
+    "cards": [
+      "oxford-e6f07d43b5c21db0"
+    ]
   },
   {
     "id": "verb-keep",
     "base": "keep",
     "past": "kept",
     "participle": "kept",
-    "translation": "хранить, держать",
+    "translation": "хранить; продолжать (делать)",
     "level": "A1",
     "example": "She has kept all her old letters.",
-    "exampleTranslation": "Она сохранила все свои старые письма."
+    "exampleTranslation": "Она сохранила все свои старые письма.",
+    "cards": [
+      "oxford-6ca7ea2feefc88ec"
+    ]
   },
   {
     "id": "verb-hold",
     "base": "hold",
     "past": "held",
     "participle": "held",
-    "translation": "держать",
+    "translation": "держать (в руках); проводить (встречу)",
     "level": "A2",
     "example": "He held the baby very carefully.",
-    "exampleTranslation": "Он очень осторожно держал малыша."
+    "exampleTranslation": "Он очень осторожно держал малыша.",
+    "cards": [
+      "oxford-e8b22d83b417e85b"
+    ]
   },
   {
     "id": "verb-write",
@@ -237,7 +306,10 @@
     "translation": "писать",
     "level": "A1",
     "example": "This book was written over a hundred years ago.",
-    "exampleTranslation": "Эта книга была написана больше ста лет назад."
+    "exampleTranslation": "Эта книга была написана больше ста лет назад.",
+    "cards": [
+      "oxford-10fd874b68dad080"
+    ]
   },
   {
     "id": "verb-stand",
@@ -247,7 +319,10 @@
     "translation": "стоять",
     "level": "A1",
     "example": "We stood in the queue for an hour.",
-    "exampleTranslation": "Мы простояли в очереди целый час."
+    "exampleTranslation": "Мы простояли в очереди целый час.",
+    "cards": [
+      "oxford-d37a24b801c6e2e3"
+    ]
   },
   {
     "id": "verb-hear",
@@ -257,7 +332,10 @@
     "translation": "слышать",
     "level": "A1",
     "example": "Have you heard the news about Sarah?",
-    "exampleTranslation": "Ты слышал новости про Сару?"
+    "exampleTranslation": "Ты слышал новости про Сару?",
+    "cards": [
+      "oxford-49000c4444d51233"
+    ]
   },
   {
     "id": "verb-let",
@@ -267,7 +345,10 @@
     "translation": "позволять, разрешать",
     "level": "A1",
     "example": "My parents let me stay up late last Saturday.",
-    "exampleTranslation": "В прошлую субботу родители разрешили мне лечь попозже."
+    "exampleTranslation": "В прошлую субботу родители разрешили мне лечь попозже.",
+    "cards": [
+      "oxford-5654d4106d7025c2"
+    ]
   },
   {
     "id": "verb-mean",
@@ -277,17 +358,23 @@
     "translation": "значить; иметь в виду",
     "level": "A1",
     "example": "I've always meant to learn the piano.",
-    "exampleTranslation": "Я всегда собирался научиться играть на пианино."
+    "exampleTranslation": "Я всегда собирался научиться играть на пианино.",
+    "cards": [
+      "oxford-82523faea1b0f2da"
+    ]
   },
   {
     "id": "verb-set",
     "base": "set",
     "past": "set",
     "participle": "set",
-    "translation": "ставить, устанавливать",
+    "translation": "устанавливать, задавать",
     "level": "B1",
     "example": "I set my alarm for six but didn't hear it.",
-    "exampleTranslation": "Я поставил будильник на шесть, но не услышал его."
+    "exampleTranslation": "Я поставил будильник на шесть, но не услышал его.",
+    "cards": [
+      "oxford-81b47719b3cb8006"
+    ]
   },
   {
     "id": "verb-meet",
@@ -297,7 +384,10 @@
     "translation": "встречать(ся), знакомиться",
     "level": "A1",
     "example": "I'm sure we've met somewhere before.",
-    "exampleTranslation": "Я уверен, что мы где-то уже встречались."
+    "exampleTranslation": "Я уверен, что мы где-то уже встречались.",
+    "cards": [
+      "oxford-8ccb033c0e48b27f"
+    ]
   },
   {
     "id": "verb-run",
@@ -307,7 +397,10 @@
     "translation": "бегать, бежать",
     "level": "A1",
     "example": "She ran all the way to the station.",
-    "exampleTranslation": "Она бежала всю дорогу до станции."
+    "exampleTranslation": "Она бежала всю дорогу до станции.",
+    "cards": [
+      "oxford-acba25512100f80b"
+    ]
   },
   {
     "id": "verb-pay",
@@ -317,7 +410,10 @@
     "translation": "платить",
     "level": "A1",
     "example": "Have you paid the electricity bill yet?",
-    "exampleTranslation": "Ты уже оплатил счёт за электричество?"
+    "exampleTranslation": "Ты уже оплатил счёт за электричество?",
+    "cards": [
+      "oxford-9350872d712a127c"
+    ]
   },
   {
     "id": "verb-sit",
@@ -327,17 +423,23 @@
     "translation": "сидеть",
     "level": "A1",
     "example": "We sat by the fire and talked for hours.",
-    "exampleTranslation": "Мы сидели у камина и разговаривали часами."
+    "exampleTranslation": "Мы сидели у камина и разговаривали часами.",
+    "cards": [
+      "oxford-584178e5e3517ddc"
+    ]
   },
   {
     "id": "verb-speak",
     "base": "speak",
     "past": "spoke",
     "participle": "spoken",
-    "translation": "говорить",
+    "translation": "говорить (на языке), выступать",
     "level": "A1",
     "example": "English is spoken in many countries around the world.",
-    "exampleTranslation": "На английском говорят во многих странах мира."
+    "exampleTranslation": "На английском говорят во многих странах мира.",
+    "cards": [
+      "oxford-21e5205f73d9edbf"
+    ]
   },
   {
     "id": "verb-lie",
@@ -347,7 +449,10 @@
     "translation": "лежать",
     "level": "A1",
     "example": "The cat lay in the sun all afternoon.",
-    "exampleTranslation": "Кошка полдня пролежала на солнце."
+    "exampleTranslation": "Кошка полдня пролежала на солнце.",
+    "cards": [
+      "oxford-97bed1654a8e301d"
+    ]
   },
   {
     "id": "verb-lead",
@@ -357,7 +462,10 @@
     "translation": "вести, приводить; руководить",
     "level": "A2",
     "example": "Bad weather has led to delays at the airport.",
-    "exampleTranslation": "Из-за плохой погоды в аэропорту задерживаются рейсы."
+    "exampleTranslation": "Из-за плохой погоды в аэропорту задерживаются рейсы.",
+    "cards": [
+      "oxford-9f12e29b91501256"
+    ]
   },
   {
     "id": "verb-read",
@@ -367,7 +475,10 @@
     "translation": "читать",
     "level": "A1",
     "example": "I read that book on holiday last year.",
-    "exampleTranslation": "Я прочитал эту книгу в отпуске в прошлом году."
+    "exampleTranslation": "Я прочитал эту книгу в отпуске в прошлом году.",
+    "cards": [
+      "oxford-3316348dbadfb7b1"
+    ]
   },
   {
     "id": "verb-grow",
@@ -377,7 +488,10 @@
     "translation": "расти; выращивать",
     "level": "A1",
     "example": "Our little village has grown into a busy town.",
-    "exampleTranslation": "Наша деревенька превратилась в оживлённый город."
+    "exampleTranslation": "Наша деревенька превратилась в оживлённый город.",
+    "cards": [
+      "oxford-adca5146416ee419"
+    ]
   },
   {
     "id": "verb-lose",
@@ -387,7 +501,10 @@
     "translation": "терять; проигрывать",
     "level": "A1",
     "example": "I lost my phone on the bus yesterday.",
-    "exampleTranslation": "Вчера я потерял телефон в автобусе."
+    "exampleTranslation": "Вчера я потерял телефон в автобусе.",
+    "cards": [
+      "oxford-a57cf9eaf908c5ce"
+    ]
   },
   {
     "id": "verb-fall",
@@ -397,7 +514,10 @@
     "translation": "падать",
     "level": "A1",
     "example": "Prices have fallen sharply this month.",
-    "exampleTranslation": "В этом месяце цены резко упали."
+    "exampleTranslation": "В этом месяце цены резко упали.",
+    "cards": [
+      "oxford-2dc46af1b78c32df"
+    ]
   },
   {
     "id": "verb-send",
@@ -407,7 +527,10 @@
     "translation": "посылать, отправлять",
     "level": "A1",
     "example": "She sent me a postcard from Spain.",
-    "exampleTranslation": "Она прислала мне открытку из Испании."
+    "exampleTranslation": "Она прислала мне открытку из Испании.",
+    "cards": [
+      "oxford-27ce1d1bf4270020"
+    ]
   },
   {
     "id": "verb-build",
@@ -417,7 +540,10 @@
     "translation": "строить",
     "level": "A1",
     "example": "The bridge was built in the nineteenth century.",
-    "exampleTranslation": "Мост был построен в девятнадцатом веке."
+    "exampleTranslation": "Мост был построен в девятнадцатом веке.",
+    "cards": [
+      "oxford-44575cf5b28512d7"
+    ]
   },
   {
     "id": "verb-understand",
@@ -427,7 +553,10 @@
     "translation": "понимать",
     "level": "A1",
     "example": "Nobody understood what the teacher meant.",
-    "exampleTranslation": "Никто не понял, что имел в виду учитель."
+    "exampleTranslation": "Никто не понял, что имел в виду учитель.",
+    "cards": [
+      "oxford-f9dc689e6d50ad6f"
+    ]
   },
   {
     "id": "verb-draw",
@@ -437,7 +566,10 @@
     "translation": "рисовать",
     "level": "A1",
     "example": "This picture was drawn by my six-year-old son.",
-    "exampleTranslation": "Этот рисунок нарисовал мой шестилетний сын."
+    "exampleTranslation": "Этот рисунок нарисовал мой шестилетний сын.",
+    "cards": [
+      "oxford-50f7becde477bb50"
+    ]
   },
   {
     "id": "verb-break",
@@ -447,7 +579,10 @@
     "translation": "ломать, разбивать",
     "level": "A1",
     "example": "He broke his leg playing football.",
-    "exampleTranslation": "Он сломал ногу, играя в футбол."
+    "exampleTranslation": "Он сломал ногу, играя в футбол.",
+    "cards": [
+      "oxford-14ebe56a5008e7c2"
+    ]
   },
   {
     "id": "verb-spend",
@@ -457,7 +592,10 @@
     "translation": "тратить; проводить (время)",
     "level": "A1",
     "example": "We've spent too much money this month.",
-    "exampleTranslation": "В этом месяце мы потратили слишком много денег."
+    "exampleTranslation": "В этом месяце мы потратили слишком много денег.",
+    "cards": [
+      "oxford-f64a33ff88c38111"
+    ]
   },
   {
     "id": "verb-cut",
@@ -467,27 +605,36 @@
     "translation": "резать",
     "level": "A1",
     "example": "She cut her finger while chopping onions.",
-    "exampleTranslation": "Она порезала палец, когда резала лук."
+    "exampleTranslation": "Она порезала палец, когда резала лук.",
+    "cards": [
+      "oxford-378bfce5cda2599a"
+    ]
   },
   {
     "id": "verb-rise",
     "base": "rise",
     "past": "rose",
     "participle": "risen",
-    "translation": "подниматься, расти",
+    "translation": "подниматься (о солнце, ценах)",
     "level": "A2",
     "example": "The cost of living has risen again.",
-    "exampleTranslation": "Стоимость жизни снова выросла."
+    "exampleTranslation": "Стоимость жизни снова выросла.",
+    "cards": [
+      "oxford-dbfbe1cd2ee1f49a"
+    ]
   },
   {
     "id": "verb-drive",
     "base": "drive",
     "past": "drove",
     "participle": "driven",
-    "translation": "водить (машину), ехать",
+    "translation": "водить машину, ехать за рулём",
     "level": "A1",
     "example": "We drove to Scotland for the weekend.",
-    "exampleTranslation": "Мы съездили на машине в Шотландию на выходные."
+    "exampleTranslation": "Мы съездили на машине в Шотландию на выходные.",
+    "cards": [
+      "oxford-7062520c5a0ea9de"
+    ]
   },
   {
     "id": "verb-buy",
@@ -497,7 +644,10 @@
     "translation": "покупать",
     "level": "A1",
     "example": "I've just bought a new pair of trainers.",
-    "exampleTranslation": "Я только что купил новые кроссовки."
+    "exampleTranslation": "Я только что купил новые кроссовки.",
+    "cards": [
+      "oxford-e8197b20f8e71e42"
+    ]
   },
   {
     "id": "verb-wear",
@@ -507,7 +657,10 @@
     "translation": "носить (одежду), быть одетым",
     "level": "A1",
     "example": "She wore a lovely blue dress to the wedding.",
-    "exampleTranslation": "На свадьбу она надела прелестное синее платье."
+    "exampleTranslation": "На свадьбу она надела прелестное синее платье.",
+    "cards": [
+      "oxford-c47fbc5d87a12981"
+    ]
   },
   {
     "id": "verb-choose",
@@ -517,17 +670,23 @@
     "translation": "выбирать",
     "level": "A1",
     "example": "Have you chosen a name for the puppy?",
-    "exampleTranslation": "Вы уже выбрали имя для щенка?"
+    "exampleTranslation": "Вы уже выбрали имя для щенка?",
+    "cards": [
+      "oxford-725fed9d1ae90998"
+    ]
   },
   {
     "id": "verb-learn",
     "base": "learn",
     "past": "learnt / learned",
     "participle": "learnt / learned",
-    "translation": "учить, узнавать",
+    "translation": "учиться, изучать; узнавать",
     "level": "A1",
     "example": "I learnt to swim when I was five.",
-    "exampleTranslation": "Я научился плавать в пять лет."
+    "exampleTranslation": "Я научился плавать в пять лет.",
+    "cards": [
+      "oxford-6a8da52e920664ef"
+    ]
   },
   {
     "id": "verb-sell",
@@ -537,7 +696,10 @@
     "translation": "продавать",
     "level": "A1",
     "example": "All the tickets have been sold.",
-    "exampleTranslation": "Все билеты уже проданы."
+    "exampleTranslation": "Все билеты уже проданы.",
+    "cards": [
+      "oxford-c0f21d451463ec3e"
+    ]
   },
   {
     "id": "verb-win",
@@ -547,17 +709,23 @@
     "translation": "выигрывать, побеждать",
     "level": "A1",
     "example": "Our team won the match three–nil.",
-    "exampleTranslation": "Наша команда выиграла матч со счётом три–ноль."
+    "exampleTranslation": "Наша команда выиграла матч со счётом три–ноль.",
+    "cards": [
+      "oxford-823a3180dad3c9c3"
+    ]
   },
   {
     "id": "verb-teach",
     "base": "teach",
     "past": "taught",
     "participle": "taught",
-    "translation": "учить, преподавать",
+    "translation": "учить (кого-то), преподавать",
     "level": "A1",
     "example": "She has taught English for twenty years.",
-    "exampleTranslation": "Она преподаёт английский уже двадцать лет."
+    "exampleTranslation": "Она преподаёт английский уже двадцать лет.",
+    "cards": [
+      "oxford-eb0b4270edb36c1e"
+    ]
   },
   {
     "id": "verb-eat",
@@ -567,7 +735,10 @@
     "translation": "есть, кушать",
     "level": "A1",
     "example": "We ate fish and chips on the beach.",
-    "exampleTranslation": "Мы ели рыбу с картошкой фри на пляже."
+    "exampleTranslation": "Мы ели рыбу с картошкой фри на пляже.",
+    "cards": [
+      "oxford-e57bd924047ef39d"
+    ]
   },
   {
     "id": "verb-show",
@@ -577,7 +748,10 @@
     "translation": "показывать",
     "level": "A1",
     "example": "The film will be shown on television tonight.",
-    "exampleTranslation": "Сегодня вечером фильм покажут по телевизору."
+    "exampleTranslation": "Сегодня вечером фильм покажут по телевизору.",
+    "cards": [
+      "oxford-1c6333509debf060"
+    ]
   },
   {
     "id": "verb-forget",
@@ -587,7 +761,10 @@
     "translation": "забывать",
     "level": "A1",
     "example": "I forgot my umbrella and got soaked.",
-    "exampleTranslation": "Я забыл зонт и промок насквозь."
+    "exampleTranslation": "Я забыл зонт и промок насквозь.",
+    "cards": [
+      "oxford-babc1bd8ec812c74"
+    ]
   },
   {
     "id": "verb-catch",
@@ -597,7 +774,10 @@
     "translation": "ловить; успевать (на транспорт)",
     "level": "A2",
     "example": "Police have caught the man who stole the car.",
-    "exampleTranslation": "Полиция поймала человека, который угнал машину."
+    "exampleTranslation": "Полиция поймала человека, который угнал машину.",
+    "cards": [
+      "oxford-9f925cdc4feedda4"
+    ]
   },
   {
     "id": "verb-fight",
@@ -607,17 +787,23 @@
     "translation": "драться, бороться",
     "level": "A2",
     "example": "The two brothers fought over the last biscuit.",
-    "exampleTranslation": "Два брата подрались из-за последнего печенья."
+    "exampleTranslation": "Два брата подрались из-за последнего печенья.",
+    "cards": [
+      "oxford-23b6a8f399dd913a"
+    ]
   },
   {
     "id": "verb-throw",
     "base": "throw",
     "past": "threw",
     "participle": "thrown",
-    "translation": "бросать",
+    "translation": "бросать, кидать",
     "level": "A2",
     "example": "Someone has thrown a stone through our window.",
-    "exampleTranslation": "Кто-то разбил камнем наше окно."
+    "exampleTranslation": "Кто-то разбил камнем наше окно.",
+    "cards": [
+      "oxford-7b0456581bef4cb1"
+    ]
   },
   {
     "id": "verb-sleep",
@@ -627,7 +813,10 @@
     "translation": "спать",
     "level": "A1",
     "example": "I slept badly because of the noise.",
-    "exampleTranslation": "Я плохо спал из-за шума."
+    "exampleTranslation": "Я плохо спал из-за шума.",
+    "cards": [
+      "oxford-0afa5bb5d5f17879"
+    ]
   },
   {
     "id": "verb-drink",
@@ -637,7 +826,10 @@
     "translation": "пить",
     "level": "A1",
     "example": "Have you ever drunk real Turkish coffee?",
-    "exampleTranslation": "Ты когда-нибудь пил настоящий турецкий кофе?"
+    "exampleTranslation": "Ты когда-нибудь пил настоящий турецкий кофе?",
+    "cards": [
+      "oxford-218ae6b44966c8a9"
+    ]
   },
   {
     "id": "verb-fly",
@@ -647,17 +839,23 @@
     "translation": "летать, лететь",
     "level": "A1",
     "example": "We flew to Edinburgh on Friday evening.",
-    "exampleTranslation": "В пятницу вечером мы полетели в Эдинбург."
+    "exampleTranslation": "В пятницу вечером мы полетели в Эдинбург.",
+    "cards": [
+      "oxford-f4debdb7ab7dd958"
+    ]
   },
   {
     "id": "verb-hit",
     "base": "hit",
     "past": "hit",
     "participle": "hit",
-    "translation": "ударять, попадать",
+    "translation": "ударять, попадать (в цель)",
     "level": "A2",
     "example": "The coast has been hit by heavy storms.",
-    "exampleTranslation": "На побережье обрушились сильные штормы."
+    "exampleTranslation": "На побережье обрушились сильные штормы.",
+    "cards": [
+      "oxford-63d04dee7c50f6fb"
+    ]
   },
   {
     "id": "verb-cost",
@@ -667,7 +865,10 @@
     "translation": "стоить",
     "level": "A1",
     "example": "The repairs cost more than we expected.",
-    "exampleTranslation": "Ремонт обошёлся дороже, чем мы ожидали."
+    "exampleTranslation": "Ремонт обошёлся дороже, чем мы ожидали.",
+    "cards": [
+      "oxford-9f82f7b375f4aa1b"
+    ]
   },
   {
     "id": "verb-hurt",
@@ -677,7 +878,10 @@
     "translation": "причинять боль, ранить; болеть",
     "level": "A2",
     "example": "Luckily, nobody was hurt in the accident.",
-    "exampleTranslation": "К счастью, в аварии никто не пострадал."
+    "exampleTranslation": "К счастью, в аварии никто не пострадал.",
+    "cards": [
+      "oxford-49002d515d1605d8"
+    ]
   },
   {
     "id": "verb-shut",
@@ -687,7 +891,10 @@
     "translation": "закрывать",
     "level": "A2",
     "example": "She shut the door quietly behind her.",
-    "exampleTranslation": "Она тихо закрыла за собой дверь."
+    "exampleTranslation": "Она тихо закрыла за собой дверь.",
+    "cards": [
+      "oxford-2a1db49adbe0e828"
+    ]
   },
   {
     "id": "verb-swim",
@@ -697,7 +904,10 @@
     "translation": "плавать",
     "level": "A1",
     "example": "I have never swum in the sea in winter.",
-    "exampleTranslation": "Я никогда не плавал в море зимой."
+    "exampleTranslation": "Я никогда не плавал в море зимой.",
+    "cards": [
+      "oxford-d493f8869139bac7"
+    ]
   },
   {
     "id": "verb-sing",
@@ -707,7 +917,10 @@
     "translation": "петь",
     "level": "A1",
     "example": "The children sang a song for their parents.",
-    "exampleTranslation": "Дети спели песню для родителей."
+    "exampleTranslation": "Дети спели песню для родителей.",
+    "cards": [
+      "oxford-6342d0648a746457"
+    ]
   },
   {
     "id": "verb-ride",
@@ -717,7 +930,10 @@
     "translation": "ездить (верхом, на велосипеде)",
     "level": "A1",
     "example": "Have you ever ridden a horse?",
-    "exampleTranslation": "Ты когда-нибудь ездил верхом?"
+    "exampleTranslation": "Ты когда-нибудь ездил верхом?",
+    "cards": [
+      "oxford-e049bd056f936d1b"
+    ]
   },
   {
     "id": "verb-wake",
@@ -727,7 +943,10 @@
     "translation": "просыпаться; будить",
     "level": "A1",
     "example": "I woke up at five this morning.",
-    "exampleTranslation": "Сегодня я проснулся в пять утра."
+    "exampleTranslation": "Сегодня я проснулся в пять утра.",
+    "cards": [
+      "oxford-51391bf0ab33e827"
+    ]
   },
   {
     "id": "verb-deal",
@@ -737,7 +956,10 @@
     "translation": "иметь дело; справляться",
     "level": "A2",
     "example": "The problem has already been dealt with.",
-    "exampleTranslation": "С проблемой уже разобрались."
+    "exampleTranslation": "С проблемой уже разобрались.",
+    "cards": [
+      "oxford-f96c94f287038f69"
+    ]
   },
   {
     "id": "verb-hide",
@@ -747,7 +969,10 @@
     "translation": "прятать(ся)",
     "level": "A2",
     "example": "The children hid behind the sofa.",
-    "exampleTranslation": "Дети спрятались за диваном."
+    "exampleTranslation": "Дети спрятались за диваном.",
+    "cards": [
+      "oxford-1f5bb9791a310e13"
+    ]
   },
   {
     "id": "verb-steal",
@@ -757,17 +982,23 @@
     "translation": "красть",
     "level": "A2",
     "example": "My bike was stolen from outside the library.",
-    "exampleTranslation": "Мой велосипед украли у библиотеки."
+    "exampleTranslation": "Мой велосипед украли у библиотеки.",
+    "cards": [
+      "oxford-a0fd408352bd19a2"
+    ]
   },
   {
     "id": "verb-beat",
     "base": "beat",
     "past": "beat",
     "participle": "beaten",
-    "translation": "бить; побеждать",
+    "translation": "бить; обыгрывать (кого-то)",
     "level": "A2",
     "example": "Liverpool beat Chelsea two–one last Saturday.",
-    "exampleTranslation": "В прошлую субботу «Ливерпуль» обыграл «Челси» со счётом два–один."
+    "exampleTranslation": "В прошлую субботу «Ливерпуль» обыграл «Челси» со счётом два–один.",
+    "cards": [
+      "oxford-f9eeb63bf773f4b0"
+    ]
   },
   {
     "id": "verb-blow",
@@ -777,7 +1008,10 @@
     "translation": "дуть",
     "level": "A2",
     "example": "The wind has blown the fence down.",
-    "exampleTranslation": "Ветер повалил забор."
+    "exampleTranslation": "Ветер повалил забор.",
+    "cards": [
+      "oxford-7cf6b0597fe4e3cb"
+    ]
   },
   {
     "id": "verb-burn",
@@ -787,7 +1021,10 @@
     "translation": "гореть, жечь",
     "level": "A2",
     "example": "I burnt the toast again this morning.",
-    "exampleTranslation": "Сегодня утром я опять сжёг тосты."
+    "exampleTranslation": "Сегодня утром я опять сжёг тосты.",
+    "cards": [
+      "oxford-859facc5a4c9b80a"
+    ]
   },
   {
     "id": "verb-dream",
@@ -797,7 +1034,10 @@
     "translation": "мечтать; видеть сон",
     "level": "A2",
     "example": "I've always dreamt of living by the sea.",
-    "exampleTranslation": "Я всегда мечтал жить у моря."
+    "exampleTranslation": "Я всегда мечтал жить у моря.",
+    "cards": [
+      "oxford-30fde358b34772de"
+    ]
   },
   {
     "id": "verb-feed",
@@ -807,7 +1047,10 @@
     "translation": "кормить",
     "level": "A2",
     "example": "We fed the ducks in the park.",
-    "exampleTranslation": "Мы покормили уток в парке."
+    "exampleTranslation": "Мы покормили уток в парке.",
+    "cards": [
+      "oxford-c8bc2586cdd87cd6"
+    ]
   },
   {
     "id": "verb-lend",
@@ -817,7 +1060,10 @@
     "translation": "одалживать, давать взаймы",
     "level": "A2",
     "example": "I've lent my car to my brother for the weekend.",
-    "exampleTranslation": "Я одолжил брату машину на выходные."
+    "exampleTranslation": "Я одолжил брату машину на выходные.",
+    "cards": [
+      "oxford-5d59b2b96755e2c6"
+    ]
   },
   {
     "id": "verb-ring",
@@ -827,7 +1073,10 @@
     "translation": "звонить",
     "level": "A2",
     "example": "The phone rang in the middle of the night.",
-    "exampleTranslation": "Посреди ночи зазвонил телефон."
+    "exampleTranslation": "Посреди ночи зазвонил телефон.",
+    "cards": [
+      "oxford-a7c9e2cca3483d74"
+    ]
   },
   {
     "id": "verb-shake",
@@ -837,7 +1086,10 @@
     "translation": "трясти; потрясать",
     "level": "A2",
     "example": "She was badly shaken by the news.",
-    "exampleTranslation": "Эта новость её сильно потрясла."
+    "exampleTranslation": "Эта новость её сильно потрясла.",
+    "cards": [
+      "oxford-50d22da6c0d4799b"
+    ]
   },
   {
     "id": "verb-smell",
@@ -847,7 +1099,10 @@
     "translation": "пахнуть; нюхать",
     "level": "A2",
     "example": "The kitchen smelt of fresh bread.",
-    "exampleTranslation": "На кухне пахло свежим хлебом."
+    "exampleTranslation": "На кухне пахло свежим хлебом.",
+    "cards": [
+      "oxford-8fca2d48e1ee96c1"
+    ]
   },
   {
     "id": "verb-spell",
@@ -857,7 +1112,10 @@
     "translation": "писать или называть по буквам",
     "level": "A1",
     "example": "Your surname has been spelt wrongly on the form.",
-    "exampleTranslation": "В анкете ваша фамилия написана с ошибкой."
+    "exampleTranslation": "В анкете ваша фамилия написана с ошибкой.",
+    "cards": [
+      "oxford-8f4a0aaa62c4ceef"
+    ]
   },
   {
     "id": "verb-light",
@@ -867,17 +1125,23 @@
     "translation": "зажигать",
     "level": "B1",
     "example": "We lit a fire to keep warm.",
-    "exampleTranslation": "Мы развели костёр, чтобы согреться."
+    "exampleTranslation": "Мы развели костёр, чтобы согреться.",
+    "cards": [
+      "oxford-135970ca5322772e"
+    ]
   },
   {
     "id": "verb-lay",
     "base": "lay",
     "past": "laid",
     "participle": "laid",
-    "translation": "класть; накрывать (на стол)",
+    "translation": "укладывать; накрывать (на стол)",
     "level": "B1",
     "example": "Has anyone laid the table for dinner yet?",
-    "exampleTranslation": "Кто-нибудь уже накрыл на стол к ужину?"
+    "exampleTranslation": "Кто-нибудь уже накрыл на стол к ужину?",
+    "cards": [
+      "oxford-360cdbba702f5889"
+    ]
   },
   {
     "id": "verb-hang",
@@ -887,7 +1151,10 @@
     "translation": "вешать; висеть",
     "level": "B1",
     "example": "He hung his coat on the back of the door.",
-    "exampleTranslation": "Он повесил пальто на дверь."
+    "exampleTranslation": "Он повесил пальто на дверь.",
+    "cards": [
+      "oxford-e3ccbe1f95156325"
+    ]
   },
   {
     "id": "verb-bend",
@@ -897,7 +1164,10 @@
     "translation": "гнуть, сгибать(ся)",
     "level": "B1",
     "example": "Someone has bent the key, and now it won't turn.",
-    "exampleTranslation": "Кто-то погнул ключ, и теперь он не поворачивается."
+    "exampleTranslation": "Кто-то погнул ключ, и теперь он не поворачивается.",
+    "cards": [
+      "oxford-36e110819a318ddd"
+    ]
   },
   {
     "id": "verb-bite",
@@ -907,7 +1177,10 @@
     "translation": "кусать",
     "level": "B1",
     "example": "A dog bit me when I was a child.",
-    "exampleTranslation": "В детстве меня укусила собака."
+    "exampleTranslation": "В детстве меня укусила собака.",
+    "cards": [
+      "oxford-8420c85c2aadaeba"
+    ]
   },
   {
     "id": "verb-freeze",
@@ -917,7 +1190,10 @@
     "translation": "замерзать; замораживать",
     "level": "B1",
     "example": "The lake has frozen, so we can go skating.",
-    "exampleTranslation": "Озеро замёрзло, так что можно покататься на коньках."
+    "exampleTranslation": "Озеро замёрзло, так что можно покататься на коньках.",
+    "cards": [
+      "oxford-12dd9774cc96e18b"
+    ]
   },
   {
     "id": "verb-shine",
@@ -927,7 +1203,10 @@
     "translation": "светить, сиять",
     "level": "B1",
     "example": "The sun shone all day at the seaside.",
-    "exampleTranslation": "На море весь день светило солнце."
+    "exampleTranslation": "На море весь день светило солнце.",
+    "cards": [
+      "oxford-6d7cbfe8a1ceaf7d"
+    ]
   },
   {
     "id": "verb-shoot",
@@ -937,7 +1216,10 @@
     "translation": "стрелять; снимать (фильм)",
     "level": "B1",
     "example": "The film was shot in Ireland.",
-    "exampleTranslation": "Фильм снимали в Ирландии."
+    "exampleTranslation": "Фильм снимали в Ирландии.",
+    "cards": [
+      "oxford-bd9b8d8e9aa8e2aa"
+    ]
   },
   {
     "id": "verb-sink",
@@ -947,7 +1229,10 @@
     "translation": "тонуть",
     "level": "B1",
     "example": "The ship sank after hitting rocks near the coast.",
-    "exampleTranslation": "Корабль затонул, налетев на скалы у берега."
+    "exampleTranslation": "Корабль затонул, налетев на скалы у берега.",
+    "cards": [
+      "oxford-1978baf2c153fd3b"
+    ]
   },
   {
     "id": "verb-stick",
@@ -957,7 +1242,10 @@
     "translation": "приклеивать; застревать",
     "level": "B1",
     "example": "The car has got stuck in the mud.",
-    "exampleTranslation": "Машина застряла в грязи."
+    "exampleTranslation": "Машина застряла в грязи.",
+    "cards": [
+      "oxford-ec6713dac8fe9981"
+    ]
   },
   {
     "id": "verb-spread",
@@ -967,7 +1255,10 @@
     "translation": "распространять(ся); намазывать",
     "level": "B1",
     "example": "The news spread quickly around the school.",
-    "exampleTranslation": "Новость быстро разлетелась по школе."
+    "exampleTranslation": "Новость быстро разлетелась по школе.",
+    "cards": [
+      "oxford-909802b269dee093"
+    ]
   },
   {
     "id": "verb-prove",
@@ -977,7 +1268,10 @@
     "translation": "доказывать; оказываться",
     "level": "B1",
     "example": "The theory has never been proved.",
-    "exampleTranslation": "Эта теория так и не была доказана."
+    "exampleTranslation": "Эта теория так и не была доказана.",
+    "cards": [
+      "oxford-52dabec3560592b3"
+    ]
   },
   {
     "id": "verb-quit",
@@ -987,7 +1281,10 @@
     "translation": "бросать (привычку, работу)",
     "level": "B1",
     "example": "He quit his job and went travelling.",
-    "exampleTranslation": "Он уволился с работы и отправился путешествовать."
+    "exampleTranslation": "Он уволился с работы и отправился путешествовать.",
+    "cards": [
+      "oxford-8577da2ea5408570"
+    ]
   },
   {
     "id": "verb-upset",
@@ -997,7 +1294,10 @@
     "translation": "расстраивать",
     "level": "B1",
     "example": "She was really upset by his comments.",
-    "exampleTranslation": "Его слова её очень расстроили."
+    "exampleTranslation": "Его слова её очень расстроили.",
+    "cards": [
+      "oxford-8b2f406339328a5d"
+    ]
   },
   {
     "id": "verb-tear",
@@ -1007,17 +1307,23 @@
     "translation": "рвать",
     "level": "B2",
     "example": "I tore my jeans on a nail.",
-    "exampleTranslation": "Я порвал джинсы о гвоздь."
+    "exampleTranslation": "Я порвал джинсы о гвоздь.",
+    "cards": [
+      "oxford-e5addceea17c1f61"
+    ]
   },
   {
     "id": "verb-strike",
     "base": "strike",
     "past": "struck",
     "participle": "struck",
-    "translation": "ударять; бастовать",
+    "translation": "наносить удар; бастовать",
     "level": "B2",
     "example": "The house was struck by lightning last night.",
-    "exampleTranslation": "Прошлой ночью в дом ударила молния."
+    "exampleTranslation": "Прошлой ночью в дом ударила молния.",
+    "cards": [
+      "oxford-7cd58cdd64a3dcfc"
+    ]
   },
   {
     "id": "verb-swear",
@@ -1027,7 +1333,10 @@
     "translation": "клясться; ругаться",
     "level": "B2",
     "example": "He swore he would never lie to her again.",
-    "exampleTranslation": "Он поклялся, что больше никогда не будет ей лгать."
+    "exampleTranslation": "Он поклялся, что больше никогда не будет ей лгать.",
+    "cards": [
+      "oxford-3ef631dfff36845f"
+    ]
   },
   {
     "id": "verb-sweep",
@@ -1037,7 +1346,10 @@
     "translation": "подметать",
     "level": "B2",
     "example": "Has anyone swept the kitchen floor today?",
-    "exampleTranslation": "Кто-нибудь подметал сегодня пол на кухне?"
+    "exampleTranslation": "Кто-нибудь подметал сегодня пол на кухне?",
+    "cards": [
+      "oxford-dfd33796972c3baa"
+    ]
   },
   {
     "id": "verb-seek",
@@ -1047,7 +1359,10 @@
     "translation": "искать, стремиться",
     "level": "B2",
     "example": "Thousands of people sought help after the floods.",
-    "exampleTranslation": "После наводнения тысячи людей обратились за помощью."
+    "exampleTranslation": "После наводнения тысячи людей обратились за помощью.",
+    "cards": [
+      "oxford-cbd345d6a2815fa8"
+    ]
   },
   {
     "id": "verb-slide",
@@ -1057,7 +1372,10 @@
     "translation": "скользить",
     "level": "B2",
     "example": "The book had slid off the table.",
-    "exampleTranslation": "Книга соскользнула со стола."
+    "exampleTranslation": "Книга соскользнула со стола.",
+    "cards": [
+      "oxford-b8a7e24e95497806"
+    ]
   },
   {
     "id": "verb-split",
@@ -1067,7 +1385,10 @@
     "translation": "делить, раскалывать",
     "level": "B2",
     "example": "Yesterday we split the bill between the four of us.",
-    "exampleTranslation": "Вчера мы разделили счёт на четверых."
+    "exampleTranslation": "Вчера мы разделили счёт на четверых.",
+    "cards": [
+      "oxford-ad1a64057f9ab34f"
+    ]
   },
   {
     "id": "verb-bet",
@@ -1077,7 +1398,10 @@
     "translation": "держать пари, делать ставку",
     "level": "B2",
     "example": "He has bet all his money on one horse.",
-    "exampleTranslation": "Он поставил все деньги на одну лошадь."
+    "exampleTranslation": "Он поставил все деньги на одну лошадь.",
+    "cards": [
+      "oxford-0ae467cc10e077a1"
+    ]
   },
   {
     "id": "verb-dig",
@@ -1087,7 +1411,10 @@
     "translation": "копать",
     "level": "B2",
     "example": "The children dug a big hole in the sand.",
-    "exampleTranslation": "Дети выкопали большую яму в песке."
+    "exampleTranslation": "Дети выкопали большую яму в песке.",
+    "cards": [
+      "oxford-ebbde58a4bbe357e"
+    ]
   },
   {
     "id": "verb-forgive",
@@ -1097,7 +1424,10 @@
     "translation": "прощать",
     "level": "B2",
     "example": "She has never forgiven him for forgetting her birthday.",
-    "exampleTranslation": "Она так и не простила ему, что он забыл о её дне рождения."
+    "exampleTranslation": "Она так и не простила ему, что он забыл о её дне рождения.",
+    "cards": [
+      "oxford-1b06b788c4234e67"
+    ]
   },
   {
     "id": "verb-lean",
@@ -1107,7 +1437,10 @@
     "translation": "наклоняться; прислоняться",
     "level": "B2",
     "example": "She leant against the wall and closed her eyes.",
-    "exampleTranslation": "Она прислонилась к стене и закрыла глаза."
+    "exampleTranslation": "Она прислонилась к стене и закрыла глаза.",
+    "cards": [
+      "oxford-92e89a1ed0d39215"
+    ]
   },
   {
     "id": "verb-wind",
@@ -1117,7 +1450,10 @@
     "translation": "заводить (часы); наматывать; извиваться",
     "level": "B2",
     "example": "The old clock hasn't been wound for years.",
-    "exampleTranslation": "Старые часы не заводили уже много лет."
+    "exampleTranslation": "Старые часы не заводили уже много лет.",
+    "cards": [
+      "oxford-74e334b1bf621b02"
+    ]
   },
   {
     "id": "verb-bear",
@@ -1127,7 +1463,10 @@
     "translation": "выносить, терпеть",
     "level": "B2",
     "example": "She bore the pain without complaining.",
-    "exampleTranslation": "Она терпела боль, не жалуясь."
+    "exampleTranslation": "Она терпела боль, не жалуясь.",
+    "cards": [
+      "oxford-b17e1c248a7295d4"
+    ]
   },
   {
     "id": "verb-arise",
@@ -1137,17 +1476,23 @@
     "translation": "возникать",
     "level": "B2",
     "example": "A serious problem has arisen with the computer system.",
-    "exampleTranslation": "С компьютерной системой возникла серьёзная проблема."
+    "exampleTranslation": "С компьютерной системой возникла серьёзная проблема.",
+    "cards": [
+      "oxford-877d41bc540c57e0"
+    ]
   },
   {
     "id": "verb-cast",
     "base": "cast",
     "past": "cast",
     "participle": "cast",
-    "translation": "бросать; отдавать (голос)",
+    "translation": "бросать (взгляд, тень); отдавать (голос)",
     "level": "B2",
     "example": "She cast her vote for the first time.",
-    "exampleTranslation": "Она впервые проголосовала."
+    "exampleTranslation": "Она впервые проголосовала.",
+    "cards": [
+      "oxford-603705cc260e946d"
+    ]
   },
   {
     "id": "verb-broadcast",
@@ -1157,7 +1502,10 @@
     "translation": "транслировать, передавать в эфир",
     "level": "B2",
     "example": "The match will be broadcast live on the BBC.",
-    "exampleTranslation": "Матч будут транслировать в прямом эфире на Би-би-си."
+    "exampleTranslation": "Матч будут транслировать в прямом эфире на Би-би-си.",
+    "cards": [
+      "oxford-e88199c423228a45"
+    ]
   },
   {
     "id": "verb-speed",
@@ -1167,7 +1515,10 @@
     "translation": "мчаться; превышать скорость",
     "level": "A2",
     "example": "The car sped past us on the motorway.",
-    "exampleTranslation": "Машина промчалась мимо нас по трассе."
+    "exampleTranslation": "Машина промчалась мимо нас по трассе.",
+    "cards": [
+      "oxford-bbccb9c002d5ed59"
+    ]
   },
   {
     "id": "verb-rid",
@@ -1177,17 +1528,23 @@
     "translation": "избавлять (get rid of — избавляться)",
     "level": "B2",
     "example": "We have finally got rid of the old sofa.",
-    "exampleTranslation": "Мы наконец избавились от старого дивана."
+    "exampleTranslation": "Мы наконец избавились от старого дивана.",
+    "cards": [
+      "oxford-81466ee3cd6cf44d"
+    ]
   },
   {
     "id": "verb-spring",
     "base": "spring",
     "past": "sprang",
     "participle": "sprung",
-    "translation": "прыгать, вскакивать",
+    "translation": "вскакивать, выпрыгивать",
     "level": "B2",
     "example": "He sprang to his feet when she came in.",
-    "exampleTranslation": "Когда она вошла, он вскочил на ноги."
+    "exampleTranslation": "Когда она вошла, он вскочил на ноги.",
+    "cards": [
+      "oxford-622a494d3ea8c7ba"
+    ]
   },
   {
     "id": "verb-mistake",
@@ -1197,7 +1554,10 @@
     "translation": "ошибаться; принимать (за другого)",
     "level": "B2",
     "example": "If I'm not mistaken, the shop closes at five.",
-    "exampleTranslation": "Если я не ошибаюсь, магазин закрывается в пять."
+    "exampleTranslation": "Если я не ошибаюсь, магазин закрывается в пять.",
+    "cards": [
+      "oxford-1b34ffb5e8ddb2c9"
+    ]
   },
   {
     "id": "verb-burst",
@@ -1207,7 +1567,8 @@
     "translation": "лопаться, разрываться",
     "level": "B2",
     "example": "The balloon burst with a loud bang.",
-    "exampleTranslation": "Шарик лопнул с громким хлопком."
+    "exampleTranslation": "Шарик лопнул с громким хлопком.",
+    "cards": []
   },
   {
     "id": "verb-swing",
@@ -1217,7 +1578,8 @@
     "translation": "качать(ся), размахивать",
     "level": "B2",
     "example": "The door had swung open in the wind.",
-    "exampleTranslation": "Дверь распахнулась от ветра."
+    "exampleTranslation": "Дверь распахнулась от ветра.",
+    "cards": []
   },
   {
     "id": "verb-dive",
@@ -1227,7 +1589,10 @@
     "translation": "нырять",
     "level": "B2",
     "example": "He dived into the cold water without hesitating.",
-    "exampleTranslation": "Он не раздумывая нырнул в холодную воду."
+    "exampleTranslation": "Он не раздумывая нырнул в холодную воду.",
+    "cards": [
+      "dune-ab7a76a84a7a8715"
+    ]
   },
   {
     "id": "verb-forbid",
@@ -1237,7 +1602,10 @@
     "translation": "запрещать",
     "level": "B2",
     "example": "Smoking is forbidden in all parts of the building.",
-    "exampleTranslation": "Курить запрещено во всём здании."
+    "exampleTranslation": "Курить запрещено во всём здании.",
+    "cards": [
+      "dune-80c873b709784819"
+    ]
   },
   {
     "id": "verb-spill",
@@ -1247,7 +1615,10 @@
     "translation": "проливать",
     "level": "B2",
     "example": "I spilt coffee all over my keyboard.",
-    "exampleTranslation": "Я пролил кофе прямо на клавиатуру."
+    "exampleTranslation": "Я пролил кофе прямо на клавиатуру.",
+    "cards": [
+      "zootopia-b9d2b4d376d64174"
+    ]
   },
   {
     "id": "verb-spoil",
@@ -1257,7 +1628,10 @@
     "translation": "портить; баловать",
     "level": "B2",
     "example": "The rain has spoilt our picnic.",
-    "exampleTranslation": "Дождь испортил нам пикник."
+    "exampleTranslation": "Дождь испортил нам пикник.",
+    "cards": [
+      "dune-cbdad2eb107b1c4f"
+    ]
   },
   {
     "id": "verb-shrink",
@@ -1267,7 +1641,8 @@
     "translation": "садиться (о ткани), уменьшаться",
     "level": "B2",
     "example": "My favourite jumper shrank in the wash.",
-    "exampleTranslation": "Мой любимый свитер сел после стирки."
+    "exampleTranslation": "Мой любимый свитер сел после стирки.",
+    "cards": []
   },
   {
     "id": "verb-withdraw",
@@ -1277,7 +1652,8 @@
     "translation": "снимать (деньги); отзывать; отступать",
     "level": "B2",
     "example": "I've withdrawn some cash from the machine.",
-    "exampleTranslation": "Я снял немного наличных в банкомате."
+    "exampleTranslation": "Я снял немного наличных в банкомате.",
+    "cards": []
   },
   {
     "id": "verb-overcome",
@@ -1287,7 +1663,8 @@
     "translation": "преодолевать",
     "level": "B2",
     "example": "She overcame her fear of flying.",
-    "exampleTranslation": "Она преодолела страх перед полётами."
+    "exampleTranslation": "Она преодолела страх перед полётами.",
+    "cards": []
   },
   {
     "id": "verb-spin",
@@ -1297,17 +1674,19 @@
     "translation": "крутить(ся), вращать(ся)",
     "level": "B2",
     "example": "The car spun round on the icy road.",
-    "exampleTranslation": "Машину закрутило на обледенелой дороге."
+    "exampleTranslation": "Машину закрутило на обледенелой дороге.",
+    "cards": []
   },
   {
     "id": "verb-leap",
     "base": "leap",
     "past": "leapt / leaped",
     "participle": "leapt / leaped",
-    "translation": "прыгать; резко расти",
+    "translation": "прыгать (далеко, высоко); резко расти",
     "level": "B2",
     "example": "House prices have leapt by ten per cent.",
-    "exampleTranslation": "Цены на жильё подскочили на десять процентов."
+    "exampleTranslation": "Цены на жильё подскочили на десять процентов.",
+    "cards": []
   },
   {
     "id": "verb-kneel",
@@ -1317,7 +1696,10 @@
     "translation": "вставать на колени",
     "level": "B2",
     "example": "She knelt down to tie her shoelace.",
-    "exampleTranslation": "Она опустилась на колени, чтобы завязать шнурок."
+    "exampleTranslation": "Она опустилась на колени, чтобы завязать шнурок.",
+    "cards": [
+      "dune-7771ca9a2e96c510"
+    ]
   },
   {
     "id": "verb-bleed",
@@ -1327,7 +1709,8 @@
     "translation": "кровоточить, истекать кровью",
     "level": "B2",
     "example": "His knee bled badly after he fell off his bike.",
-    "exampleTranslation": "Когда он упал с велосипеда, у него сильно кровоточило колено."
+    "exampleTranslation": "Когда он упал с велосипеда, у него сильно кровоточило колено.",
+    "cards": []
   },
   {
     "id": "verb-sting",
@@ -1337,7 +1720,8 @@
     "translation": "жалить",
     "level": "B2",
     "example": "I've been stung by a wasp!",
-    "exampleTranslation": "Меня ужалила оса!"
+    "exampleTranslation": "Меня ужалила оса!",
+    "cards": []
   },
   {
     "id": "verb-swell",
@@ -1347,7 +1731,8 @@
     "translation": "опухать; увеличиваться",
     "level": "B2",
     "example": "My ankle has swollen up since I fell.",
-    "exampleTranslation": "После падения у меня распухла лодыжка."
+    "exampleTranslation": "После падения у меня распухла лодыжка.",
+    "cards": []
   },
   {
     "id": "verb-creep",
@@ -1357,17 +1742,19 @@
     "translation": "красться, ползти",
     "level": "B2",
     "example": "We crept upstairs so as not to wake the baby.",
-    "exampleTranslation": "Мы прокрались наверх, чтобы не разбудить малыша."
+    "exampleTranslation": "Мы прокрались наверх, чтобы не разбудить малыша.",
+    "cards": []
   },
   {
     "id": "verb-flee",
     "base": "flee",
     "past": "fled",
     "participle": "fled",
-    "translation": "бежать, спасаться бегством",
+    "translation": "спасаться бегством",
     "level": "B2",
     "example": "Thousands of people have fled the fighting.",
-    "exampleTranslation": "Тысячи людей бежали от боевых действий."
+    "exampleTranslation": "Тысячи людей бежали от боевых действий.",
+    "cards": []
   },
   {
     "id": "verb-breed",
@@ -1377,7 +1764,8 @@
     "translation": "разводить (животных); размножаться",
     "level": "B2",
     "example": "These dogs were bred to work on farms.",
-    "exampleTranslation": "Этих собак вывели для работы на фермах."
+    "exampleTranslation": "Этих собак вывели для работы на фермах.",
+    "cards": []
   },
   {
     "id": "verb-sew",
@@ -1387,7 +1775,8 @@
     "translation": "шить",
     "level": "B2",
     "example": "All the costumes were sewn by hand.",
-    "exampleTranslation": "Все костюмы сшиты вручную."
+    "exampleTranslation": "Все костюмы сшиты вручную.",
+    "cards": []
   },
   {
     "id": "verb-mow",
@@ -1397,7 +1786,8 @@
     "translation": "косить, стричь (траву)",
     "level": "B2",
     "example": "Dad mowed the lawn on Sunday morning.",
-    "exampleTranslation": "В воскресенье утром папа подстриг газон."
+    "exampleTranslation": "В воскресенье утром папа подстриг газон.",
+    "cards": []
   },
   {
     "id": "verb-weep",
@@ -1407,7 +1797,8 @@
     "translation": "плакать",
     "level": "B2",
     "example": "She wept when she heard the sad news.",
-    "exampleTranslation": "Она заплакала, услышав печальную новость."
+    "exampleTranslation": "Она заплакала, услышав печальную новость.",
+    "cards": []
   },
   {
     "id": "verb-stink",
@@ -1417,7 +1808,8 @@
     "translation": "вонять",
     "level": "B2",
     "example": "The fridge stank of old cheese.",
-    "exampleTranslation": "Из холодильника воняло старым сыром."
+    "exampleTranslation": "Из холодильника воняло старым сыром.",
+    "cards": []
   },
   {
     "id": "verb-spit",
@@ -1427,7 +1819,8 @@
     "translation": "плевать(ся)",
     "level": "B2",
     "example": "The baby spat out its food.",
-    "exampleTranslation": "Малыш выплюнул еду."
+    "exampleTranslation": "Малыш выплюнул еду.",
+    "cards": []
   },
   {
     "id": "verb-cling",
@@ -1437,7 +1830,10 @@
     "translation": "цепляться",
     "level": "B2",
     "example": "The little girl clung to her mother's hand.",
-    "exampleTranslation": "Девочка вцепилась в мамину руку."
+    "exampleTranslation": "Девочка вцепилась в мамину руку.",
+    "cards": [
+      "dune-7c132687e34e518a"
+    ]
   },
   {
     "id": "verb-fling",
@@ -1447,7 +1843,8 @@
     "translation": "швырять",
     "level": "B2",
     "example": "He flung his bag onto the bed.",
-    "exampleTranslation": "Он швырнул сумку на кровать."
+    "exampleTranslation": "Он швырнул сумку на кровать.",
+    "cards": []
   },
   {
     "id": "verb-grind",
@@ -1457,7 +1854,8 @@
     "translation": "молоть",
     "level": "B2",
     "example": "This coffee has been freshly ground.",
-    "exampleTranslation": "Это свежемолотый кофе."
+    "exampleTranslation": "Это свежемолотый кофе.",
+    "cards": []
   },
   {
     "id": "verb-shed",
@@ -1467,7 +1865,8 @@
     "translation": "сбрасывать (листья); проливать (слёзы)",
     "level": "B2",
     "example": "The trees have shed all their leaves.",
-    "exampleTranslation": "Деревья сбросили всю листву."
+    "exampleTranslation": "Деревья сбросили всю листву.",
+    "cards": []
   },
   {
     "id": "verb-forecast",
@@ -1477,6 +1876,7 @@
     "translation": "предсказывать, прогнозировать",
     "level": "B2",
     "example": "Heavy rain has been forecast for the weekend.",
-    "exampleTranslation": "На выходные обещают сильный дождь."
+    "exampleTranslation": "На выходные обещают сильный дождь.",
+    "cards": []
   }
 ]
