@@ -294,6 +294,7 @@ export default function App() {
 
   // Recorded voices download in the background after installation; Settings → Voice shows how far it is.
   const [voicePack, setVoicePack] = useState<VoicePackStatus | null>(null);
+  const voicesReady = voicePack?.state === "ready";
   useEffect(() => {
     if (!window.oxfordVoices) return;
     let disposed = false;
@@ -369,7 +370,9 @@ export default function App() {
       window.removeEventListener("pagehide", stop);
       controller.dispose();
     };
-  }, [state.settings.voice]);
+    // The controller keeps the Windows voice it prepared while the recordings were downloading; a fresh one takes the
+    // recordings as soon as they are ready (Ivan, 09.11.2026).
+  }, [state.settings.voice, voicesReady]);
   useEffect(() => {
     const id = window.setInterval(() => setNow(Date.now()), 15000);
     return () => clearInterval(id);
